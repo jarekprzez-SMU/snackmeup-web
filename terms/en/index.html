@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Snack Me Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --o: #FF6B35;
+      --ink: #111118;
+      --parchment: #FDF8F2;
+      --body: #47424F;
+      --muted: #9390A0;
+      --rule: rgba(17,17,24,0.08);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--parchment);
+      color: var(--body);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(253,248,242,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--rule);
+      padding: 0 24px;
+      height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-brand { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 16px; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+    .nav-lang { display: flex; gap: 8px; }
+    .nav-lang a { font-size: 13px; font-weight: 500; color: var(--muted); text-decoration: none; padding: 4px 10px; border-radius: 100px; border: 1px solid transparent; transition: all 0.2s; }
+    .nav-lang a.active { color: var(--o); border-color: rgba(255,107,53,0.3); background: rgba(255,107,53,0.06); }
+    .nav-lang a:hover:not(.active) { color: var(--ink); }
+    header { border-bottom: 1px solid var(--rule); padding: 64px 24px 48px; max-width: 720px; margin: 0 auto; }
+    .doc-type { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--o); margin-bottom: 16px; }
+    h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(32px, 5vw, 48px); color: var(--ink); letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 20px; }
+    .meta { font-size: 14px; color: var(--muted); }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; }
+    .intro-box { background: rgba(255,107,53,0.06); border-left: 3px solid var(--o); border-radius: 0 12px 12px 0; padding: 20px 24px; margin-bottom: 48px; font-size: 15px; color: var(--body); }
+    section { margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--rule); }
+    section:last-child { border-bottom: none; }
+    h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: -0.02em; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    h2::before { content: attr(data-n); display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--o); color: white; font-size: 12px; font-weight: 800; border-radius: 8px; flex-shrink: 0; }
+    p { margin-bottom: 16px; }
+    p:last-child { margin-bottom: 0; }
+    ul { padding-left: 20px; margin-bottom: 16px; }
+    li { margin-bottom: 8px; }
+    strong { color: var(--ink); font-weight: 500; }
+    .highlight { background: rgba(255,107,53,0.08); border-radius: 8px; padding: 16px 20px; margin: 20px 0; font-size: 15px; }
+    a { color: var(--o); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { border-top: 1px solid var(--rule); padding: 32px 24px; max-width: 720px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-brand { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 14px; color: var(--ink); }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: 13px; color: var(--muted); }
+    @media (max-width: 600px) { footer { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/">Snack Me Up</a>
+  <div class="nav-lang">
+    <a href="/terms/pl">PL</a>
+    <a href="/terms/en" class="active">EN</a>
+  </div>
+</nav>
+
+<header>
+  <div class="doc-type">Legal document</div>
+  <h1>Terms of Service</h1>
+  <p class="meta">Last updated: June 2025 &nbsp;·&nbsp; Version 1.0</p>
+</header>
+
+<main>
+
+  <div class="intro-box">
+    By using Snack Me Up, you agree to these Terms of Service. Please read them carefully before using the app.
+  </div>
+
+  <section>
+    <h2 data-n="1">About Us</h2>
+    <p>Snack Me Up is a mobile app that generates recipes using artificial intelligence. The app is owned and operated by:</p>
+    <div class="highlight">
+      <strong>Jarosław Przezdziecki</strong><br>
+      Poland<br>
+      Contact: <a href="mailto:support@snackmeup.com">support@snackmeup.com</a>
+    </div>
+    <p>These Terms govern your use of the Snack Me Up mobile application available on the App Store (iOS) and Google Play (Android).</p>
+  </section>
+
+  <section>
+    <h2 data-n="2">AI-Generated Content</h2>
+    <p><strong>Recipes in Snack Me Up are generated by artificial intelligence (Google Gemini).</strong> This means:</p>
+    <ul>
+      <li>Recipes are created automatically based on your preferences, allergies, and available ingredients.</li>
+      <li>While we make every effort to ensure the AI respects your dietary restrictions, <strong>we cannot guarantee 100% accuracy</strong> — always check ingredients before preparing any meal.</li>
+      <li>Snack Me Up is <strong>not a medical device</strong> and is not a dietary or nutritional service. Recipes do not replace advice from a doctor or registered dietitian.</li>
+      <li>Nutritional information (calories, macros) is estimated and may differ from actual values.</li>
+    </ul>
+    <div class="highlight">
+      ⚠️ If you have severe food allergies or a medical condition requiring a special diet, please consult a healthcare professional before preparing any recipe from this app.
+    </div>
+  </section>
+
+  <section>
+    <h2 data-n="3">Your Account</h2>
+    <p>To access full features, you may create an account using:</p>
+    <ul>
+      <li>Email and password,</li>
+      <li>Google account,</li>
+      <li>Apple account (Sign in with Apple).</li>
+    </ul>
+    <p>You are responsible for:</p>
+    <ul>
+      <li>keeping your login credentials confidential,</li>
+      <li>all activity that occurs under your account,</li>
+      <li>notifying us immediately of any unauthorized access to your account.</li>
+    </ul>
+    <p>You may delete your account at any time from the Profile settings in the app. Account deletion is permanent and irreversible.</p>
+  </section>
+
+  <section>
+    <h2 data-n="4">Subscriptions & Payments</h2>
+    <p>Snack Me Up uses a freemium model:</p>
+    <ul>
+      <li><strong>Free plan:</strong> limited number of recipe generations per month.</li>
+      <li><strong>Trial (7 days):</strong> full access to all features for 7 days at no charge.</li>
+      <li><strong>Premium:</strong> full access via monthly or annual subscription.</li>
+    </ul>
+    <p><strong>Billing and renewals:</strong></p>
+    <ul>
+      <li>Payments are processed by the App Store (Apple) or Google Play — Snack Me Up does not store your payment details.</li>
+      <li>Subscriptions auto-renew unless cancelled at least 24 hours before the end of the current billing period.</li>
+      <li>You can cancel in your App Store or Google Play account settings.</li>
+      <li>Renewal charges are applied within 24 hours before the end of the current period.</li>
+    </ul>
+    <p>You can restore a previously purchased subscription via Profile → Manage Subscription → Restore Purchases.</p>
+  </section>
+
+  <section>
+    <h2 data-n="5">Acceptable Use</h2>
+    <p>By using Snack Me Up, you agree to:</p>
+    <ul>
+      <li>use the app solely for its intended purpose (generating recipes for personal use),</li>
+      <li>not attempt to circumvent free plan limits in bad faith,</li>
+      <li>not use the app for commercial purposes without our written consent,</li>
+      <li>not attempt to reverse-engineer or modify the app.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 data-n="6">Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law:</p>
+    <ul>
+      <li>Snack Me Up is provided "as is" without warranties of any kind.</li>
+      <li>We are not liable for harm resulting from the AI failing to observe your allergy restrictions.</li>
+      <li>We are not liable for service interruptions caused by failures of third-party infrastructure (Supabase, Google Gemini, App Store, Google Play).</li>
+      <li>Our total liability to you shall not exceed the fees paid by you in the preceding 12 months.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 data-n="7">Privacy</h2>
+    <p>How we handle your personal data is described in detail in our <a href="/privacy/en">Privacy Policy</a>. The Privacy Policy forms an integral part of these Terms.</p>
+  </section>
+
+  <section>
+    <h2 data-n="8">Changes to These Terms</h2>
+    <p>We may update these Terms from time to time. For material changes, we will notify you via:</p>
+    <ul>
+      <li>an in-app notification,</li>
+      <li>email (if you provided an email address).</li>
+    </ul>
+    <p>Continued use of the app after changes take effect constitutes acceptance of the updated Terms.</p>
+  </section>
+
+  <section>
+    <h2 data-n="9">Governing Law & Contact</h2>
+    <p>These Terms are governed by Polish law. Any disputes will be resolved by courts with jurisdiction over the owner's place of residence.</p>
+    <p>For questions or concerns, please contact us:</p>
+    <div class="highlight">
+      📧 <a href="mailto:support@snackmeup.com">support@snackmeup.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span class="footer-brand">Snack Me Up</span>
+  <div class="footer-links">
+    <a href="/terms/en">Terms</a>
+    <a href="/privacy/en">Privacy</a>
+    <a href="mailto:support@snackmeup.com">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>

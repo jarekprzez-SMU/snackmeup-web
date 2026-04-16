@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polityka Prywatności — Snack Me Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root { --o: #FF6B35; --ink: #111118; --parchment: #FDF8F2; --body: #47424F; --muted: #9390A0; --rule: rgba(17,17,24,0.08); }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--parchment); color: var(--body); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.75; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(253,248,242,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--rule); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 16px; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+    .nav-lang { display: flex; gap: 8px; }
+    .nav-lang a { font-size: 13px; font-weight: 500; color: var(--muted); text-decoration: none; padding: 4px 10px; border-radius: 100px; border: 1px solid transparent; transition: all 0.2s; }
+    .nav-lang a.active { color: var(--o); border-color: rgba(255,107,53,0.3); background: rgba(255,107,53,0.06); }
+    .nav-lang a:hover:not(.active) { color: var(--ink); }
+    header { border-bottom: 1px solid var(--rule); padding: 64px 24px 48px; max-width: 720px; margin: 0 auto; }
+    .doc-type { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--o); margin-bottom: 16px; }
+    h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(32px, 5vw, 48px); color: var(--ink); letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 20px; }
+    .meta { font-size: 14px; color: var(--muted); }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; }
+    .intro-box { background: rgba(255,107,53,0.06); border-left: 3px solid var(--o); border-radius: 0 12px 12px 0; padding: 20px 24px; margin-bottom: 48px; font-size: 15px; }
+    section { margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--rule); }
+    section:last-child { border-bottom: none; }
+    h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: -0.02em; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    h2::before { content: attr(data-n); display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--o); color: white; font-size: 12px; font-weight: 800; border-radius: 8px; flex-shrink: 0; }
+    p { margin-bottom: 16px; }
+    p:last-child { margin-bottom: 0; }
+    ul { padding-left: 20px; margin-bottom: 16px; }
+    li { margin-bottom: 8px; }
+    strong { color: var(--ink); font-weight: 500; }
+    .highlight { background: rgba(255,107,53,0.08); border-radius: 8px; padding: 16px 20px; margin: 20px 0; font-size: 15px; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+    th { background: rgba(17,17,24,0.04); color: var(--ink); font-weight: 500; text-align: left; padding: 10px 14px; border-bottom: 2px solid var(--rule); }
+    td { padding: 10px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    a { color: var(--o); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { border-top: 1px solid var(--rule); padding: 32px 24px; max-width: 720px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-brand { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 14px; color: var(--ink); }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: 13px; color: var(--muted); }
+    @media (max-width: 600px) { footer { flex-direction: column; align-items: flex-start; } table { font-size: 13px; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/">Snack Me Up</a>
+  <div class="nav-lang">
+    <a href="/privacy/pl" class="active">PL</a>
+    <a href="/privacy/en">EN</a>
+  </div>
+</nav>
+
+<header>
+  <div class="doc-type">Dokument prawny</div>
+  <h1>Polityka Prywatności</h1>
+  <p class="meta">Ostatnia aktualizacja: czerwiec 2025 &nbsp;·&nbsp; Wersja 1.0</p>
+</header>
+
+<main>
+
+  <div class="intro-box">
+    Twoja prywatność jest dla nas ważna. Ten dokument wyjaśnia, jakie dane zbieramy, jak je wykorzystujemy i jakie masz prawa.
+  </div>
+
+  <section>
+    <h2 data-n="1">Administrator danych</h2>
+    <div class="highlight">
+      <strong>Jarosław Przezdziecki</strong><br>
+      Polska<br>
+      📧 <a href="mailto:support@snackmeup.com">support@snackmeup.com</a>
+    </div>
+    <p>Jako administrator danych osobowych przetwarzamy Twoje dane zgodnie z Rozporządzeniem RODO (GDPR) oraz polskim prawem o ochronie danych osobowych.</p>
+  </section>
+
+  <section>
+    <h2 data-n="2">Jakie dane zbieramy</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Kategoria danych</th>
+          <th>Przykłady</th>
+          <th>Cel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Dane konta</strong></td>
+          <td>Adres e-mail, imię (opcjonalnie), provider logowania (Google/Apple/email)</td>
+          <td>Uwierzytelnienie, obsługa konta</td>
+        </tr>
+        <tr>
+          <td><strong>Dane profilu</strong></td>
+          <td>Lokalizacja (kraj, miasto), alergie pokarmowe, sprzęt kuchenny, preferencje kuchni, poziom trudności, budżet</td>
+          <td>Personalizacja przepisów przez AI</td>
+        </tr>
+        <tr>
+          <td><strong>Historia użytkowania</strong></td>
+          <td>Wygenerowane przepisy, oceny, ulubione, historia gotowania</td>
+          <td>Anti-Monotony Engine, poprawa jakości AI</td>
+        </tr>
+        <tr>
+          <td><strong>Dane subskrypcji</strong></td>
+          <td>Status subskrypcji, daty odnowienia (przez RevenueCat)</td>
+          <td>Zarządzanie dostępem do funkcji premium</td>
+        </tr>
+        <tr>
+          <td><strong>Dane techniczne</strong></td>
+          <td>Identyfikator urządzenia, system operacyjny, wersja aplikacji</td>
+          <td>Diagnostyka błędów, bezpieczeństwo</td>
+        </tr>
+        <tr>
+          <td><strong>Dane analityczne</strong> (planowane)</td>
+          <td>Zdarzenia użytkowania, czas sesji, przepływy nawigacji</td>
+          <td>Poprawa UX, analiza retencji</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Dane analityczne behawioralne mogą być zbierane w przyszłych wersjach aplikacji przy użyciu narzędzi takich jak Sentry lub analogicznych platform analitycznych. Poinformujemy Cię o tym przed wdrożeniem.</p>
+  </section>
+
+  <section>
+    <h2 data-n="3">Jak wykorzystujemy Twoje dane</h2>
+    <ul>
+      <li><strong>Generowanie przepisów AI:</strong> Twoje preferencje, alergie i lokalizacja są wysyłane do Google Gemini (API) w celu wygenerowania spersonalizowanych przepisów. Dane te nie są przechowywane przez Google w sposób umożliwiający identyfikację użytkownika zgodnie z warunkami Google Cloud.</li>
+      <li><strong>Personalizacja:</strong> Historia gotowania jest używana do unikania powtarzania przepisów (Anti-Monotony Engine).</li>
+      <li><strong>Subskrypcje:</strong> Status subskrypcji jest synchronizowany z RevenueCat w celu zarządzania dostępem do funkcji premium.</li>
+      <li><strong>Bezpieczeństwo:</strong> Dane techniczne pomagają nam wykrywać i naprawiać błędy aplikacji.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 data-n="4">Podmioty zewnętrzne</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Dostawca</th>
+          <th>Cel</th>
+          <th>Polityka prywatności</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Supabase</strong></td>
+          <td>Baza danych, uwierzytelnienie, przechowywanie plików</td>
+          <td><a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>Google Gemini API</strong></td>
+          <td>Generowanie przepisów przez AI</td>
+          <td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>RevenueCat</strong></td>
+          <td>Zarządzanie subskrypcjami i płatnościami</td>
+          <td><a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>Apple / Google</strong></td>
+          <td>Logowanie (Sign in with Apple / Google), płatności w sklepie</td>
+          <td>Polityki Apple i Google</td>
+        </tr>
+        <tr>
+          <td><strong>Sentry</strong> (planowane)</td>
+          <td>Monitorowanie błędów i crashów</td>
+          <td><a href="https://sentry.io/privacy/" target="_blank">sentry.io/privacy</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Dane osobowe są przekazywane podmiotom zewnętrznym wyłącznie w zakresie niezbędnym do świadczenia usługi. Nie sprzedajemy Twoich danych osobowych.</p>
+  </section>
+
+  <section>
+    <h2 data-n="5">Dane szczególnie wrażliwe</h2>
+    <p>Alergie pokarmowe i restrykcje dietetyczne (np. Vegan, Keto) stanowią dane dotyczące zdrowia w rozumieniu RODO. Zbieramy je wyłącznie:</p>
+    <ul>
+      <li>na podstawie Twojej wyraźnej zgody udzielonej podczas konfiguracji profilu,</li>
+      <li>w celu zapewnienia Twojego bezpieczeństwa podczas generowania przepisów,</li>
+      <li>wyłącznie na Twoim koncie — nie profilujemy ani nie udostępniamy tych danych reklamodawcom.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 data-n="6">Przechowywanie danych</h2>
+    <ul>
+      <li>Dane konta i profilu: przechowywane przez czas aktywności konta.</li>
+      <li>Historia przepisów: przechowywana przez czas aktywności konta.</li>
+      <li>Po usunięciu konta: wszystkie dane są trwale usuwane w ciągu 30 dni.</li>
+      <li>Logi techniczne: usuwane po 90 dniach.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 data-n="7">Twoje prawa (RODO)</h2>
+    <p>Jako użytkownik masz prawo do:</p>
+    <ul>
+      <li><strong>Dostępu</strong> — możesz zażądać kopii swoich danych.</li>
+      <li><strong>Sprostowania</strong> — możesz poprawić nieprawidłowe dane przez ustawienia profilu.</li>
+      <li><strong>Usunięcia</strong> — możesz usunąć konto i wszystkie dane w ustawieniach aplikacji.</li>
+      <li><strong>Przenoszenia</strong> — możesz zażądać eksportu swoich danych w formacie JSON.</li>
+      <li><strong>Sprzeciwu</strong> — możesz sprzeciwić się przetwarzaniu danych w celach analitycznych.</li>
+      <li><strong>Wycofania zgody</strong> — możesz w każdej chwili wycofać zgodę na przetwarzanie danych wrażliwych.</li>
+    </ul>
+    <p>Aby skorzystać z powyższych praw, skontaktuj się z nami: <a href="mailto:support@snackmeup.com">support@snackmeup.com</a></p>
+    <p>Masz również prawo złożenia skargi do Prezesa Urzędu Ochrony Danych Osobowych (UODO).</p>
+  </section>
+
+  <section>
+    <h2 data-n="8">Reklamy</h2>
+    <p>Snack Me Up <strong>nie wyświetla reklam</strong> i <strong>nie udostępnia danych reklamodawcom</strong>. Aplikacja finansuje się wyłącznie z subskrypcji użytkowników.</p>
+  </section>
+
+  <section>
+    <h2 data-n="9">Dzieci</h2>
+    <p>Snack Me Up nie jest przeznaczony dla dzieci poniżej 13. roku życia. Nie zbieramy świadomie danych od dzieci poniżej tego wieku. Jeśli uważasz, że dziecko poniżej 13 lat korzysta z aplikacji, skontaktuj się z nami.</p>
+  </section>
+
+  <section>
+    <h2 data-n="10">Zmiany Polityki</h2>
+    <p>O istotnych zmianach w Polityce Prywatności poinformujemy Cię przez powiadomienie w aplikacji lub e-mail. Data ostatniej aktualizacji jest zawsze widoczna na górze tego dokumentu.</p>
+    <p>Pytania: <a href="mailto:support@snackmeup.com">support@snackmeup.com</a></p>
+  </section>
+
+</main>
+
+<footer>
+  <span class="footer-brand">Snack Me Up</span>
+  <div class="footer-links">
+    <a href="/terms/pl">Regulamin</a>
+    <a href="/privacy/pl">Prywatność</a>
+    <a href="mailto:support@snackmeup.com">Kontakt</a>
+  </div>
+</footer>
+
+</body>
+</html>
