@@ -1,0 +1,47 @@
+/* snack me up — strony legal. Tokeny z lib/theme.ts aplikacji (E_MASTER §7):
+   parchment / ink / o. Nagłówki Nunito 800, treść DM Sans — jak w aplikacji po redesignie;
+   Syne wycofany (#123). */
+:root { --o: #FF6B35; --ink: #111118; --parchment: #FDF8F2; --parchment-mid: #F4EDE3; --body: #47424F; --muted: #9390A0; --rule: rgba(17,17,24,0.08); }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--parchment); color: var(--body); font-family: 'DM Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+nav { position: sticky; top: 0; z-index: 100; background: rgba(253,248,242,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--rule); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 17px; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+.nav-brand span { color: var(--o); }
+.nav-lang { display: flex; gap: 8px; }
+.nav-lang a { font-size: 13px; font-weight: 500; color: var(--muted); text-decoration: none; padding: 4px 10px; border-radius: 100px; border: 1px solid transparent; transition: all 0.2s; }
+.nav-lang a.active { color: var(--o); border-color: rgba(255,107,53,0.3); background: rgba(255,107,53,0.06); }
+.nav-lang a:hover:not(.active) { color: var(--ink); }
+header { border-bottom: 1px solid var(--rule); padding: 64px 24px 48px; max-width: 720px; margin: 0 auto; }
+.doc-type { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--o); margin-bottom: 16px; }
+h1 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: clamp(32px, 5vw, 48px); color: var(--ink); letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 20px; }
+.meta { font-size: 14px; color: var(--muted); }
+main { max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; }
+.intro-box { background: rgba(255,107,53,0.06); border-left: 3px solid var(--o); border-radius: 0 12px 12px 0; padding: 20px 24px; margin-bottom: 48px; font-size: 15px; }
+.toc { background: var(--parchment-mid); border-radius: 16px; padding: 20px 24px; margin-bottom: 48px; font-size: 14px; }
+.toc ol { padding-left: 20px; columns: 2; column-gap: 24px; margin: 0; }
+.toc li { margin-bottom: 4px; break-inside: avoid; }
+.toc a { color: var(--body); }
+section { margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--rule); scroll-margin-top: 72px; }
+section:last-child { border-bottom: none; }
+h2 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 21px; color: var(--ink); letter-spacing: -0.02em; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+h2::before { content: attr(data-n); display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--o); color: white; font-size: 12px; font-weight: 800; border-radius: 8px; flex-shrink: 0; }
+h3 { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 15px; color: var(--ink); margin: 24px 0 8px; }
+p { margin-bottom: 16px; }
+p:last-child { margin-bottom: 0; }
+ul, ol { padding-left: 20px; margin-bottom: 16px; }
+li { margin-bottom: 8px; }
+strong { color: var(--ink); font-weight: 500; }
+.highlight { background: rgba(255,107,53,0.08); border-radius: 12px; padding: 16px 20px; margin: 20px 0; font-size: 15px; }
+.table-wrap { overflow-x: auto; margin: 20px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 520px; }
+th { background: rgba(17,17,24,0.04); color: var(--ink); font-weight: 500; text-align: left; padding: 10px 14px; border-bottom: 2px solid var(--rule); }
+td { padding: 10px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+a { color: var(--o); text-decoration: none; }
+a:hover { text-decoration: underline; }
+footer { border-top: 1px solid var(--rule); padding: 32px 24px; max-width: 720px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-brand { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 14px; color: var(--ink); }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { font-size: 13px; color: var(--muted); }
+@media (max-width: 600px) { footer { flex-direction: column; align-items: flex-start; } .toc ol { columns: 1; } }

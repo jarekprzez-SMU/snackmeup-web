@@ -4,235 +4,259 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Polityka Prywatności — Snack Me Up</title>
+  <meta name="description" content="Polityka prywatności aplikacji Snack Me Up: jakie dane zbieramy, po co, komu je powierzamy i jakie masz prawa.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root { --o: #FF6B35; --ink: #111118; --parchment: #FDF8F2; --body: #47424F; --muted: #9390A0; --rule: rgba(17,17,24,0.08); }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { background: var(--parchment); color: var(--body); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.75; }
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(253,248,242,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--rule); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-brand { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 16px; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
-    .nav-lang { display: flex; gap: 8px; }
-    .nav-lang a { font-size: 13px; font-weight: 500; color: var(--muted); text-decoration: none; padding: 4px 10px; border-radius: 100px; border: 1px solid transparent; transition: all 0.2s; }
-    .nav-lang a.active { color: var(--o); border-color: rgba(255,107,53,0.3); background: rgba(255,107,53,0.06); }
-    .nav-lang a:hover:not(.active) { color: var(--ink); }
-    header { border-bottom: 1px solid var(--rule); padding: 64px 24px 48px; max-width: 720px; margin: 0 auto; }
-    .doc-type { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--o); margin-bottom: 16px; }
-    h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(32px, 5vw, 48px); color: var(--ink); letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 20px; }
-    .meta { font-size: 14px; color: var(--muted); }
-    main { max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; }
-    .intro-box { background: rgba(255,107,53,0.06); border-left: 3px solid var(--o); border-radius: 0 12px 12px 0; padding: 20px 24px; margin-bottom: 48px; font-size: 15px; }
-    section { margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--rule); }
-    section:last-child { border-bottom: none; }
-    h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 20px; color: var(--ink); letter-spacing: -0.02em; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
-    h2::before { content: attr(data-n); display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--o); color: white; font-size: 12px; font-weight: 800; border-radius: 8px; flex-shrink: 0; }
-    p { margin-bottom: 16px; }
-    p:last-child { margin-bottom: 0; }
-    ul { padding-left: 20px; margin-bottom: 16px; }
-    li { margin-bottom: 8px; }
-    strong { color: var(--ink); font-weight: 500; }
-    .highlight { background: rgba(255,107,53,0.08); border-radius: 8px; padding: 16px 20px; margin: 20px 0; font-size: 15px; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
-    th { background: rgba(17,17,24,0.04); color: var(--ink); font-weight: 500; text-align: left; padding: 10px 14px; border-bottom: 2px solid var(--rule); }
-    td { padding: 10px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
-    tr:last-child td { border-bottom: none; }
-    a { color: var(--o); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    footer { border-top: 1px solid var(--rule); padding: 32px 24px; max-width: 720px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-    .footer-brand { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 14px; color: var(--ink); }
-    .footer-links { display: flex; gap: 20px; }
-    .footer-links a { font-size: 13px; color: var(--muted); }
-    @media (max-width: 600px) { footer { flex-direction: column; align-items: flex-start; } table { font-size: 13px; } }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/snackmeup-web/assets/legal.css">
 </head>
 <body>
 
 <nav>
-  <a class="nav-brand" href="/">Snack Me Up</a>
+  <a class="nav-brand" href="https://snack-me-up.com">snack me up<span>.</span></a>
   <div class="nav-lang">
-    <a href="/snackmeup-web/privacy/pl" class="active">PL</a>
-    <a href="/snackmeup-web/privacy/en">EN</a>
+    <a href="/snackmeup-web/privacy/pl/" class="active">PL</a>
+    <a href="/snackmeup-web/privacy/en/">EN</a>
   </div>
 </nav>
 
 <header>
   <div class="doc-type">Dokument prawny</div>
   <h1>Polityka Prywatności</h1>
-  <p class="meta">Ostatnia aktualizacja: czerwiec 2025 &nbsp;·&nbsp; Wersja 1.0</p>
+  <p class="meta">Ostatnia aktualizacja: 2 września 2026 &nbsp;·&nbsp; Wersja 2.0</p>
 </header>
 
 <main>
-
   <div class="intro-box">
-    Twoja prywatność jest dla nas ważna. Ten dokument wyjaśnia, jakie dane zbieramy, jak je wykorzystujemy i jakie masz prawa.
+    Snack Me Up to aplikacja, która decyduje za Ciebie, co ugotować. Żeby robić to dobrze, musi znać Twoje alergie, sprzęt i to, co jadłeś ostatnio. Ten dokument mówi wprost, jakie dane zbieramy, po co, komu je powierzamy, jak długo je trzymamy i jak możesz je usunąć.
   </div>
 
-  <section>
+  <div class="toc">
+    <ol>
+      <li><a href="#s1">Administrator danych</a></li>
+      <li><a href="#s2">Jakie dane zbieramy</a></li>
+      <li><a href="#s3">Po co i na jakiej podstawie</a></li>
+      <li><a href="#s4">Sztuczna inteligencja</a></li>
+      <li><a href="#s5">Głos, zdjęcia, lokalizacja, powiadomienia</a></li>
+      <li><a href="#s6">Podmioty zewnętrzne</a></li>
+      <li><a href="#s7">Dane szczególnie wrażliwe</a></li>
+      <li><a href="#s8">Jak długo przechowujemy dane</a></li>
+      <li><a href="#s9">Usunięcie konta</a></li>
+      <li><a href="#s10">Twoje prawa (RODO)</a></li>
+      <li><a href="#s11">Reklamy i śledzenie</a></li>
+      <li><a href="#s12">Bezpieczeństwo</a></li>
+      <li><a href="#s13">Dzieci</a></li>
+      <li><a href="#s14">Zmiany Polityki</a></li>
+    </ol>
+  </div>
+
+  <section id="s1">
     <h2 data-n="1">Administrator danych</h2>
-    <div class="highlight">
-      <strong>Jarosław Przezdziecki</strong><br>
-      Polska<br>
-      📧 <a href="mailto:support@snack-me-up.com">support@snack-me-up.com</a>
-    </div>
-    <p>Jako administrator danych osobowych przetwarzamy Twoje dane zgodnie z Rozporządzeniem RODO (GDPR) oraz polskim prawem o ochronie danych osobowych.</p>
+    <p>Administratorem Twoich danych osobowych jest <strong>Jarosław Przezdziecki</strong>, Polska, twórca aplikacji Snack Me Up (dalej: „my”, „aplikacja”).</p>
+    <p>Kontakt we wszystkich sprawach dotyczących danych: <a href="mailto:support@snack-me-up.com">support@snack-me-up.com</a>. Odpowiadamy najpóźniej w ciągu 30 dni.</p>
+    <p>Przetwarzamy dane zgodnie z Rozporządzeniem (UE) 2016/679 (RODO) i polską ustawą o ochronie danych osobowych. Polityka dotyczy aplikacji mobilnej Snack Me Up na iOS i Androida oraz stron pod adresami snack-me-up.com i jarekprzez-smu.github.io/snackmeup-web.</p>
   </section>
 
-  <section>
+  <section id="s2">
     <h2 data-n="2">Jakie dane zbieramy</h2>
+    <p>Zbieramy wyłącznie dane potrzebne do działania aplikacji. Nie ma w niej reklam, więc nie budujemy Twojego profilu dla nikogo poza Tobą.</p>
+    <div class="table-wrap">
     <table>
       <thead>
-        <tr>
-          <th>Kategoria danych</th>
-          <th>Przykłady</th>
-          <th>Cel</th>
-        </tr>
+        <tr><th>Kategoria</th><th>Co konkretnie</th><th>Skąd</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Dane konta</strong></td>
-          <td>Adres e-mail, imię (opcjonalnie), provider logowania (Google/Apple/email)</td>
-          <td>Uwierzytelnienie, obsługa konta</td>
+          <td><strong>Konto</strong></td>
+          <td>Adres e-mail, nazwa kucharza (opcjonalnie), dostawca logowania (Apple, Google lub e-mail), identyfikator konta. Możesz też korzystać z aplikacji <strong>bez zakładania konta</strong> — wtedy tworzymy anonimowe konto techniczne bez adresu e-mail.</td>
+          <td>Ty, przy logowaniu lub przy pierwszym uruchomieniu</td>
         </tr>
         <tr>
-          <td><strong>Dane profilu</strong></td>
-          <td>Lokalizacja (kraj, miasto), alergie pokarmowe, sprzęt kuchenny, preferencje kuchni, poziom trudności, budżet</td>
-          <td>Personalizacja przepisów przez AI</td>
+          <td><strong>Kotwica urządzenia</strong></td>
+          <td>Skrót (hash) identyfikatora, który pozwala rozpoznać to samo urządzenie: na Androidzie systemowy identyfikator aplikacji, na iOS losowy identyfikator zapisany w pęku kluczy urządzenia. Służy wyłącznie do liczenia darmowego miesięcznego limitu generowań i do połączenia anonimowego konta z kontem, na które później się zalogujesz. Nie identyfikuje Cię z nazwiska i nie jest identyfikatorem reklamowym.</td>
+          <td>Urządzenie</td>
         </tr>
         <tr>
-          <td><strong>Historia użytkowania</strong></td>
-          <td>Wygenerowane przepisy, oceny, ulubione, historia gotowania</td>
-          <td>Anti-Monotony Engine, poprawa jakości AI</td>
+          <td><strong>Profil kulinarny</strong></td>
+          <td>Alergie i wykluczenia pokarmowe, nielubiane składniki, typ diety, sprzęt kuchenny, ulubione kuchnie, poziom umiejętności, budżet, domyślna liczba porcji, język, kraj lub region. W Meal Prep dodatkowo domownicy: etykieta (np. „Ania”, „dzieci”), mnożnik porcji, ich wykluczenia i dieta.</td>
+          <td>Ty, w konfiguracji i w ustawieniach</td>
         </tr>
         <tr>
-          <td><strong>Dane subskrypcji</strong></td>
-          <td>Status subskrypcji, daty odnowienia (przez RevenueCat)</td>
-          <td>Zarządzanie dostępem do funkcji premium</td>
+          <td><strong>Aktywność w aplikacji</strong></td>
+          <td>Przepisy wygenerowane, ugotowane, pominięte i ocenione, ulubione, obejrzane, spiżarnia, listy zakupów, plany posiłków, statystyki gotowania, treść zachcianki wpisana lub podyktowana w trybie Cravings.</td>
+          <td>Twoje działania w aplikacji</td>
+        </tr>
+        <tr>
+          <td><strong>Zdjęcia produktów</strong></td>
+          <td>W trybie Kitchen Hero możesz zrobić zdjęcie lodówki lub produktów. Zdjęcie jest przesyłane do modelu AI w celu rozpoznania składników i <strong>nie jest przez nas zapisywane</strong> — zostaje tylko lista rozpoznanych składników.</td>
+          <td>Ty, dobrowolnie</td>
+        </tr>
+        <tr>
+          <td><strong>Subskrypcja</strong></td>
+          <td>Identyfikator subskrybenta w RevenueCat, status (darmowy, okres próbny, Premium), daty rozpoczęcia, odnowienia i wygaśnięcia, platforma zakupu. <strong>Nie widzimy danych Twojej karty</strong> — płatność obsługuje w całości Apple albo Google.</td>
+          <td>Apple / Google przez RevenueCat</td>
+        </tr>
+        <tr>
+          <td><strong>Powiadomienia</strong></td>
+          <td>Token urządzenia do powiadomień push i platforma — tylko jeśli wyrazisz zgodę systemową. Używamy ich do przypomnień o zaplanowanym gotowaniu i o gotowym planie Meal Prep.</td>
+          <td>Urządzenie, za Twoją zgodą</td>
         </tr>
         <tr>
           <td><strong>Dane techniczne</strong></td>
-          <td>Identyfikator urządzenia, system operacyjny, wersja aplikacji</td>
-          <td>Diagnostyka błędów, bezpieczeństwo</td>
-        </tr>
-        <tr>
-          <td><strong>Dane analityczne</strong> (planowane)</td>
-          <td>Zdarzenia użytkowania, czas sesji, przepływy nawigacji</td>
-          <td>Poprawa UX, analiza retencji</td>
+          <td>Wersja aplikacji, system operacyjny, znaczniki czasu żądań, adres IP w krótkotrwałych logach infrastruktury, liczniki zużycia modeli AI (bez powiązania z użytkownikiem), zapisy błędów.</td>
+          <td>Automatycznie</td>
         </tr>
       </tbody>
     </table>
-    <p>Dane analityczne behawioralne mogą być zbierane w przyszłych wersjach aplikacji przy użyciu narzędzi takich jak Sentry lub analogicznych platform analitycznych. Poinformujemy Cię o tym przed wdrożeniem.</p>
+    </div>
+    <p>Nie zbieramy: dokładnej lokalizacji GPS (patrz sekcja 5), danych z książki adresowej, identyfikatorów reklamowych, danych z innych aplikacji ani danych o Twoim zdrowiu innych niż to, co sam wpiszesz w profilu kulinarnym.</p>
   </section>
 
-  <section>
-    <h2 data-n="3">Jak wykorzystujemy Twoje dane</h2>
-    <ul>
-      <li><strong>Generowanie przepisów AI:</strong> Twoje preferencje, alergie i lokalizacja są wysyłane do Google Gemini (API) w celu wygenerowania spersonalizowanych przepisów. Dane te nie są przechowywane przez Google w sposób umożliwiający identyfikację użytkownika zgodnie z warunkami Google Cloud.</li>
-      <li><strong>Personalizacja:</strong> Historia gotowania jest używana do unikania powtarzania przepisów (Anti-Monotony Engine).</li>
-      <li><strong>Subskrypcje:</strong> Status subskrypcji jest synchronizowany z RevenueCat w celu zarządzania dostępem do funkcji premium.</li>
-      <li><strong>Bezpieczeństwo:</strong> Dane techniczne pomagają nam wykrywać i naprawiać błędy aplikacji.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2 data-n="4">Podmioty zewnętrzne</h2>
+  <section id="s3">
+    <h2 data-n="3">Po co i na jakiej podstawie</h2>
+    <div class="table-wrap">
     <table>
       <thead>
-        <tr>
-          <th>Dostawca</th>
-          <th>Cel</th>
-          <th>Polityka prywatności</th>
-        </tr>
+        <tr><th>Cel</th><th>Jakie dane</th><th>Podstawa prawna (RODO)</th></tr>
       </thead>
       <tbody>
-        <tr>
-          <td><strong>Supabase</strong></td>
-          <td>Baza danych, uwierzytelnienie, przechowywanie plików</td>
-          <td><a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a></td>
-        </tr>
-        <tr>
-          <td><strong>Google Gemini API</strong></td>
-          <td>Generowanie przepisów przez AI</td>
-          <td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td>
-        </tr>
-        <tr>
-          <td><strong>RevenueCat</strong></td>
-          <td>Zarządzanie subskrypcjami i płatnościami</td>
-          <td><a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a></td>
-        </tr>
-        <tr>
-          <td><strong>Apple / Google</strong></td>
-          <td>Logowanie (Sign in with Apple / Google), płatności w sklepie</td>
-          <td>Polityki Apple i Google</td>
-        </tr>
-        <tr>
-          <td><strong>Sentry</strong> (planowane)</td>
-          <td>Monitorowanie błędów i crashów</td>
-          <td><a href="https://sentry.io/privacy/" target="_blank">sentry.io/privacy</a></td>
-        </tr>
+        <tr><td>Generowanie i dobór przepisów dopasowanych do Ciebie</td><td>profil kulinarny, aktywność, zachcianka, zdjęcia produktów</td><td>umowa — art. 6 ust. 1 lit. b; dla alergii i diety Twoja wyraźna zgoda — art. 9 ust. 2 lit. a</td></tr>
+        <tr><td>Unikanie powtórek (Anti-Monotony Engine)</td><td>historia wygenerowanych, ugotowanych i pominiętych dań</td><td>umowa — art. 6 ust. 1 lit. b</td></tr>
+        <tr><td>Prowadzenie konta, logowanie, przenoszenie danych z konta anonimowego</td><td>konto, kotwica urządzenia</td><td>umowa — art. 6 ust. 1 lit. b</td></tr>
+        <tr><td>Egzekwowanie darmowego limitu i zapobieganie nadużyciom</td><td>kotwica urządzenia, liczniki generowań, dane techniczne</td><td>uzasadniony interes — art. 6 ust. 1 lit. f</td></tr>
+        <tr><td>Obsługa subskrypcji Premium i okresu próbnego</td><td>dane subskrypcji</td><td>umowa — art. 6 ust. 1 lit. b</td></tr>
+        <tr><td>Przypomnienia push</td><td>token powiadomień</td><td>zgoda — art. 6 ust. 1 lit. a</td></tr>
+        <tr><td>Dostosowanie dostępności składników do regionu</td><td>kraj lub region</td><td>umowa — art. 6 ust. 1 lit. b; zgoda na jednorazowy odczyt lokalizacji</td></tr>
+        <tr><td>Bezpieczeństwo, diagnostyka błędów, kontrola kosztów AI</td><td>dane techniczne</td><td>uzasadniony interes — art. 6 ust. 1 lit. f</td></tr>
+        <tr><td>Odpowiadanie na Twoje wiadomości i realizacja praw</td><td>e-mail, treść wiadomości</td><td>obowiązek prawny — art. 6 ust. 1 lit. c; uzasadniony interes</td></tr>
       </tbody>
     </table>
-    <p>Dane osobowe są przekazywane podmiotom zewnętrznym wyłącznie w zakresie niezbędnym do świadczenia usługi. Nie sprzedajemy Twoich danych osobowych.</p>
+    </div>
+    <p>Nie podejmujemy wobec Ciebie decyzji wywołujących skutki prawne wyłącznie w sposób zautomatyzowany. Dobór przepisu jest automatyczny, ale to jedyny jego skutek: propozycja kolacji.</p>
   </section>
 
-  <section>
-    <h2 data-n="5">Dane szczególnie wrażliwe</h2>
-    <p>Alergie pokarmowe i restrykcje dietetyczne (np. Vegan, Keto) stanowią dane dotyczące zdrowia w rozumieniu RODO. Zbieramy je wyłącznie:</p>
+  <section id="s4">
+    <h2 data-n="4">Sztuczna inteligencja</h2>
+    <p>Przepisy, plany posiłków, zdjęcia dań i rozpoznawanie składników ze zdjęć generuje model sztucznej inteligencji <strong>Google Gemini</strong>, z którego korzystamy przez płatny interfejs programistyczny Google.</p>
+    <h3>Co trafia do modelu</h3>
+    <p>Do modelu wysyłamy tylko to, co jest potrzebne do przepisu: Twoje preferencje, alergie i wykluczenia, sprzęt, tytuły ostatnio jedzonych dań, treść zachcianki, liczbę porcji, region oraz — w Kitchen Hero — zdjęcie produktów. <strong>Nie wysyłamy</strong> Twojego adresu e-mail, identyfikatora konta ani danych subskrypcji.</p>
+    <h3>Czego Google nie robi</h3>
+    <p>Zgodnie z warunkami płatnych usług Gemini API Google nie wykorzystuje przesyłanych treści do trenowania swoich modeli i nie przechowuje ich poza czasem potrzebnym do obsługi żądania oraz wymaganym prawem monitoringiem nadużyć. Szczegóły: <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Warunki Gemini API</a>.</p>
+    <h3>Treści generowane automatycznie</h3>
+    <div class="highlight">
+      Przepisy i plany powstają automatycznie i mogą zawierać błędy — w ilościach, czasach, a wyjątkowo także w składnikach. Alergie z Twojego profilu traktujemy jako twarde ograniczenie i dodatkowo weryfikujemy wynik, ale <strong>żaden system nie daje stuprocentowej gwarancji</strong>. Zawsze sprawdzaj etykiety produktów. Snack Me Up nie jest poradą medyczną ani dietetyczną i nie jest wyrobem medycznym.
+    </div>
+    <h3>Wspólny katalog</h3>
+    <p>Wygenerowany przepis (tytuł, składniki, kroki, makroskładniki, zdjęcie) trafia do wspólnego katalogu przepisów aplikacji <strong>bez żadnych Twoich danych osobowych</strong> i może zostać zaproponowany innym użytkownikom o podobnych preferencjach. Zdjęcia dań są generowane przez AI i współdzielone między użytkownikami jako pamięć podręczna; nie zawierają danych osobowych.</p>
+  </section>
+
+  <section id="s5">
+    <h2 data-n="5">Głos, zdjęcia, lokalizacja, powiadomienia</h2>
+    <p>Każde z poniższych uprawnień jest opcjonalne. Aplikacja działa bez nich, a zgodę możesz cofnąć w ustawieniach systemu.</p>
     <ul>
-      <li>na podstawie Twojej wyraźnej zgody udzielonej podczas konfiguracji profilu,</li>
-      <li>w celu zapewnienia Twojego bezpieczeństwa podczas generowania przepisów,</li>
-      <li>wyłącznie na Twoim koncie — nie profilujemy ani nie udostępniamy tych danych reklamodawcom.</li>
+      <li><strong>Mikrofon i rozpoznawanie mowy.</strong> W trybach Cravings, Łasuch i Kitchen Hero możesz podyktować zachciankę. Zamiana mowy na tekst odbywa się przez usługę systemową Twojego telefonu (Apple lub Google) zgodnie z jej polityką prywatności — może to oznaczać przesłanie dźwięku na serwery tego dostawcy. My otrzymujemy wyłącznie tekst; <strong>nie nagrywamy ani nie przechowujemy dźwięku</strong>.</li>
+      <li><strong>Aparat i galeria.</strong> Zdjęcie z Kitchen Hero jest przesyłane do modelu AI wyłącznie w celu rozpoznania składników i nie jest zapisywane na naszych serwerach.</li>
+      <li><strong>Lokalizacja.</strong> Podczas konfiguracji możesz jednorazowo pozwolić na odczyt lokalizacji, żeby aplikacja sama ustaliła Twój kraj i region (dostępność składników, kuchnia lokalna). Zapisujemy wyłącznie kraj lub region — <strong>nigdy współrzędnych</strong> — i nie śledzimy lokalizacji w tle. Możesz też wpisać region ręcznie.</li>
+      <li><strong>Powiadomienia.</strong> Wyłącznie przypomnienia o gotowaniu i o gotowym planie. Bez marketingu push.</li>
     </ul>
   </section>
 
-  <section>
-    <h2 data-n="6">Przechowywanie danych</h2>
+  <section id="s6">
+    <h2 data-n="6">Podmioty zewnętrzne</h2>
+    <p>Korzystamy z dostawców, bez których aplikacja nie mogłaby działać. Każdy z nich przetwarza dane na nasze zlecenie albo jako niezależny administrator w zakresie własnej usługi (płatności, logowanie).</p>
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Dostawca</th><th>Rola</th><th>Gdzie</th><th>Polityka</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Supabase</td><td>baza danych, logowanie, przechowywanie zdjęć dań, funkcje serwerowe</td><td>UE (Frankfurt)</td><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></td></tr>
+        <tr><td>Google (Gemini API)</td><td>generowanie przepisów, planów i zdjęć dań, rozpoznawanie składników</td><td>USA / globalnie</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
+        <tr><td>Google (Sign in with Google, Google Play)</td><td>logowanie, dystrybucja aplikacji, płatności na Androidzie</td><td>USA / globalnie</td><td>jak wyżej</td></tr>
+        <tr><td>Apple (Sign in with Apple, App Store, rozpoznawanie mowy)</td><td>logowanie, dystrybucja, płatności na iOS, zamiana mowy na tekst</td><td>USA / globalnie</td><td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></td></tr>
+        <tr><td>RevenueCat</td><td>weryfikacja i synchronizacja statusu subskrypcji</td><td>USA</td><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></td></tr>
+        <tr><td>Expo (EAS)</td><td>dostarczanie powiadomień push</td><td>USA</td><td><a href="https://expo.dev/privacy" target="_blank" rel="noopener">expo.dev/privacy</a></td></tr>
+        <tr><td>GitHub</td><td>hosting tej strony</td><td>USA</td><td><a href="https://docs.github.com/site-policy/privacy-policies" target="_blank" rel="noopener">github.com — privacy</a></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p><strong>Transfer poza Europejski Obszar Gospodarczy.</strong> Dostawcy z USA przetwarzają dane na podstawie decyzji Komisji Europejskiej o adekwatności (EU-U.S. Data Privacy Framework) lub standardowych klauzul umownych. Twoja baza danych i konto pozostają w Unii Europejskiej.</p>
+    <p>Nie sprzedajemy danych osobowych i nie udostępniamy ich nikomu w celach marketingowych.</p>
+  </section>
+
+  <section id="s7">
+    <h2 data-n="7">Dane szczególnie wrażliwe</h2>
+    <p>Alergie, nietolerancje i typ diety (np. wegańska, keto) mogą być danymi dotyczącymi zdrowia w rozumieniu art. 9 RODO. Przetwarzamy je:</p>
     <ul>
-      <li>Dane konta i profilu: przechowywane przez czas aktywności konta.</li>
-      <li>Historia przepisów: przechowywana przez czas aktywności konta.</li>
-      <li>Po usunięciu konta: wszystkie dane są trwale usuwane w ciągu 30 dni.</li>
-      <li>Logi techniczne: usuwane po 90 dniach.</li>
+      <li>wyłącznie na podstawie Twojej <strong>wyraźnej zgody</strong>, którą wyrażasz, wpisując je w profilu;</li>
+      <li>wyłącznie po to, żeby przepisy i plany były dla Ciebie bezpieczne i dopasowane;</li>
+      <li>bez profilowania w innych celach i bez udostępniania reklamodawcom.</li>
+    </ul>
+    <p>Zgodę możesz cofnąć w każdej chwili, usuwając te pozycje z profilu — aplikacja będzie wtedy generować przepisy bez tych ograniczeń.</p>
+  </section>
+
+  <section id="s8">
+    <h2 data-n="8">Jak długo przechowujemy dane</h2>
+    <ul>
+      <li><strong>Konto, profil, aktywność:</strong> przez czas istnienia konta.</li>
+      <li><strong>Konto anonimowe</strong> (bez logowania): przez czas korzystania z aplikacji na tym urządzeniu; po zalogowaniu jego dane są przenoszone na konto docelowe.</li>
+      <li><strong>Licznik darmowego limitu</strong> powiązany z kotwicą urządzenia: liczony w cyklach miesięcznych i nadpisywany co miesiąc.</li>
+      <li><strong>Dane subskrypcji:</strong> przez czas subskrypcji i okres wymagany do rozliczeń oraz obsługi reklamacji.</li>
+      <li><strong>Logi techniczne infrastruktury</strong> (w tym adres IP): do 30 dni.</li>
+      <li><strong>Przepisy we wspólnym katalogu:</strong> bezterminowo, jako treść anonimowa bez powiązania z Tobą.</li>
+      <li><strong>Korespondencja z pomocą:</strong> do 3 lat od zamknięcia sprawy, na potrzeby ewentualnych roszczeń.</li>
     </ul>
   </section>
 
-  <section>
-    <h2 data-n="7">Twoje prawa (RODO)</h2>
-    <p>Jako użytkownik masz prawo do:</p>
+  <section id="s9">
+    <h2 data-n="9">Usunięcie konta</h2>
+    <p>Konto usuniesz samodzielnie w aplikacji: <strong>Profil → Usuń konto</strong>. Operacja jest natychmiastowa i nieodwracalna. Kasujemy wtedy konto logowania oraz wszystkie powiązane z nim dane: profil, alergie, sprzęt, domowników, historię aktywności, oceny, ulubione, spiżarnię, listy zakupów, plany posiłków, statystyki, zadania generowania i tokeny powiadomień.</p>
+    <p>Nie kasujemy wyłącznie treści, które nie są już z Tobą powiązane: anonimowych przepisów i zdjęć dań we wspólnym katalogu oraz zagregowanych liczników zużycia AI. Aktywną subskrypcję anuluj osobno w ustawieniach App Store albo Google Play — usunięcie konta jej nie anuluje.</p>
+    <p>Jeśli nie możesz zalogować się do aplikacji, napisz na <a href="mailto:support@snack-me-up.com">support@snack-me-up.com</a> — usuniemy konto ręcznie po weryfikacji, że jesteś jego właścicielem.</p>
+  </section>
+
+  <section id="s10">
+    <h2 data-n="10">Twoje prawa (RODO)</h2>
+    <p>Masz prawo do:</p>
     <ul>
-      <li><strong>Dostępu</strong> — możesz zażądać kopii swoich danych.</li>
-      <li><strong>Sprostowania</strong> — możesz poprawić nieprawidłowe dane przez ustawienia profilu.</li>
-      <li><strong>Usunięcia</strong> — możesz usunąć konto i wszystkie dane w ustawieniach aplikacji.</li>
-      <li><strong>Przenoszenia</strong> — możesz zażądać eksportu swoich danych w formacie JSON.</li>
-      <li><strong>Sprzeciwu</strong> — możesz sprzeciwić się przetwarzaniu danych w celach analitycznych.</li>
-      <li><strong>Wycofania zgody</strong> — możesz w każdej chwili wycofać zgodę na przetwarzanie danych wrażliwych.</li>
+      <li><strong>dostępu</strong> — otrzymania kopii swoich danych;</li>
+      <li><strong>sprostowania</strong> — większość danych poprawisz samodzielnie w ustawieniach profilu;</li>
+      <li><strong>usunięcia</strong> — w aplikacji, jak w sekcji 9;</li>
+      <li><strong>ograniczenia przetwarzania</strong> i <strong>sprzeciwu</strong> wobec przetwarzania opartego na uzasadnionym interesie;</li>
+      <li><strong>przenoszenia</strong> — otrzymania danych w formacie nadającym się do odczytu maszynowego (JSON);</li>
+      <li><strong>cofnięcia zgody</strong> w każdej chwili, bez wpływu na zgodność z prawem wcześniejszego przetwarzania;</li>
+      <li><strong>skargi</strong> do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa, <a href="https://uodo.gov.pl" target="_blank" rel="noopener">uodo.gov.pl</a>) albo organu nadzorczego w kraju Twojego pobytu.</li>
     </ul>
-    <p>Aby skorzystać z powyższych praw, skontaktuj się z nami: <a href="mailto:support@snack-me-up.com">support@snack-me-up.com</a></p>
-    <p>Masz również prawo złożenia skargi do Prezesa Urzędu Ochrony Danych Osobowych (UODO).</p>
+    <p>Żądania kieruj na <a href="mailto:support@snack-me-up.com">support@snack-me-up.com</a> z adresu przypisanego do konta. Odpowiadamy w ciągu 30 dni; w złożonych sprawach możemy ten termin wydłużyć o kolejne 60 dni, o czym Cię poinformujemy.</p>
   </section>
 
-  <section>
-    <h2 data-n="8">Reklamy</h2>
-    <p>Snack Me Up <strong>nie wyświetla reklam</strong> i <strong>nie udostępnia danych reklamodawcom</strong>. Aplikacja finansuje się wyłącznie z subskrypcji użytkowników.</p>
+  <section id="s11">
+    <h2 data-n="11">Reklamy i śledzenie</h2>
+    <p>Snack Me Up <strong>nie wyświetla reklam</strong>, nie zawiera zestawów SDK reklamowych ani analitycznych firm trzecich i nie śledzi Cię w innych aplikacjach ani na stronach internetowych. Nie używamy identyfikatora reklamowego (IDFA / GAID). Aplikacja finansuje się wyłącznie z subskrypcji.</p>
+    <p>Jeśli w przyszłości dodamy narzędzie do monitorowania błędów lub anonimowej analityki użycia, zaktualizujemy ten dokument przed jego uruchomieniem i — tam, gdzie prawo tego wymaga — zapytamy Cię o zgodę.</p>
   </section>
 
-  <section>
-    <h2 data-n="9">Dzieci</h2>
-    <p>Snack Me Up nie jest przeznaczony dla dzieci poniżej 13. roku życia. Nie zbieramy świadomie danych od dzieci poniżej tego wieku. Jeśli uważasz, że dziecko poniżej 13 lat korzysta z aplikacji, skontaktuj się z nami.</p>
+  <section id="s12">
+    <h2 data-n="12">Bezpieczeństwo</h2>
+    <p>Transmisja danych jest szyfrowana (TLS). Dostęp do bazy chronią reguły, które pozwalają każdemu użytkownikowi czytać i zmieniać wyłącznie własne wiersze; funkcje serwerowe generujące treści sprawdzają tożsamość i uprawnienia przed każdym wywołaniem. Klucze do usług zewnętrznych są przechowywane w zaszyfrowanym magazynie sekretów, nigdy w aplikacji na telefonie. Dostęp administracyjny ma wyłącznie administrator danych.</p>
   </section>
 
-  <section>
-    <h2 data-n="10">Zmiany Polityki</h2>
-    <p>O istotnych zmianach w Polityce Prywatności poinformujemy Cię przez powiadomienie w aplikacji lub e-mail. Data ostatniej aktualizacji jest zawsze widoczna na górze tego dokumentu.</p>
+  <section id="s13">
+    <h2 data-n="13">Dzieci</h2>
+    <p>Aplikacja jest przeznaczona dla osób, które ukończyły <strong>16 lat</strong>. Nie zbieramy świadomie danych osób młodszych. Jeśli uważasz, że dziecko poniżej tego wieku założyło konto, napisz do nas — usuniemy je.</p>
+  </section>
+
+  <section id="s14">
+    <h2 data-n="14">Zmiany Polityki</h2>
+    <p>O istotnych zmianach poinformujemy w aplikacji lub e-mailem przed ich wejściem w życie. Aktualna wersja i data są zawsze na górze tej strony. Poprzednia wersja (1.0, czerwiec 2025) nie obejmowała kont anonimowych, kotwicy urządzenia, rozpoznawania mowy, zdjęć produktów, powiadomień ani wspólnego katalogu przepisów — ta wersja opisuje te mechanizmy wprost.</p>
     <p>Pytania: <a href="mailto:support@snack-me-up.com">support@snack-me-up.com</a></p>
   </section>
-
 </main>
 
 <footer>
-  <span class="footer-brand">Snack Me Up</span>
+  <div class="footer-brand">snack me up</div>
   <div class="footer-links">
-    <a href="/snackmeup-web/terms/pl">Regulamin</a>
-    <a href="/snackmeup-web/privacy/pl">Prywatność</a>
+    <a href="/snackmeup-web/terms/pl/">Regulamin</a>
+    <a href="/snackmeup-web/privacy/pl/">Prywatność</a>
     <a href="mailto:support@snack-me-up.com">Kontakt</a>
   </div>
 </footer>

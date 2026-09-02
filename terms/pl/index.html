@@ -4,314 +4,168 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Regulamin — Snack Me Up</title>
+  <meta name="description" content="Regulamin aplikacji Snack Me Up: zasady korzystania, plan darmowy i Premium, treści generowane przez AI, odpowiedzialność.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --o: #FF6B35;
-      --ink: #111118;
-      --parchment: #FDF8F2;
-      --body: #47424F;
-      --muted: #9390A0;
-      --rule: rgba(17,17,24,0.08);
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--parchment);
-      color: var(--body);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 16px;
-      line-height: 1.75;
-    }
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(253,248,242,0.92);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--rule);
-      padding: 0 24px;
-      height: 56px;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .nav-brand {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 16px;
-      color: var(--ink);
-      text-decoration: none;
-      letter-spacing: -0.02em;
-    }
-    .nav-lang {
-      display: flex; gap: 8px;
-    }
-    .nav-lang a {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--muted);
-      text-decoration: none;
-      padding: 4px 10px;
-      border-radius: 100px;
-      border: 1px solid transparent;
-      transition: all 0.2s;
-    }
-    .nav-lang a.active {
-      color: var(--o);
-      border-color: rgba(255,107,53,0.3);
-      background: rgba(255,107,53,0.06);
-    }
-    .nav-lang a:hover:not(.active) { color: var(--ink); }
-    header {
-      border-bottom: 1px solid var(--rule);
-      padding: 64px 24px 48px;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-    .doc-type {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--o);
-      margin-bottom: 16px;
-    }
-    h1 {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: clamp(32px, 5vw, 48px);
-      color: var(--ink);
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-    .meta {
-      font-size: 14px;
-      color: var(--muted);
-    }
-    main {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 48px 24px 96px;
-    }
-    .intro-box {
-      background: rgba(255,107,53,0.06);
-      border-left: 3px solid var(--o);
-      border-radius: 0 12px 12px 0;
-      padding: 20px 24px;
-      margin-bottom: 48px;
-      font-size: 15px;
-      color: var(--body);
-    }
-    section {
-      margin-bottom: 48px;
-      padding-bottom: 48px;
-      border-bottom: 1px solid var(--rule);
-    }
-    section:last-child { border-bottom: none; }
-    h2 {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 20px;
-      color: var(--ink);
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    h2::before {
-      content: attr(data-n);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px; height: 28px;
-      background: var(--o);
-      color: white;
-      font-size: 12px;
-      font-weight: 800;
-      border-radius: 8px;
-      flex-shrink: 0;
-    }
-    p { margin-bottom: 16px; }
-    p:last-child { margin-bottom: 0; }
-    ul {
-      padding-left: 20px;
-      margin-bottom: 16px;
-    }
-    li { margin-bottom: 8px; }
-    strong { color: var(--ink); font-weight: 500; }
-    .highlight {
-      background: rgba(255,107,53,0.08);
-      border-radius: 8px;
-      padding: 16px 20px;
-      margin: 20px 0;
-      font-size: 15px;
-    }
-    a { color: var(--o); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    footer {
-      border-top: 1px solid var(--rule);
-      padding: 32px 24px;
-      max-width: 720px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .footer-brand {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 14px;
-      color: var(--ink);
-    }
-    .footer-links {
-      display: flex; gap: 20px;
-    }
-    .footer-links a {
-      font-size: 13px;
-      color: var(--muted);
-    }
-    @media (max-width: 600px) {
-      footer { flex-direction: column; align-items: flex-start; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/snackmeup-web/assets/legal.css">
 </head>
 <body>
 
 <nav>
-  <a class="nav-brand" href="/">Snack Me Up</a>
+  <a class="nav-brand" href="https://snack-me-up.com">snack me up<span>.</span></a>
   <div class="nav-lang">
-    <a href="/snackmeup-web/terms/pl" class="active">PL</a>
-    <a href="/snackmeup-web/terms/en">EN</a>
+    <a href="/snackmeup-web/terms/pl/" class="active">PL</a>
+    <a href="/snackmeup-web/terms/en/">EN</a>
   </div>
 </nav>
 
 <header>
   <div class="doc-type">Dokument prawny</div>
   <h1>Regulamin</h1>
-  <p class="meta">Ostatnia aktualizacja: czerwiec 2025 &nbsp;·&nbsp; Wersja 1.0</p>
+  <p class="meta">Ostatnia aktualizacja: 2 września 2026 &nbsp;·&nbsp; Wersja 2.0</p>
 </header>
 
 <main>
-
   <div class="intro-box">
-    Korzystając z aplikacji Snack Me Up, akceptujesz niniejszy Regulamin. Prosimy o uważne przeczytanie przed użyciem aplikacji.
+    Krótko: Snack Me Up podpowiada, co ugotować, na podstawie Twojego profilu. Przepisy tworzy sztuczna inteligencja, więc traktuj je jak propozycję kumpla, który zna się na gotowaniu — nie jak orzeczenie lekarza. Część funkcji jest darmowa, część wymaga subskrypcji Premium kupowanej przez App Store albo Google Play. Reszta poniżej.
   </div>
 
-  <section>
+  <div class="toc">
+    <ol>
+      <li><a href="#s1">Informacje ogólne</a></li>
+      <li><a href="#s2">Usługa i treści generowane przez AI</a></li>
+      <li><a href="#s3">Konto</a></li>
+      <li><a href="#s4">Plan darmowy i Premium</a></li>
+      <li><a href="#s5">Płatności, okres próbny, odnawianie</a></li>
+      <li><a href="#s6">Dozwolone korzystanie</a></li>
+      <li><a href="#s7">Własność intelektualna</a></li>
+      <li><a href="#s8">Odpowiedzialność</a></li>
+      <li><a href="#s9">Reklamacje i odstąpienie</a></li>
+      <li><a href="#s10">Prywatność</a></li>
+      <li><a href="#s11">Zmiany Regulaminu</a></li>
+      <li><a href="#s12">Prawo właściwe i kontakt</a></li>
+    </ol>
+  </div>
+
+  <section id="s1">
     <h2 data-n="1">Informacje ogólne</h2>
-    <p>Snack Me Up to aplikacja mobilna do generowania przepisów kulinarnych przy użyciu sztucznej inteligencji. Właścicielem i operatorem aplikacji jest:</p>
+    <p>Aplikację mobilną <strong>Snack Me Up</strong> (dalej: „aplikacja”) udostępnia <strong>Jarosław Przezdziecki</strong>, Polska (dalej: „my”, „usługodawca”). Kontakt: <a href="mailto:support@snack-me-up.com">support@snack-me-up.com</a>.</p>
+    <p>Regulamin określa zasady korzystania z aplikacji na iOS i Androidzie. Instalując aplikację lub korzystając z niej, zawierasz z nami umowę o świadczenie usługi drogą elektroniczną na warunkach opisanych poniżej. Jeśli się z nimi nie zgadzasz, nie korzystaj z aplikacji.</p>
+    <p>Aplikację pobierasz z App Store (Apple) albo Google Play (Google). Te sklepy mają własne regulaminy, które obowiązują Cię niezależnie od tego dokumentu — w szczególności w zakresie płatności i zwrotów.</p>
+  </section>
+
+  <section id="s2">
+    <h2 data-n="2">Usługa i treści generowane przez AI</h2>
+    <p>Aplikacja generuje i dobiera przepisy kulinarne, plany posiłków, listy zakupów oraz zdjęcia dań na podstawie Twojego profilu (alergie, sprzęt, preferencje, budżet, historia) i bieżącego kontekstu (pora dnia, zachcianka, zawartość lodówki). Treści te tworzy model sztucznej inteligencji, a aplikacja dodatkowo weryfikuje je pod kątem Twoich alergii i wykluczeń.</p>
     <div class="highlight">
-      <strong>Jarosław Przezdziecki</strong><br>
-      Polska<br>
-      Kontakt: <a href="mailto:support@snack-me-up.com">support@snack-me-up.com</a>
+      <strong>Treści AI mogą zawierać błędy.</strong> Ilości, czasy, temperatury, wartości odżywcze, a wyjątkowo także składniki mogą być nieprecyzyjne. Alergie z Twojego profilu traktujemy jako twarde ograniczenie, ale żadna technologia nie daje stuprocentowej gwarancji — <strong>zawsze czytaj etykiety produktów</strong> i stosuj zdrowy rozsądek, zwłaszcza przy alergiach zagrażających życiu.
     </div>
-    <p>Niniejszy Regulamin reguluje korzystanie z aplikacji mobilnej Snack Me Up dostępnej w App Store (iOS) oraz Google Play (Android).</p>
+    <p>Aplikacja <strong>nie jest</strong> poradą medyczną, dietetyczną ani wyrobem medycznym. Nie diagnozuje, nie leczy i nie zastępuje konsultacji z lekarzem ani dietetykiem. Podane wartości odżywcze są szacunkowe. Jeśli masz szczególne wymagania zdrowotne (ciąża, choroby przewlekłe, dieta lecznicza), skonsultuj przepisy ze specjalistą.</p>
+    <p>Wygenerowane przepisy mogą trafiać do wspólnego katalogu aplikacji — bez Twoich danych osobowych — i być proponowane innym użytkownikom. Możemy je dowolnie modyfikować, tłumaczyć i usuwać.</p>
+    <p>Aplikacja rozwija się. Możemy dodawać, zmieniać i wyłączać funkcje, tryby i modele AI. O zmianach istotnie ograniczających opłaconą funkcjonalność Premium poinformujemy z wyprzedzeniem.</p>
   </section>
 
-  <section>
-    <h2 data-n="2">Treści generowane przez AI</h2>
-    <p><strong>Przepisy w Snack Me Up są generowane przez sztuczną inteligencję (Google Gemini).</strong> Oznacza to, że:</p>
+  <section id="s3">
+    <h2 data-n="3">Konto</h2>
     <ul>
-      <li>Przepisy są tworzone automatycznie na podstawie Twoich preferencji, alergii i dostępnych składników.</li>
-      <li>Mimo że dokładamy wszelkich starań, by AI przestrzegało Twoich restrykcji żywieniowych, <strong>nie gwarantujemy 100% bezbłędności</strong> — zawsze sprawdź składniki przed przyrządzeniem posiłku.</li>
-      <li>Snack Me Up <strong>nie jest urządzeniem medycznym</strong> ani serwisem dietetycznym. Przepisy nie zastępują porady lekarza lub dietetyka.</li>
-      <li>Informacje o wartościach odżywczych (kalorie, makroskładniki) są szacunkowe i mogą odbiegać od rzeczywistości.</li>
-    </ul>
-    <div class="highlight">
-      ⚠️ Jeśli masz poważne alergie pokarmowe lub schorzenia wymagające diety specjalnej, skonsultuj każdy przepis ze specjalistą przed jego przyrządzeniem.
-    </div>
-  </section>
-
-  <section>
-    <h2 data-n="3">Konto użytkownika</h2>
-    <p>Aby w pełni korzystać z aplikacji, możesz zarejestrować konto przy użyciu:</p>
-    <ul>
-      <li>adresu e-mail i hasła,</li>
-      <li>konta Google,</li>
-      <li>konta Apple (Sign in with Apple).</li>
-    </ul>
-    <p>Jesteś odpowiedzialny za:</p>
-    <ul>
-      <li>zachowanie poufności danych logowania,</li>
-      <li>wszelkie działania wykonywane za pośrednictwem Twojego konta,</li>
-      <li>niezwłoczne powiadomienie nas o nieautoryzowanym dostępie do konta.</li>
-    </ul>
-    <p>Możesz usunąć konto w każdej chwili z poziomu ustawień profilu w aplikacji. Usunięcie konta jest nieodwracalne i powoduje trwałe usunięcie wszystkich Twoich danych.</p>
-  </section>
-
-  <section>
-    <h2 data-n="4">Subskrypcja i płatności</h2>
-    <p>Snack Me Up oferuje model freemium:</p>
-    <ul>
-      <li><strong>Plan Free:</strong> ograniczona liczba generowań przepisów miesięcznie.</li>
-      <li><strong>Trial (7 dni):</strong> pełen dostęp do wszystkich funkcji przez 7 dni bez opłat.</li>
-      <li><strong>Premium:</strong> pełen dostęp do wszystkich funkcji w ramach subskrypcji miesięcznej lub rocznej.</li>
-    </ul>
-    <p><strong>Płatności i odnowienia:</strong></p>
-    <ul>
-      <li>Płatności są przetwarzane przez App Store (Apple) lub Google Play — Snack Me Up nie przechowuje danych karty płatniczej.</li>
-      <li>Subskrypcja odnawia się automatycznie, chyba że zostanie anulowana co najmniej 24 godziny przed końcem bieżącego okresu rozliczeniowego.</li>
-      <li>Anulowanie jest możliwe w ustawieniach konta App Store lub Google Play.</li>
-      <li>Opłata za odnowienie jest pobierana w ciągu 24 godzin przed końcem bieżącego okresu.</li>
-    </ul>
-    <p>Możesz przywrócić zakupioną subskrypcję w sekcji Profil → Zarządzaj subskrypcją → Przywróć zakupy.</p>
-  </section>
-
-  <section>
-    <h2 data-n="5">Dozwolone korzystanie</h2>
-    <p>Korzystając z Snack Me Up, zobowiązujesz się:</p>
-    <ul>
-      <li>używać aplikacji wyłącznie zgodnie z jej przeznaczeniem (generowanie przepisów kulinarnych na użytek osobisty),</li>
-      <li>nie próbować obchodzić limitów bezpłatnego planu w sposób nieuczciwy,</li>
-      <li>nie używać aplikacji do celów komercyjnych bez naszej zgody,</li>
-      <li>nie podejmować prób inżynierii wstecznej ani modyfikowania aplikacji.</li>
+      <li>Z aplikacji możesz korzystać <strong>bez rejestracji</strong> na koncie anonimowym powiązanym z urządzeniem, albo zalogować się przez Apple, Google lub e-mail. Po zalogowaniu dane konta anonimowego są przenoszone na Twoje konto.</li>
+      <li>Musisz mieć ukończone <strong>16 lat</strong>. Zakładając konto, potwierdzasz, że spełniasz ten warunek.</li>
+      <li>Odpowiadasz za zabezpieczenie dostępu do swojego urządzenia i konta u dostawcy logowania.</li>
+      <li>Jedno konto to jedna osoba. Nie udostępniaj konta ani subskrypcji poza własnym gospodarstwem domowym w rozumieniu zasad Apple i Google.</li>
+      <li>Konto możesz usunąć w każdej chwili w aplikacji (Profil → Usuń konto). Usunięcie konta nie anuluje subskrypcji — tę anulujesz w sklepie (sekcja 5).</li>
+      <li>Możemy zablokować albo usunąć konto, które łamie Regulamin (sekcja 6), po uprzednim wezwaniu, chyba że naruszenie jest rażące.</li>
     </ul>
   </section>
 
-  <section>
-    <h2 data-n="6">Ograniczenie odpowiedzialności</h2>
-    <p>W maksymalnym zakresie dozwolonym przez prawo:</p>
+  <section id="s4">
+    <h2 data-n="4">Plan darmowy i Premium</h2>
+    <h3>Plan darmowy</h3>
     <ul>
-      <li>Snack Me Up jest dostarczany „w stanie takim, jakim jest" (as-is), bez jakichkolwiek gwarancji.</li>
-      <li>Nie ponosimy odpowiedzialności za szkody wynikające z nieprzestrzegania zaleceń alergicznych przez AI.</li>
-      <li>Nie ponosimy odpowiedzialności za przerwy w dostępności usługi wynikające z awarii infrastruktury zewnętrznej (Supabase, Google Gemini, App Store).</li>
-      <li>Nasza łączna odpowiedzialność wobec Ciebie nie przekroczy kwoty opłat uiszczonych przez Ciebie w ciągu ostatnich 12 miesięcy.</li>
+      <li>ograniczona liczba generowań przepisów w miesiącu kalendarzowym (aktualny limit widzisz na ekranie głównym; obecnie <strong>5</strong>), liczona na urządzenie i konto;</li>
+      <li>katalog ostatnich przepisów o ograniczonej pojemności;</li>
+      <li>przepisy bez zdjęć dań generowanych przez AI.</li>
+    </ul>
+    <h3>Premium</h3>
+    <ul>
+      <li>generowanie bez miesięcznego limitu, w granicach uczciwego użycia (dzienny sufit chroniący przed nadużyciem automatycznym; obecnie 45 generowań na dobę);</li>
+      <li>tryb <strong>Meal Prep</strong> — wielodniowe plany posiłków z listami zakupów;</li>
+      <li>zdjęcia dań, pełny katalog i historia gotowania;</li>
+      <li>wszystkie tryby generowania i funkcje oznaczone w aplikacji jako Premium.</li>
+    </ul>
+    <p>Limity możemy zmieniać; aktualne wartości pokazuje aplikacja. Zmiana limitów planu darmowego nie jest zmianą umowy odpłatnej.</p>
+  </section>
+
+  <section id="s5">
+    <h2 data-n="5">Płatności, okres próbny, odnawianie</h2>
+    <ul>
+      <li>Subskrypcję Premium kupujesz wyłącznie przez <strong>App Store</strong> albo <strong>Google Play</strong>. Płatność pobiera sklep na zasadach Twojego konta w sklepie. Nie mamy dostępu do danych Twojej karty.</li>
+      <li>Dostępne są plany <strong>miesięczny</strong> i <strong>roczny</strong>. Cena w Twojej walucie jest widoczna w aplikacji i w sklepie przed potwierdzeniem zakupu.</li>
+      <li><strong>Okres próbny:</strong> nowi subskrybenci mogą otrzymać 7-dniowy bezpłatny okres próbny (raz na konto w sklepie). Po jego zakończeniu subskrypcja przechodzi automatycznie w płatną, chyba że anulujesz ją co najmniej 24 godziny przed końcem okresu próbnego.</li>
+      <li><strong>Automatyczne odnawianie:</strong> subskrypcja odnawia się automatycznie na kolejny okres, a opłata jest pobierana w ciągu 24 godzin przed końcem bieżącego okresu, dopóki jej nie anulujesz.</li>
+      <li><strong>Anulowanie:</strong> w dowolnej chwili w ustawieniach subskrypcji App Store lub Google Play. Anulowanie działa od końca opłaconego okresu; do tego czasu zachowujesz dostęp do Premium.</li>
+      <li><strong>Przywracanie zakupów:</strong> po zmianie telefonu lub ponownej instalacji użyj „Przywróć zakup” w profilu aplikacji.</li>
+      <li><strong>Zwroty</strong> obsługuje sklep według swojej polityki (Apple: reportaproblem.apple.com; Google: Centrum pomocy Google Play). Nie mamy technicznej możliwości zwrotu środków pobranych przez sklep.</li>
+      <li>Ceny możemy zmieniać. Nowa cena obowiązuje od kolejnego okresu rozliczeniowego i tylko po tym, jak sklep Cię o niej powiadomi zgodnie ze swoimi zasadami — w wielu przypadkach wymaga to Twojej zgody.</li>
     </ul>
   </section>
 
-  <section>
-    <h2 data-n="7">Prywatność</h2>
-    <p>Przetwarzanie Twoich danych osobowych opisujemy szczegółowo w <a href="../../privacy/pl/">Polityce Prywatności</a>. Polityka Prywatności jest integralną częścią niniejszego Regulaminu.</p>
-  </section>
-
-  <section>
-    <h2 data-n="8">Zmiany Regulaminu</h2>
-    <p>Możemy aktualizować niniejszy Regulamin. O istotnych zmianach poinformujemy Cię przez:</p>
+  <section id="s6">
+    <h2 data-n="6">Dozwolone korzystanie</h2>
+    <p>Aplikacja służy do użytku osobistego, niekomercyjnego. Zabronione jest w szczególności:</p>
     <ul>
-      <li>powiadomienie w aplikacji,</li>
-      <li>e-mail (jeśli podałeś adres e-mail).</li>
+      <li>obchodzenie limitów generowań, w tym przez wiele kont anonimowych lub manipulację identyfikatorem urządzenia;</li>
+      <li>automatyczne odpytywanie usługi, scraping katalogu, masowe pobieranie przepisów lub zdjęć;</li>
+      <li>dekompilacja, inżynieria wsteczna, wyodrębnianie kluczy lub promptów, zakłócanie działania usługi;</li>
+      <li>wpisywanie w zachciankach treści bezprawnych, obraźliwych lub mających skłonić model do działania niezgodnego z jego przeznaczeniem;</li>
+      <li>odsprzedaż, wynajem lub udostępnianie dostępu Premium osobom trzecim;</li>
+      <li>używanie aplikacji w sposób naruszający prawo albo prawa osób trzecich.</li>
     </ul>
-    <p>Kontynuowanie korzystania z aplikacji po wejściu zmian w życie oznacza ich akceptację.</p>
   </section>
 
-  <section>
-    <h2 data-n="9">Prawo właściwe i kontakt</h2>
-    <p>Niniejszy Regulamin podlega prawu polskiemu. Wszelkie spory będą rozstrzygane przez sądy właściwe dla miejsca zamieszkania właściciela.</p>
-    <p>W przypadku pytań lub wątpliwości skontaktuj się z nami:</p>
-    <div class="highlight">
-      📧 <a href="mailto:support@snack-me-up.com">support@snack-me-up.com</a>
-    </div>
+  <section id="s7">
+    <h2 data-n="7">Własność intelektualna</h2>
+    <p>Aplikacja, jej nazwa, logo, interfejs, prompty, kod i baza przepisów należą do usługodawcy lub jego licencjodawców i są chronione prawem. Otrzymujesz ograniczoną, niewyłączną, nieprzenoszalną licencję na korzystanie z aplikacji na własnych urządzeniach zgodnie z Regulaminem.</p>
+    <p>Przepisy i plany wygenerowane w Twoim koncie możesz swobodnie wykorzystywać do celów osobistych: gotować, zapisywać, drukować, dzielić się nimi z bliskimi. Nie możesz publikować ich masowo jako własnej bazy ani sprzedawać. Przyjmujesz do wiadomości, że podobne przepisy mogą powstać także dla innych użytkowników i że treści AI mogą nie podlegać ochronie prawnoautorskiej.</p>
+    <p>Treści, które wpisujesz (zachcianki, nazwy domowników, notatki), pozostają Twoje. Udzielasz nam licencji na ich przetwarzanie wyłącznie w zakresie potrzebnym do działania usługi.</p>
   </section>
 
+  <section id="s8">
+    <h2 data-n="8">Odpowiedzialność</h2>
+    <p>Dokładamy starań, żeby aplikacja działała poprawnie i nieprzerwanie, ale świadczymy ją w modelu „taka, jaka jest”. Nie gwarantujemy, że każdy przepis się uda, że będzie odpowiadał Twoim oczekiwaniom smakowym ani że usługa będzie dostępna bez przerw — zależymy m.in. od dostawców modeli AI i infrastruktury.</p>
+    <p>W granicach dopuszczalnych prawem nie odpowiadamy za skutki przygotowania lub spożycia potraw według wygenerowanych przepisów, za utracone korzyści ani za szkody pośrednie. Nasza łączna odpowiedzialność wobec Ciebie ogranicza się do kwoty zapłaconej przez Ciebie za Premium w ciągu 12 miesięcy poprzedzających zdarzenie.</p>
+    <p>Powyższe ograniczenia <strong>nie wyłączają ani nie ograniczają</strong> odpowiedzialności, której nie można wyłączyć na mocy przepisów bezwzględnie obowiązujących — w szczególności odpowiedzialności wobec konsumentów za szkodę wyrządzoną umyślnie oraz uprawnień konsumenta z tytułu niezgodności treści cyfrowej z umową.</p>
+  </section>
+
+  <section id="s9">
+    <h2 data-n="9">Reklamacje i odstąpienie</h2>
+    <p><strong>Reklamacje</strong> dotyczące działania aplikacji kieruj na <a href="mailto:support@snack-me-up.com">support@snack-me-up.com</a>, opisując problem i podając adres e-mail konta. Odpowiadamy w ciągu 14 dni. Reklamacje dotyczące płatności rozpatruje sklep, w którym dokonano zakupu.</p>
+    <p><strong>Odstąpienie od umowy.</strong> Jeśli jesteś konsumentem, masz prawo odstąpić od umowy o dostarczenie treści cyfrowych w ciągu 14 dni bez podania przyczyny. Rozpoczynając korzystanie z funkcji Premium przed upływem tego terminu, wyrażasz zgodę na natychmiastowe rozpoczęcie świadczenia i przyjmujesz do wiadomości, że w zakresie już spełnionego świadczenia prawo odstąpienia wygasa. Zwrot środków pobranych przez App Store lub Google Play realizuje ten sklep według własnych zasad.</p>
+    <p>Konsument może skorzystać z pozasądowych sposobów rozpatrywania reklamacji, m.in. za pośrednictwem powiatowego (miejskiego) rzecznika konsumentów lub Inspekcji Handlowej. Informacje: <a href="https://uokik.gov.pl" target="_blank" rel="noopener">uokik.gov.pl</a>.</p>
+  </section>
+
+  <section id="s10">
+    <h2 data-n="10">Prywatność</h2>
+    <p>Zasady przetwarzania danych osobowych opisuje <a href="/snackmeup-web/privacy/pl/">Polityka Prywatności</a>, która stanowi część tej umowy. Znajdziesz tam m.in. informację o tym, co trafia do modelu AI, jak działa konto anonimowe i jak usunąć wszystkie dane.</p>
+  </section>
+
+  <section id="s11">
+    <h2 data-n="11">Zmiany Regulaminu</h2>
+    <p>Możemy zmieniać Regulamin z ważnych przyczyn: zmiana prawa, nowe funkcje, zmiana dostawców, względy bezpieczeństwa. O zmianach istotnych poinformujemy w aplikacji lub e-mailem co najmniej 14 dni przed ich wejściem w życie. Jeśli nie akceptujesz zmian, możesz wypowiedzieć umowę, usuwając konto i anulując subskrypcję przed datą wejścia zmian w życie. Dalsze korzystanie po tej dacie oznacza akceptację.</p>
+  </section>
+
+  <section id="s12">
+    <h2 data-n="12">Prawo właściwe i kontakt</h2>
+    <p>Regulamin podlega prawu polskiemu. Jeśli jesteś konsumentem mieszkającym w innym państwie Unii Europejskiej, zachowujesz ochronę wynikającą z bezwzględnie obowiązujących przepisów Twojego kraju. Spory rozstrzyga sąd właściwy według przepisów ogólnych.</p>
+    <p>Jeśli którekolwiek postanowienie okaże się nieważne, pozostałe zachowują moc. Regulamin jest dostępny po polsku i po angielsku; w razie rozbieżności dla użytkowników z Polski wiążąca jest wersja polska.</p>
+    <p>Kontakt: <a href="mailto:support@snack-me-up.com">support@snack-me-up.com</a></p>
+  </section>
 </main>
 
 <footer>
-  <span class="footer-brand">Snack Me Up</span>
+  <div class="footer-brand">snack me up</div>
   <div class="footer-links">
-    <a href="/snackmeup-web/terms/pl">Regulamin</a>
-    <a href="/snackmeup-web/privacy/pl">Prywatność</a>
+    <a href="/snackmeup-web/terms/pl/">Regulamin</a>
+    <a href="/snackmeup-web/privacy/pl/">Prywatność</a>
     <a href="mailto:support@snack-me-up.com">Kontakt</a>
   </div>
 </footer>
