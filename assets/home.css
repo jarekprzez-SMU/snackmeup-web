@@ -1,0 +1,35 @@
+/* snack me up — strona główna. Dokłada się do assets/legal.css i NIE definiuje
+   własnych kolorów ani krojów: tokeny --o / --ink / --parchment / --body / --muted
+   pochodzą z legal.css, a te z lib/theme.ts aplikacji (E_MASTER §7). */
+
+.hero { max-width: 720px; margin: 0 auto; padding: 88px 24px 56px; }
+.hero .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--o); margin-bottom: 16px; }
+.hero h1 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: clamp(36px, 6vw, 56px); color: var(--ink); letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 20px; }
+.hero .lead { font-size: 19px; line-height: 1.6; color: var(--ink); margin-bottom: 16px; }
+.hero .sub { font-size: 16px; color: var(--body); max-width: 60ch; }
+
+.stores { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 36px; }
+.store-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--ink); color: var(--parchment); font-weight: 500; font-size: 15px; padding: 13px 22px; border-radius: 100px; text-decoration: none; transition: transform 0.15s ease, opacity 0.15s ease; }
+.store-btn:hover { text-decoration: none; opacity: 0.88; transform: translateY(-1px); }
+.store-btn svg { flex-shrink: 0; }
+.store-soon { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); padding: 13px 4px; }
+.store-soon::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--o); opacity: 0.55; flex-shrink: 0; }
+
+.modes { max-width: 720px; margin: 0 auto; padding: 0 24px 40px; }
+.modes h2 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 21px; color: var(--ink); letter-spacing: -0.02em; margin-bottom: 24px; display: block; }
+/* legal.css dokleja do h2 numer sekcji (h2::before z data-n). Strona glowna nie ma
+   numerowanych sekcji, wiec bez tego zostaje pusty pomaranczowy kwadrat. */
+.modes h2::before { content: none; display: none; }
+.mode-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.mode { background: var(--parchment-mid); border-radius: 16px; padding: 22px 24px; }
+.mode .name { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 16px; color: var(--ink); margin-bottom: 6px; }
+.mode .desc { font-size: 15px; color: var(--body); line-height: 1.55; }
+
+.closing { max-width: 720px; margin: 0 auto; padding: 16px 24px 96px; }
+.closing .note { background: rgba(255,107,53,0.06); border-left: 3px solid var(--o); border-radius: 0 12px 12px 0; padding: 20px 24px; font-size: 15px; }
+
+@media (max-width: 600px) {
+  .hero { padding: 56px 24px 40px; }
+  .mode-grid { grid-template-columns: 1fr; }
+  .stores { gap: 10px; }
+}
