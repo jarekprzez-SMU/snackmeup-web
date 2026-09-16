@@ -22,7 +22,7 @@
 <header>
   <div class="doc-type">Legal document</div>
   <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: 2 September 2026 &nbsp;·&nbsp; Version 2.0</p>
+  <p class="meta">Last updated: 16 September 2026 &nbsp;·&nbsp; Version 2.1</p>
 </header>
 
 <main>
@@ -105,6 +105,11 @@
           <td>App version, operating system, request timestamps, IP address in short-lived infrastructure logs, AI usage counters (not linked to a user), error records.</td>
           <td>Automatically</td>
         </tr>
+        <tr>
+          <td><strong>Usage analytics</strong></td>
+          <td>Events describing the path through the app only: which setup step was shown, opening the sign-in screen and its outcome (method and error code &mdash; <strong>never your password</strong>), leaving the waiting screen before a recipe is ready. Each event carries a random installation identifier, a session identifier, the platform, app version, language and a timestamp. <strong>We use no third-party analytics SDKs</strong> &mdash; events go only to our own infrastructure. They contain no recipe text, no cravings, no photos and nothing from your cooking profile.</td>
+          <td>Automatically, while you use the app</td>
+        </tr>
       </tbody>
     </table>
     </div>
@@ -127,6 +132,7 @@
         <tr><td>Push reminders</td><td>notification token</td><td>consent — Art. 6(1)(a)</td></tr>
         <tr><td>Adapting ingredient availability to your region</td><td>country or region</td><td>contract — Art. 6(1)(b); consent for a one-off location read</td></tr>
         <tr><td>Security, error diagnostics, AI cost control</td><td>technical data</td><td>legitimate interest — Art. 6(1)(f)</td></tr>
+        <tr><td>Seeing which setup or sign-in step people stop at, and fixing those places</td><td>usage analytics</td><td>legitimate interest — Art. 6(1)(f)</td></tr>
         <tr><td>Answering your messages and handling your rights</td><td>email, message content</td><td>legal obligation — Art. 6(1)(c); legitimate interest</td></tr>
       </tbody>
     </table>
@@ -202,6 +208,7 @@
       <li><strong>Free allowance counter</strong> tied to the device anchor: counted in monthly cycles and overwritten each month.</li>
       <li><strong>Subscription data:</strong> for the subscription term plus the period required for accounting and complaint handling.</li>
       <li><strong>Infrastructure logs</strong> (including IP address): up to 30 days.</li>
+      <li><strong>Usage analytics:</strong> events are kept, but deleting your account <strong>clears the account identifier inside them</strong> &mdash; only the random installation identifier remains, and it points to no person. They hold none of the text you typed.</li>
       <li><strong>Recipes in the shared catalogue:</strong> indefinitely, as anonymous content not linked to you.</li>
       <li><strong>Support correspondence:</strong> up to 3 years after the case is closed, for potential claims.</li>
     </ul>
@@ -232,7 +239,8 @@
   <section id="s11">
     <h2 data-n="11">Advertising and tracking</h2>
     <p>Snack Me Up <strong>shows no ads</strong>, contains no third-party advertising or analytics SDKs, and does not track you across other apps or websites. We do not use the advertising identifier (IDFA / GAID). The app is funded solely by subscriptions.</p>
-    <p>If we ever add an error-monitoring or anonymous usage-analytics tool, we will update this document before enabling it and — where the law requires — ask for your consent.</p>
+    <p>From version <strong>1.0.1</strong> we measure <strong>our own, anonymous usage analytics</strong>, described in section 2: we want to know which setup or sign-in step people stop at. The events never leave our infrastructure, are not combined with any advertising profile, and are neither sold nor shared with anyone.</p>
+    <p>If we ever add a <strong>third-party</strong> analytics or error-monitoring tool, we will update this document before enabling it and — where the law requires — ask for your consent.</p>
   </section>
 
   <section id="s12">

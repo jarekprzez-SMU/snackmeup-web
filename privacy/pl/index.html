@@ -22,7 +22,7 @@
 <header>
   <div class="doc-type">Dokument prawny</div>
   <h1>Polityka Prywatności</h1>
-  <p class="meta">Ostatnia aktualizacja: 2 września 2026 &nbsp;·&nbsp; Wersja 2.0</p>
+  <p class="meta">Ostatnia aktualizacja: 16 września 2026 &nbsp;·&nbsp; Wersja 2.1</p>
 </header>
 
 <main>
@@ -105,6 +105,11 @@
           <td>Wersja aplikacji, system operacyjny, znaczniki czasu żądań, adres IP w krótkotrwałych logach infrastruktury, liczniki zużycia modeli AI (bez powiązania z użytkownikiem), zapisy błędów.</td>
           <td>Automatycznie</td>
         </tr>
+        <tr>
+          <td><strong>Analityka użycia</strong></td>
+          <td>Zdarzenia opisujące samą ścieżkę przez aplikację: który krok konfiguracji został pokazany, otwarcie ekranu logowania i jego wynik (metoda oraz kod błędu — <strong>nigdy hasło</strong>), wyjście z ekranu oczekiwania przed gotowym przepisem. Do każdego zdarzenia dopisujemy losowy identyfikator instalacji, identyfikator sesji, platformę, wersję aplikacji, język i znacznik czasu. <strong>Nie korzystamy z zestawów SDK analitycznych firm trzecich</strong> — zdarzenia trafiają wyłącznie na naszą własną infrastrukturę. Nie ma w nich treści przepisów, zachcianek, zdjęć ani danych z profilu kulinarnego.</td>
+          <td>Automatycznie, w trakcie korzystania</td>
+        </tr>
       </tbody>
     </table>
     </div>
@@ -127,6 +132,7 @@
         <tr><td>Przypomnienia push</td><td>token powiadomień</td><td>zgoda — art. 6 ust. 1 lit. a</td></tr>
         <tr><td>Dostosowanie dostępności składników do regionu</td><td>kraj lub region</td><td>umowa — art. 6 ust. 1 lit. b; zgoda na jednorazowy odczyt lokalizacji</td></tr>
         <tr><td>Bezpieczeństwo, diagnostyka błędów, kontrola kosztów AI</td><td>dane techniczne</td><td>uzasadniony interes — art. 6 ust. 1 lit. f</td></tr>
+        <tr><td>Sprawdzenie, na którym kroku konfiguracji albo logowania ludzie się zatrzymują, i poprawianie tych miejsc</td><td>analityka użycia</td><td>uzasadniony interes — art. 6 ust. 1 lit. f</td></tr>
         <tr><td>Odpowiadanie na Twoje wiadomości i realizacja praw</td><td>e-mail, treść wiadomości</td><td>obowiązek prawny — art. 6 ust. 1 lit. c; uzasadniony interes</td></tr>
       </tbody>
     </table>
@@ -202,6 +208,7 @@
       <li><strong>Licznik darmowego limitu</strong> powiązany z kotwicą urządzenia: liczony w cyklach miesięcznych i nadpisywany co miesiąc.</li>
       <li><strong>Dane subskrypcji:</strong> przez czas subskrypcji i okres wymagany do rozliczeń oraz obsługi reklamacji.</li>
       <li><strong>Logi techniczne infrastruktury</strong> (w tym adres IP): do 30 dni.</li>
+      <li><strong>Analityka użycia:</strong> zdarzenia przechowujemy dalej, ale usunięcie konta <strong>kasuje w nich identyfikator konta</strong> — zostaje wyłącznie losowy identyfikator instalacji, po którym nie da się wskazać osoby. Nie zawierają żadnej treści, którą wpisałeś.</li>
       <li><strong>Przepisy we wspólnym katalogu:</strong> bezterminowo, jako treść anonimowa bez powiązania z Tobą.</li>
       <li><strong>Korespondencja z pomocą:</strong> do 3 lat od zamknięcia sprawy, na potrzeby ewentualnych roszczeń.</li>
     </ul>
@@ -232,7 +239,8 @@
   <section id="s11">
     <h2 data-n="11">Reklamy i śledzenie</h2>
     <p>Snack Me Up <strong>nie wyświetla reklam</strong>, nie zawiera zestawów SDK reklamowych ani analitycznych firm trzecich i nie śledzi Cię w innych aplikacjach ani na stronach internetowych. Nie używamy identyfikatora reklamowego (IDFA / GAID). Aplikacja finansuje się wyłącznie z subskrypcji.</p>
-    <p>Jeśli w przyszłości dodamy narzędzie do monitorowania błędów lub anonimowej analityki użycia, zaktualizujemy ten dokument przed jego uruchomieniem i — tam, gdzie prawo tego wymaga — zapytamy Cię o zgodę.</p>
+    <p>Od wersji <strong>1.0.1</strong> mierzymy <strong>własną, anonimową analitykę użycia</strong> opisaną w sekcji 2: chcemy wiedzieć, na którym kroku konfiguracji albo logowania ludzie się zatrzymują. Zdarzenia nie opuszczają naszej infrastruktury, nie są łączone z żadnym profilem reklamowym i nie są nikomu sprzedawane ani udostępniane.</p>
+    <p>Jeśli kiedykolwiek dodamy narzędzie analityczne albo do monitorowania błędów <strong>firmy trzeciej</strong>, zaktualizujemy ten dokument przed jego uruchomieniem i — tam, gdzie prawo tego wymaga — zapytamy Cię o zgodę.</p>
   </section>
 
   <section id="s12">
