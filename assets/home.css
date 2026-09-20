@@ -19,6 +19,19 @@ body.home { overflow-x: clip; }
 .eyebrow { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--o); margin-bottom: 14px; }
 .lede { font-size: clamp(17px, 1.6vw, 19px); line-height: 1.65; max-width: 56ch; }
 
+/* ---------- odznaka z ikoną: kółko 44px, wariant sm 36px, ciemne tło i karty trybów mają własny kolor ---------- */
+.ico { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: var(--o-lo); color: var(--o); flex: none; }
+.ico svg { width: 22px; height: 22px; }
+.ico.sm { width: 36px; height: 36px; }
+.ico.sm svg { width: 18px; height: 18px; }
+.knows .ico { background: rgba(255,107,53,0.16); color: var(--o-hi); }
+.mode .ico { background: color-mix(in srgb, var(--mc) 18%, transparent); color: var(--mc); }
+
+/* ---------- czipy: pigułki z małą ikoną, kolor ikony zawsze --o ---------- */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.chips li { display: inline-flex; align-items: center; gap: 6px; box-shadow: inset 0 0 0 1px var(--rule); background: var(--parchment); border-radius: 100px; padding: 6px 14px; font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 14px; color: var(--ink); }
+.chips li svg { width: 16px; height: 16px; color: var(--o); flex: none; }
+
 /* ---------- nav ---------- */
 .nav-links { display: none; gap: 28px; }
 .nav-links a { font-size: 14px; font-weight: 500; color: var(--body); text-decoration: none; }
@@ -36,7 +49,7 @@ body.home { overflow-x: clip; }
 .hero-grid { display: grid; gap: 56px; align-items: center; }
 .hero .tagline { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; letter-spacing: -0.01em; color: var(--o); margin-bottom: 18px; }
 .hero h1 { font-size: clamp(40px, 6.4vw, 72px); line-height: 1.02; letter-spacing: -0.035em; margin-bottom: 24px; text-wrap: balance; }
-.hero .lead { font-size: clamp(18px, 1.9vw, 21px); line-height: 1.5; color: var(--ink); margin-bottom: 14px; max-width: 34ch; }
+.hero .lead { font-size: clamp(18px, 1.9vw, 21px); line-height: 1.5; color: var(--ink); margin-bottom: 14px; max-width: 40ch; }
 .hero .sub { font-size: 16px; color: var(--body); max-width: 54ch; }
 .hero-visual { position: relative; display: grid; place-items: center; min-height: 600px; }
 .hero-visual .plate { position: absolute; z-index: 0; width: min(430px, 116vw); height: auto; aspect-ratio: 1; border-radius: 50%; object-fit: cover; left: 50%; top: 50%; transform: translate(-16%, -62%); box-shadow: 0 30px 60px -30px rgba(17,17,24,0.35); }
@@ -60,18 +73,24 @@ body.home { overflow-x: clip; }
 
 /* ---------- 2. problem ---------- */
 .problem { background: var(--parchment-mid); }
-.problem .wrap { max-width: 800px; }
-.problem p { font-size: clamp(18px, 2vw, 22px); line-height: 1.6; color: var(--ink); }
-.problem p + p { margin-top: 22px; color: var(--body); }
+.problem-head { max-width: 800px; }
+.problem-grid { display: grid; gap: 20px; margin-top: 40px; }
+.problem-card { background: var(--parchment); border-radius: 28px; padding: 28px; }
+.problem-card h3 { font-size: 20px; margin: 18px 0 8px; }
+.problem-card p { font-size: 16px; color: var(--body); }
+.problem-close { margin-top: 40px; max-width: 800px; font-size: clamp(18px, 2vw, 22px); line-height: 1.6; color: var(--ink); }
+@media (min-width: 760px) { .problem-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 /* ---------- 3. jak to działa ---------- */
 .how-head { max-width: 640px; margin-bottom: clamp(40px, 6vw, 72px); }
 .steps { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 24px; margin-inline: -24px; padding: 8px 24px 28px; scrollbar-width: none; }
 .steps::-webkit-scrollbar { display: none; }
-.step { flex: 0 0 min(76vw, 300px); scroll-snap-align: start; display: flex; flex-direction: column; }
+.step { flex: 0 0 min(84vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; }
 .step-copy { margin-bottom: 28px; }
 .step .phone { --pw: min(68vw, 264px); margin-top: auto; }
-.step .when { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--o); margin-bottom: 10px; }
+.step-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.step-no { width: 36px; height: 36px; border-radius: 50%; background: var(--o); color: var(--parchment); font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; display: flex; align-items: center; justify-content: center; flex: none; }
+.step .when { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--o); margin: 0; }
 .step h3 { font-size: clamp(21px, 2.4vw, 30px); line-height: 1.15; color: var(--ink); margin-bottom: 12px; text-wrap: balance; }
 .step p { font-size: 16px; max-width: 44ch; }
 .stage { display: none; }
@@ -83,8 +102,10 @@ body.home { overflow-x: clip; }
 
   /* ze skryptem: telefon stoi, ekran zmienia się z krokiem */
   .how.is-sticky .how-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; }
-  .how.is-sticky .steps { display: block; }
-  .how.is-sticky .step { min-height: 74vh; justify-content: center; opacity: 0.28; transition: opacity 0.35s ease; }
+  .how.is-sticky .steps { display: block; position: relative; padding-left: 28px; }
+  .how.is-sticky .steps::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; border-radius: 2px; background: var(--rule); }
+  .how.is-sticky .steps::after { content: ''; position: absolute; left: 0; top: 0; width: 2px; border-radius: 2px; background: var(--o); height: calc((var(--active, 0) + 1) / 3 * 100%); transition: height 0.4s ease; }
+  .how.is-sticky .step { min-height: 64vh; justify-content: center; opacity: 0.35; transition: opacity 0.35s ease; }
   .how.is-sticky .step.is-active { opacity: 1; }
   .how.is-sticky .step .phone { display: none; }
   .how.is-sticky .step-copy { margin-bottom: 0; }
@@ -114,10 +135,30 @@ body.home { overflow-x: clip; }
 .mode p.more { margin-top: 12px; font-size: 15px; line-height: 1.6; max-width: 46ch; }
 .mode--chef .mode-body { position: relative; z-index: 1; max-width: 30rem; }
 .mode-plate { position: absolute; z-index: 0; width: min(230px, 62%); height: auto; aspect-ratio: 1; border-radius: 50%; object-fit: cover; right: -40px; top: -48px; }
+
+/* kafelki Smaczek/Spontan wewnątrz karty AI Chef */
+.chef-tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; position: relative; z-index: 1; }
+.chef-tile { background: rgba(253,248,242,0.06); border-radius: 20px; padding: 20px; }
+.chef-tile-name { font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--parchment); margin-top: 12px; }
+.chef-tile-desc { font-size: 15px; line-height: 1.5; margin-top: 4px; }
+
+/* podgląd telefonu na dole kart trybów, ucięty dolną krawędzią karty */
+.mode-preview { display: flex; justify-content: center; margin-top: 24px; }
+.mode-preview .phone { --pw: 220px; margin-bottom: -50px; }
+
 @media (min-width: 900px) {
-  .mode-grid { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); grid-template-rows: repeat(3, auto); }
-  .mode--chef { grid-row: 1 / span 3; padding: 44px; }
+  .mode-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .mode--chef { grid-column: 1 / -1; padding: 44px; }
   .mode-plate { width: 380px; right: -70px; top: -60px; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .mode--hero, .mode--sweet, .mode--prep { transition: transform 0.2s ease; }
+  .mode--hero:hover, .mode--sweet:hover, .mode--prep:hover { transform: translateY(-3px); }
+  .mode-preview .phone { transition: transform 0.25s ease; }
+  .mode--hero:hover .mode-preview .phone,
+  .mode--sweet:hover .mode-preview .phone,
+  .mode--prep:hover .mode-preview .phone { transform: translateY(-8px); }
 }
 
 /* ---------- 5. zna Cię: ciemne pasmo ---------- */
@@ -125,7 +166,7 @@ body.home { overflow-x: clip; }
 .knows h2 { color: var(--parchment); max-width: 18ch; }
 .knows-grid { display: grid; gap: 48px; align-items: center; }
 .checks { margin-top: 36px; }
-.check { padding: 26px 0; border-top: 1px solid rgba(253,248,242,0.12); }
+.check { display: grid; grid-template-columns: 44px 1fr; gap: 18px; align-items: start; padding: 26px 0; border-top: 1px solid rgba(253,248,242,0.12); }
 .check:last-child { border-bottom: 1px solid rgba(253,248,242,0.12); }
 .check h3 { font-size: 21px; line-height: 1.2; color: var(--parchment); margin-bottom: 8px; }
 .check p { font-size: 16px; max-width: 52ch; }
@@ -140,7 +181,7 @@ body.home { overflow-x: clip; }
 .plans { display: grid; gap: 16px; }
 .plan { border-radius: 28px; padding: 32px; background: var(--parchment-mid); }
 .plan--premium { background: var(--o-lo); box-shadow: inset 0 0 0 1.5px rgba(255,107,53,0.28); }
-.plan h3 { font-size: 26px; color: var(--ink); margin-bottom: 20px; }
+.plan h3 { display: flex; align-items: center; gap: 12px; font-size: 26px; color: var(--ink); margin-bottom: 20px; }
 .plan li { position: relative; padding: 12px 0 12px 22px; border-top: 1px solid var(--rule); font-size: 16px; line-height: 1.55; color: var(--ink); }
 .plan li::before { content: ''; position: absolute; left: 0; top: 23px; width: 10px; height: 2px; border-radius: 2px; background: var(--o); }
 .plan li small { display: block; font-size: 14px; color: var(--body); }
@@ -152,10 +193,18 @@ body.home { overflow-x: clip; }
 
 /* ---------- 7. od autora: inny głos, więc inna forma — list, nie sekcja produktu ---------- */
 .maker { background: var(--parchment-mid); }
-.maker .wrap { max-width: 760px; }
+.maker .wrap { max-width: 920px; }
+.maker-copy { max-width: 720px; }
+.maker h2 { font-size: clamp(26px, 3.4vw, 36px); margin-bottom: 22px; }
 .maker-label { font-size: 13px; font-weight: 500; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 18px; }
 .maker p.letter { font-size: clamp(18px, 1.9vw, 20px); line-height: 1.7; color: var(--ink); }
+.maker .letter + .letter { margin-top: 18px; }
 .maker .sign { margin-top: 22px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 16px; color: var(--ink); }
+.maker-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
+.maker-tile { background: var(--parchment); border-radius: 20px; padding: 22px; }
+.maker-tile h3 { font-size: 17px; margin: 14px 0 6px; }
+.maker-tile p { font-size: 15px; color: var(--body); }
+@media (min-width: 760px) { .maker-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
 /* ---------- 8. zamknięcie ---------- */
 .get { padding-block: clamp(56px, 8vw, 96px) 0; }
@@ -182,12 +231,22 @@ body.home { overflow-x: clip; }
   .hero-visual .phone { animation: settle 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
   .hero-visual .plate { animation: plate-in 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
   @supports (animation-timeline: view()) {
-    .rise { animation: rise linear both; animation-timeline: view(); animation-range: entry 0% entry 38%; }
+    .rise { animation: rise linear both; animation-timeline: view(); animation-range: entry 0% entry 38%; animation-delay: calc(var(--i, 0) * 80ms); }
   }
+  /* ikony w odznakach: delikatny ruch na hover, subtelnie i krótko */
+  .ico svg { transition: transform 0.5s ease; }
+  .ico[data-spin="repeat"]:hover svg { transform: rotate(180deg); }
+  .ico[data-spin="tick"]:hover svg { animation: tick 0.6s ease 1; }
 }
 @keyframes settle { from { opacity: 0; transform: translateX(-9%) translateY(28px); } to { opacity: 1; transform: translateX(-9%); } }
 @keyframes plate-in { from { opacity: 0; transform: translate(-16%, -62%) scale(0.94) rotate(-8deg); } to { opacity: 1; transform: translate(-16%, -62%); } }
 @keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+@keyframes tick { 0% { transform: rotate(0); } 35% { transform: rotate(20deg); } 65% { transform: rotate(-8deg); } 100% { transform: rotate(0); } }
+
+/* zapasowe wejście .rise dla przeglądarek bez animation-timeline: view() (home.js dodaje html.io-rise) */
+html.io-rise .rise { opacity: 0; transform: translateY(26px); transition: opacity 0.6s ease calc(var(--i, 0) * 80ms), transform 0.6s ease calc(var(--i, 0) * 80ms); }
+html.io-rise .rise.is-in { opacity: 1; transform: none; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .phone .screens img { transition: none; }

@@ -15,6 +15,7 @@
 
   function activate(index) {
     stage.setAttribute('data-active', index);
+    how.style.setProperty('--active', index);
     steps.forEach(function (step, i) { step.classList.toggle('is-active', i === index); });
   }
 
@@ -45,4 +46,19 @@
   wide.addEventListener('change', sync);
   still.addEventListener('change', sync);
   sync();
+})();
+
+/* zapasowe wejście .rise dla przeglądarek bez animation-timeline: view() —
+   poza Chromium elementy startują ukryte i dostają .is-in przy wejściu w kadr. */
+(function () {
+  var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)');
+  if ((still && still.matches) || !('IntersectionObserver' in window)) return;
+  if (window.CSS && CSS.supports && CSS.supports('animation-timeline', 'view()')) return;
+  document.documentElement.classList.add('io-rise');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.rise').forEach(function (el) { io.observe(el); });
 })();

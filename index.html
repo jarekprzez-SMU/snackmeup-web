@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Snack Me Up — aplikacja, która decyduje, co ugotować</title>
-  <meta name="description" content="Snack Me Up decyduje za Ciebie, co ugotować. Zna Twoje alergie, sprzęt w kuchni i to, co jadłeś ostatnio.">
+  <title>Snack Me Up — osobisty szef kuchni, który wie, co dziś ugotować</title>
+  <meta name="description" content="Snack Me Up to osobisty szef kuchni w telefonie. Zna Twój smak, alergie i sprzęt w kuchni i na pytanie „co dziś zjemy?” odpowiada jednym przepisem ułożonym pod Ciebie.">
   <link rel="canonical" href="https://jarekprzez-smu.github.io/snackmeup-web/">
   <link rel="icon" type="image/png" sizes="32x32" href="/snackmeup-web/assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/snackmeup-web/assets/favicon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/snackmeup-web/assets/apple-touch-icon.png">
   <meta name="theme-color" content="#FDF8F2">
   <meta property="og:title" content="Snack Me Up — Nie wiesz, co ugotować? Ja wiem.">
-  <meta property="og:description" content="Aplikacja, która decyduje za Ciebie, co ugotować.">
+  <meta property="og:description" content="Osobisty szef kuchni w telefonie. Jeden przepis, ułożony pod Ciebie.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jarekprzez-smu.github.io/snackmeup-web/">
   <meta property="og:site_name" content="Snack Me Up">
@@ -20,7 +20,7 @@
   <meta property="og:image" content="https://jarekprzez-smu.github.io/snackmeup-web/assets/og-pl.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Snack Me Up — aplikacja, która decyduje, co ugotować">
+  <meta property="og:image:alt" content="Snack Me Up — osobisty szef kuchni, który wie, co ugotować">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://jarekprzez-smu.github.io/snackmeup-web/assets/og-pl.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,8 +50,8 @@
     <div class="hero-copy">
       <p class="tagline">Dinner, decided.</p>
       <h1>Nie wiesz, co ugotować?<br>Ja wiem.</h1>
-      <p class="lead">Snack Me Up to aplikacja, która decyduje za Ciebie, co ugotować.</p>
-      <p class="sub">Żeby robić to dobrze, zna Twoje alergie, sprzęt w kuchni i to, co jadłeś ostatnio. Nie zaproponuje Ci drugi raz tego samego dania w tygodniu i nie wyśle Cię po składnik, którego nie kupisz w swoim sklepie.</p>
+      <p class="lead">Snack Me Up to Twój osobisty szef kuchni w telefonie. Zna Twój smak i na każde „co dziś zjemy?” odpowiada jednym przepisem ułożonym pod Ciebie.</p>
+      <p class="sub">Pamięta o Twoich alergiach i diecie, wie, jaki sprzęt masz w kuchni i których składników nie lubisz. Pilnuje, żeby to samo danie nie wracało dwa razy w tygodniu, i dobiera składniki, które kupisz tam, gdzie robisz zakupy.</p>
 
       <div class="stores">
         <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.jarekpe.snackmeup">
@@ -76,10 +76,29 @@
 </section>
 
 <section class="problem band">
-  <div class="wrap rise">
-    <h2>Codziennie to samo pytanie.</h2>
-    <p>Trzy karty z przepisami, pół godziny przewijania, w końcu coś wygląda dobrze. Potem lista składników, a na niej coś, czego osiedlowy sklep nigdy nie widział. Kończy się makaronem z serem, znowu.</p>
-    <p>Wymyślanie zajmuje więcej głowy niż samo gotowanie. Tę część biorę na siebie.</p>
+  <div class="wrap">
+    <div class="problem-head rise">
+      <h2>„Co dziś zjemy?” To pytanie wraca codziennie.</h2>
+      <p class="lede">Otwierasz lodówkę, potem telefon, i zaczyna się to samo co wczoraj.</p>
+    </div>
+    <div class="problem-grid">
+      <article class="problem-card rise" style="--i:0">
+        <span class="ico" data-spin="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>
+        <h3>Pół godziny szukania</h3>
+        <p>Przeglądasz przepisy w internecie i każdy wygląda podobnie. Czas mija, a decyzji nadal nie ma.</p>
+      </article>
+      <article class="problem-card rise" style="--i:1">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16l-1.4 8.4a2 2 0 0 1-2 1.6H7.4a2 2 0 0 1-2-1.6L4 8Z"/><path d="M8.5 8V6.5a3.5 3.5 0 0 1 7 0V8"/><path d="M5 5l14 14"/></svg></span>
+        <h3>Składnik, którego nie kupisz</h3>
+        <p>Wreszcie coś wygląda dobrze, ale w przepisie jest produkt, którego w sklepie pod domem raczej nie dostaniesz.</p>
+      </article>
+      <article class="problem-card rise" style="--i:2">
+        <span class="ico" data-spin="repeat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l4 4-4 4"/><path d="M3 12V10a4 4 0 0 1 4-4h14"/><path d="M7 21l-4-4 4-4"/><path d="M21 12v2a4 4 0 0 1-4 4H3"/></svg></span>
+        <h3>Znowu to samo</h3>
+        <p>Kończy się jak zwykle: makaronem z serem albo zamawianiem jedzenia.</p>
+      </article>
+    </div>
+    <p class="problem-close rise">Codzienne wymyślanie, co zrobić i z czego, męczy bardziej niż samo gotowanie. Tę część biorę na siebie.</p>
   </div>
 </section>
 
@@ -87,31 +106,61 @@
   <div class="wrap">
     <div class="how-head rise">
       <p class="eyebrow">Jak to działa</p>
-      <h2>Trzy kroki. Pierwszy robisz raz.</h2>
+      <h2>Odpowiadasz na kilka pytań. Resztą zajmuję się ja.</h2>
     </div>
     <div class="how-grid">
       <div class="steps">
         <article class="step">
           <div class="step-copy">
-            <p class="when">Raz</p>
-            <h3>Mówisz mi, co jesz i czym gotujesz.</h3>
-            <p>Alergie, dieta, sprzęt, budżet, region zakupów. Kilka ekranów na starcie i więcej o to nie pytam. Zmienisz to w profilu, kiedy zechcesz.</p>
+            <div class="step-row">
+              <span class="step-no">1</span>
+              <p class="when">Krok 1 · tylko na początku</p>
+            </div>
+            <h3>Opowiadasz mi o swojej kuchni.</h3>
+            <p>Na początku zadaję kilka pytań: o alergie i dietę, sprzęt w kuchni, budżet i to, gdzie robisz zakupy. W profilu dodasz też ulubione kuchnie świata i składniki, których nie lubisz. Każdą odpowiedź zmienisz, kiedy zechcesz.</p>
+            <ul class="chips">
+              <li class="rise" style="--i:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l6.5 2.8v5c0 4.6-3 7.7-6.5 8.7-3.5-1-6.5-4.1-6.5-8.7v-5L12 3.5Z"/><path d="M9 12l2 2 4-4.2"/></svg>Alergie i dieta</li>
+              <li class="rise" style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10h15v2a6 6 0 0 1-6 6h-3a6 6 0 0 1-6-6v-2Z"/><path d="M2.5 10h2M19.5 10h2"/><path d="M9.5 7c0-1 1-1 1-2s-1-1-1-2"/><path d="M14.5 7c0-1 1-1 1-2s-1-1-1-2"/></svg>Sprzęt kuchenny</li>
+              <li class="rise" style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6.5" width="18" height="11" rx="2.2"/><path d="M15.5 12h3.5v3h-3.5a1.5 1.5 0 0 1 0-3Z"/></svg>Budżet</li>
+              <li class="rise" style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s6.5-6 6.5-10.5A6.5 6.5 0 0 0 5.5 10.5C5.5 15 12 21 12 21Z"/><circle cx="12" cy="10.3" r="2.3"/></svg>Region zakupów</li>
+              <li class="rise" style="--i:4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19.5s-6.7-4.1-9-8.2C1.2 7.9 3 4.5 6.3 4.5c1.9 0 3.3 1.1 3.9 2.3.6-1.2 2-2.3 3.9-2.3 3.3 0 5.1 3.4 3.3 6.8-2.3 4.1-9 8.2-9 8.2Z"/></svg>Ulubione kuchnie</li>
+              <li class="rise" style="--i:5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M6.5 6.5l11 11"/></svg>Nielubiane składniki</li>
+            </ul>
           </div>
           <div class="phone"><img src="/snackmeup-web/assets/screens/07-profile-pl-360.webp" srcset="/snackmeup-web/assets/screens/07-profile-pl-360.webp 360w, /snackmeup-web/assets/screens/07-profile-pl-720.webp 720w" sizes="(min-width: 900px) 252px, 68vw" width="360" height="780" loading="lazy" alt="Ekran ustawień kuchni: alergie i dieta, sprzęt kuchenny, styl gotowania, region zakupów"></div>
         </article>
         <article class="step">
           <div class="step-copy">
-            <p class="when">Dziś</p>
-            <h3>Mówisz, na co masz ochotę.</h3>
-            <p>Wpisz lub podyktuj zachciankę, pokaż mi lodówkę, albo nie mów nic i zdaj się na mnie.</p>
+            <div class="step-row">
+              <span class="step-no">2</span>
+              <p class="when">Krok 2 · za każdym razem</p>
+            </div>
+            <h3>Mówisz, na co masz dziś ochotę.</h3>
+            <p>Możesz wpisać albo podyktować zachciankę, na przykład „coś ostrego, 20 minut”. Możesz zrobić zdjęcie lodówki, a ułożę przepis z tego, co masz. A kiedy nie masz żadnego pomysłu, po prostu zdaj się na mnie.</p>
+            <ul class="chips">
+              <li class="rise" style="--i:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M6.5 11h.01M10 11h.01M14 11h.01M17.5 11h.01M7 15h10"/></svg>Wpisz</li>
+              <li class="rise" style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9.3" y="3.5" width="5.4" height="10" rx="2.7"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0"/><path d="M12 17.5V21"/></svg>Podyktuj</li>
+              <li class="rise" style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5h4l1.3-2.2h7.4L17 7.5h4v11.5H3V7.5Z"/><circle cx="12" cy="13.2" r="3.3"/></svg>Zdjęcie lodówki</li>
+              <li class="rise" style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3.2"/><circle cx="8.6" cy="8.6" r="1.1"/><circle cx="15.4" cy="8.6" r="1.1"/><circle cx="8.6" cy="15.4" r="1.1"/><circle cx="15.4" cy="15.4" r="1.1"/><circle cx="12" cy="12" r="1.1"/></svg>Zdaj się na mnie</li>
+            </ul>
           </div>
           <div class="phone"><img src="/snackmeup-web/assets/screens/03-cravings-pl-360.webp" srcset="/snackmeup-web/assets/screens/03-cravings-pl-360.webp 360w, /snackmeup-web/assets/screens/03-cravings-pl-720.webp 720w" sizes="(min-width: 900px) 252px, 68vw" width="360" height="780" loading="lazy" alt="Ekran trybu Smaczek z polem na zachciankę, którą można wpisać albo podyktować"></div>
         </article>
         <article class="step">
           <div class="step-copy">
-            <p class="when">Za chwilę</p>
-            <h3>Dostajesz jeden przepis.</h3>
-            <p>Z czasem przygotowania i makro. Potem prowadzę Cię krok po kroku, z minutnikiem tam, gdzie trzeba.</p>
+            <div class="step-row">
+              <span class="step-no">3</span>
+              <p class="when">Krok 3 · po kilku sekundach</p>
+            </div>
+            <h3>Dostajesz jeden przepis, ułożony pod Ciebie.</h3>
+            <p>Zamiast listy stu wyników dostajesz jedną propozycję: z czasem przygotowania, kaloriami i makroskładnikami. Jeśli Ci pasuje, prowadzę Cię przez gotowanie krok po kroku i włączam minutnik tam, gdzie trzeba. Składniki dodasz do listy zakupów jednym dotknięciem.</p>
+            <ul class="chips">
+              <li class="rise" style="--i:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Czas przygotowania</li>
+              <li class="rise" style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V11"/><path d="M12 20V5"/><path d="M19 20v-6.5"/></svg>Kalorie i makro</li>
+              <li class="rise" style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 6.5h11"/><path d="M9.5 12h11"/><path d="M9.5 17.5h11"/><path d="M4 6.5h.01"/><path d="M4 12h.01"/><path d="M4 17.5h.01"/></svg>Krok po kroku</li>
+              <li class="rise" style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.8 1.8"/><path d="M9.5 2.5h5"/><path d="M18.5 5.5l1.3-1.3"/></svg>Minutnik</li>
+              <li class="rise" style="--i:4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2.2l2.3 12a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 1.9-1.5L21 8.2H6.2"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg>Lista zakupów</li>
+            </ul>
           </div>
           <div class="phone"><img src="/snackmeup-web/assets/screens/10-steps-pl-360.webp" srcset="/snackmeup-web/assets/screens/10-steps-pl-360.webp 360w, /snackmeup-web/assets/screens/10-steps-pl-720.webp 720w" sizes="(min-width: 900px) 252px, 68vw" width="360" height="780" loading="lazy" alt="Ekran gotowania krok po kroku: krok 4 z 5 z minutnikiem ustawionym na cztery minuty"></div>
         </article>
@@ -131,30 +180,52 @@
   <div class="wrap">
     <div class="modes-head rise">
       <p class="eyebrow">Tryby</p>
-      <h2>Po otwarciu widzisz cztery kafle.</h2>
+      <h2>Na każdą sytuację w kuchni mam osobny tryb.</h2>
     </div>
     <div class="mode-grid">
-      <article class="mode mode--chef rise">
+      <article class="mode mode--chef rise" style="--i:0">
         <img class="mode-plate" src="/snackmeup-web/assets/food/04-384.webp" srcset="/snackmeup-web/assets/food/04-384.webp 384w, /snackmeup-web/assets/food/04.webp 768w" sizes="(min-width: 900px) 380px, 74vw" width="768" height="768" loading="lazy" alt="" aria-hidden="true">
         <div class="mode-body">
           <p class="mode-tag"><span class="dot"></span>AI Chef</p>
           <h3>Zdaj się na mnie, znajdę coś idealnego.</h3>
-          <p class="more">W środku znajdziesz jeszcze dwa: Smaczek, gdy masz konkretną zachciankę, i Spontan, gdy wolisz niespodziankę.</p>
+          <p class="more">Kiedy nie masz pomysłu ani siły, żeby go szukać. Jedno dotknięcie i dostajesz danie dobrane do Twojego profilu.</p>
+          <div class="chef-tiles">
+            <div class="chef-tile rise" style="--i:0">
+              <span class="ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v9H10.5L6.5 18.5V15H4V6Z"/></svg></span>
+              <p class="chef-tile-name">Smaczek</p>
+              <p class="chef-tile-desc">Gdy wiesz, na co masz ochotę. Wpisujesz albo dyktujesz zachciankę, a ja zamieniam ją w przepis.</p>
+            </div>
+            <div class="chef-tile rise" style="--i:1">
+              <span class="ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3.2"/><circle cx="8.6" cy="8.6" r="1.1"/><circle cx="15.4" cy="8.6" r="1.1"/><circle cx="8.6" cy="15.4" r="1.1"/><circle cx="15.4" cy="15.4" r="1.1"/><circle cx="12" cy="12" r="1.1"/></svg></span>
+              <p class="chef-tile-name">Spontan</p>
+              <p class="chef-tile-desc">Gdy masz ochotę na niespodziankę i wolisz dać się zaskoczyć.</p>
+            </div>
+          </div>
         </div>
       </article>
-      <article class="mode mode--hero rise">
+      <article class="mode mode--hero rise" style="--i:1">
         <p class="mode-tag"><span class="dot"></span>Kitchen Hero</p>
         <h3>Wyciśnij maksa z lodówki.</h3>
-        <p class="more">Wpisz, podyktuj albo sfotografuj, co masz. Jeśli czegoś zabraknie, dołożę najwyżej dwa drobiazgi.</p>
+        <p class="more">Kiedy lodówka jest pełna, a pomysłu brak. Wpisz, podyktuj albo sfotografuj to, co masz, a ułożę z tego przepis. Jeśli czegoś zabraknie, dopiszę najwyżej dwa drobiazgi do kupienia.</p>
+        <div class="mode-preview">
+          <div class="phone"><img src="/snackmeup-web/assets/screens/04-kitchenhero-pl-360.webp" srcset="/snackmeup-web/assets/screens/04-kitchenhero-pl-360.webp 360w, /snackmeup-web/assets/screens/04-kitchenhero-pl-720.webp 720w" sizes="220px" width="360" height="484" loading="lazy" alt="Ekran trybu Kitchen Hero: pole na składniki z przyciskiem aparatu i mikrofonu"></div>
+        </div>
       </article>
-      <article class="mode mode--sweet rise">
+      <article class="mode mode--sweet rise" style="--i:2">
         <p class="mode-tag"><span class="dot"></span>Łasuch</p>
         <h3>Coś słodkiego, bez okazji.</h3>
+        <p class="more">Kiedy po obiedzie chodzi za Tobą coś słodkiego. Mus czekoladowy, ciasto w kubku albo coś lżejszego z owocami, także z tego, co masz pod ręką.</p>
+        <div class="mode-preview">
+          <div class="phone"><img src="/snackmeup-web/assets/screens/09-sweettooth-pl-360.webp" srcset="/snackmeup-web/assets/screens/09-sweettooth-pl-360.webp 360w, /snackmeup-web/assets/screens/09-sweettooth-pl-720.webp 720w" sizes="220px" width="360" height="484" loading="lazy" alt="Ekran trybu Łasuch: pole na słodką zachciankę i gotowe inspiracje"></div>
+        </div>
       </article>
-      <article class="mode mode--prep rise">
+      <article class="mode mode--prep rise" style="--i:3">
         <p class="mode-tag"><span class="dot"></span>Meal Prep <span class="badge">Premium</span></p>
         <h3>Cały tydzień z głowy.</h3>
-        <p class="more">Plan na kilka dni i jedna lista zakupów.</p>
+        <p class="more">Kiedy wolisz ugotować raz, a jeść przez kilka dni. Układam plan posiłków dla wszystkich domowników, z jedną listą zakupów i rozpiską, co i kiedy ugotować.</p>
+        <div class="mode-preview">
+          <div class="phone"><img src="/snackmeup-web/assets/screens/05-mealprep-pl-360.webp" srcset="/snackmeup-web/assets/screens/05-mealprep-pl-360.webp 360w, /snackmeup-web/assets/screens/05-mealprep-pl-720.webp 720w" sizes="220px" width="360" height="484" loading="lazy" alt="Ekran Meal Prep: plan posiłków na kilka dni z listą zakupów"></div>
+        </div>
       </article>
     </div>
     <p class="stores-note">AI Chef, Kitchen Hero i Łasuch działają za darmo w miesięcznym limicie przepisów. Meal Prep jest w Premium. <a href="#offer">Szczegóły niżej</a></p>
@@ -167,22 +238,31 @@
       <h2>Zanim cokolwiek zaproponuję, sprawdzam trzy rzeczy.</h2>
       <div class="checks">
         <div class="check">
-          <h3>Czy możesz to zjeść.</h3>
-          <p>Alergie i dieta obowiązują w każdym przepisie, który dla Ciebie układam. Składu konkretnego produktu ze sklepu nie znam, więc etykiety czytaj jak zawsze.</p>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l6.5 2.8v5c0 4.6-3 7.7-6.5 8.7-3.5-1-6.5-4.1-6.5-8.7v-5L12 3.5Z"/><path d="M9 12l2 2 4-4.2"/></svg></span>
+          <div>
+            <h3>Czy możesz to zjeść?</h3>
+            <p>Alergie i dieta z Twojego profilu obowiązują w każdym przepisie, który dla Ciebie układam. Nie znam jednak składu konkretnych produktów ze sklepu, dlatego etykiety czytaj tak jak zawsze.</p>
+          </div>
         </div>
         <div class="check">
-          <h3>Czy kupisz to pod domem.</h3>
-          <p>Znam Twój region zakupów. Kuchnia może być dowolna, składniki mają być do kupienia w Twojej okolicy.</p>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8.5h12l-1.1 11a2 2 0 0 1-2 1.8H9.1a2 2 0 0 1-2-1.8L6 8.5Z"/><path d="M9 8.5v-2a3 3 0 0 1 6 0v2"/></svg></span>
+          <div>
+            <h3>Czy kupisz składniki u siebie?</h3>
+            <p>Wiem, gdzie robisz zakupy. Danie może pochodzić z dowolnej kuchni świata, ale składniki dobieram takie, które dostaniesz u siebie.</p>
+          </div>
         </div>
         <div class="check">
-          <h3>Czy to nie było przedwczoraj.</h3>
-          <p>To samo danie nie pojawi się drugi raz w tygodniu. Pełną historię gotowania do przejrzenia masz w Premium.</p>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="15.5" rx="2.2"/><path d="M3 9.5h18"/><path d="M8 3v4M16 3v4"/><path d="M9 15a3 3 0 0 1 5.3-1.9"/><path d="M15 12.7l1 2-2.2.4"/></svg></span>
+          <div>
+            <h3>Czy nie było tego kilka dni temu?</h3>
+            <p>Pilnuję, żeby to samo danie nie wracało drugi raz w tym samym tygodniu. Pełną historię tego, co było gotowane, przejrzysz w Premium.</p>
+          </div>
         </div>
       </div>
     </div>
     <figure class="dish rise">
       <img src="/snackmeup-web/assets/food/08-384.webp" srcset="/snackmeup-web/assets/food/08-384.webp 384w, /snackmeup-web/assets/food/08.webp 768w" sizes="(min-width: 900px) 420px, 100vw" width="768" height="768" loading="lazy" alt="Trzy tacos z kurczakiem na drewnianej desce">
-      <figcaption><span class="dish-name">Szybkie tacos z kurczakiem</span>Było wczoraj, dziś nie wróci.</figcaption>
+      <figcaption><span class="dish-name">Szybkie tacos z kurczakiem</span>Były wczoraj, więc dziś ich nie zaproponuję.</figcaption>
     </figure>
   </div>
 </section>
@@ -191,20 +271,20 @@
   <div class="wrap">
     <div class="offer-head rise">
       <p class="eyebrow">Za darmo i Premium</p>
-      <h2>Co jest za darmo, a co w Premium.</h2>
+      <h2>Plan darmowy i Premium: co dostajesz w każdym.</h2>
     </div>
     <div class="plans">
       <div class="plan rise">
-        <h3>Za darmo</h3>
+        <h3><span class="ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.6"/></svg></span>Za darmo</h3>
         <ul>
           <li>AI Chef ze Smaczkiem i Spontanem, Kitchen Hero i Łasuch</li>
           <li>miesięczny limit przepisów <small>jego aktualną wysokość pokazuje ekran główny</small></li>
           <li>przepisy bez zdjęć dań</li>
-          <li>katalog tylko ostatnich przepisów</li>
+          <li>w katalogu tylko ostatnie przepisy</li>
         </ul>
       </div>
       <div class="plan plan--premium rise">
-        <h3>Premium</h3>
+        <h3><span class="ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.3l2.5 5.6 6.1.6-4.6 4.1 1.3 6-5.3-3-5.3 3 1.3-6-4.6-4.1 6.1-.6L12 3.3Z"/></svg></span>Premium</h3>
         <ul>
           <li>bez miesięcznego limitu przepisów</li>
           <li>Meal Prep <small>plan na kilka dni z listą zakupów</small></li>
@@ -222,10 +302,37 @@
 </section>
 
 <section class="maker band">
-  <div class="wrap rise">
-    <p class="maker-label">Od autora</p>
-    <p class="letter">Na co dzień pracuję z danymi, nie z aplikacjami mobilnymi. Snack Me Up powstawał wieczorami, przez ponad pół roku, bo miałem dość codziennego wymyślania obiadu i przepisów ze składnikiem, którego nie ma w sklepie za rogiem. Lista rzeczy do poprawy jest długa. Jeśli spróbujesz, napisz mi, co poszło nie tak.</p>
-    <p class="sign">Jarek Przezdziecki</p>
+  <div class="wrap">
+    <div class="maker-copy rise">
+      <p class="maker-label">Od autora</p>
+      <h2>Dlaczego zrobiłem Snack Me Up</h2>
+      <p class="letter">Po całym dniu podejmowania decyzji w pracy pytanie „co dziś jemy?” było tą jedną decyzją za dużo. Aplikacje z przepisami nie pomagały: dawały mi tysiąc przepisów do wyboru, czyli jeszcze więcej decydowania.</p>
+      <p class="letter">Chciałem czegoś, co działa jak znajomy kucharz: zna mój smak, wie, czego nie jem i co mam w kuchni, i po prostu mówi, co dziś ugotować. Przepis ma być ułożony pod mnie, a nie pod wszystkich. Kiedy zmienia mi się dieta, budżet albo sprzęt, poprawiam jedno ustawienie i kolejne propozycje już to uwzględniają. A ponieważ aplikacja zapisuje, co było gotowane, sama pilnuje, żeby w kółko nie wracały te same dania.</p>
+      <p class="letter">Na co dzień pracuję z danymi, nie z aplikacjami mobilnymi, więc Snack Me Up powstawał wieczorami, przez ponad pół roku. Nadal jest w nim sporo do poprawienia. Jeśli spróbujesz, napisz mi, co poszło nie tak.</p>
+      <p class="sign">Jarek Przezdziecki</p>
+    </div>
+    <div class="maker-grid">
+      <div class="maker-tile rise" style="--i:0">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18.5h6"/><path d="M10 21.5h4"/><path d="M12 3a6 6 0 0 0-3.4 10.9c.5.4.9 1 .9 1.6h5a2 2 0 0 1 .9-1.6A6 6 0 0 0 12 3Z"/></svg></span>
+        <h3>Koniec z codziennym wymyślaniem</h3>
+        <p>Jedno pytanie mniej każdego dnia.</p>
+      </div>
+      <div class="maker-tile rise" style="--i:1">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.3"/><path d="M5 20c0-3.6 3-6.2 7-6.2s7 2.6 7 6.2"/></svg></span>
+        <h3>Przepisy ułożone pod Ciebie</h3>
+        <p>Pod Twój smak, dietę i sprzęt.</p>
+      </div>
+      <div class="maker-tile rise" style="--i:2">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6.5h9"/><path d="M16.5 6.5H20"/><circle cx="13.2" cy="6.5" r="1.7"/><path d="M4 12h4.5"/><path d="M12 12H20"/><circle cx="10" cy="12" r="1.7"/><path d="M4 17.5h11"/><path d="M18 17.5H20"/><circle cx="16.5" cy="17.5" r="1.7"/></svg></span>
+        <h3>Ustawienia zmienisz w chwilę</h3>
+        <p>Nowa dieta albo budżet? Jedna zmiana w profilu.</p>
+      </div>
+      <div class="maker-tile rise" style="--i:3">
+        <span class="ico" data-spin="repeat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l4 4-4 4"/><path d="M3 12V10a4 4 0 0 1 4-4h14"/><path d="M7 21l-4-4 4-4"/><path d="M21 12v2a4 4 0 0 1-4 4H3"/><path d="M2 2l20 20"/></svg></span>
+        <h3>Dania, które się nie powtarzają</h3>
+        <p>Aplikacja pamięta, co było gotowane.</p>
+      </div>
+    </div>
   </div>
 </section>
 
