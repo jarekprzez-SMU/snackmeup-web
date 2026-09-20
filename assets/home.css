@@ -115,11 +115,11 @@ body.home { overflow-x: clip; }
 /* ---------- 3. jak to działa ---------- */
 .how { background: var(--parchment); z-index: 2; }
 .how-head { max-width: 640px; margin-bottom: clamp(40px, 6vw, 72px); }
+.how-lead { margin-top: 14px; font-size: clamp(17px, 1.8vw, 19px); line-height: 1.6; color: var(--body); max-width: 60ch; }
 .steps { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 24px; margin-inline: -24px; padding: 8px 24px 28px; scrollbar-width: none; }
 .steps::-webkit-scrollbar { display: none; }
-.step { flex: 0 0 min(84vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; }
+.step { flex: 0 0 min(86vw, 360px); scroll-snap-align: start; display: flex; flex-direction: column; }
 .step-copy { margin-bottom: 28px; }
-.step .phone { --pw: min(68vw, 264px); margin-top: auto; }
 .step-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
 .step-no { width: 36px; height: 36px; border-radius: 50%; background: var(--o); color: var(--parchment); font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; display: flex; align-items: center; justify-content: center; flex: none; }
 .step .when { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--o); margin: 0; }
@@ -127,27 +127,41 @@ body.home { overflow-x: clip; }
 .step p { font-size: 16px; max-width: 44ch; }
 .stage { display: none; }
 
-@media (min-width: 900px) {
-  /* bez skryptu albo przy prefers-reduced-motion: trzy kolumny, każda ze swoim ekranem */
-  .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; overflow: visible; margin: 0; padding: 0; }
-  .step .phone { --pw: 252px; }
+/* para nachodzacych telefonow karty kroku (karuzela / siatka statyczna): sama geometria co telefony
+   Meal Prep, sekcja 4b (tylny -4deg, przedni +3deg, wlasciwosc rotate). Bez przycinania — uzasadnienie przy .prep-row-phones. */
+.step-phones { --ppw: min(38vw, 170px); position: relative; width: calc(var(--ppw) * 1.55); height: calc(var(--ppw) * 2.3 + 60px); margin: auto auto 0; overflow: visible; }
+.step-phones .phone { --pw: var(--ppw); }
+.step-phone { position: absolute; top: 0; left: 0; }
+.step-phone--back { rotate: -4deg; }
+.step-phone--front { z-index: 1; rotate: 3deg; top: 40px; left: calc(var(--ppw) * 0.45); }
 
-  /* ze skryptem: telefon stoi, ekran zmienia się z krokiem */
+@media (min-width: 900px) {
+  /* bez skryptu albo przy prefers-reduced-motion: siatka po 3, pieciu kart nie dzieli rowno — zawija sie 3+2 */
+  .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; overflow: visible; margin: 0; padding: 0; }
+
+  /* ze skryptem: para telefonow stoi w miejscu, OBA ekrany zmieniaja sie z krokiem */
   .how.is-sticky .how-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; }
   .how.is-sticky .steps { display: block; position: relative; padding-left: 28px; }
   .how.is-sticky .steps::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; border-radius: 2px; background: var(--rule); }
-  .how.is-sticky .steps::after { content: ''; position: absolute; left: 0; top: 0; width: 2px; border-radius: 2px; background: var(--o); height: calc((var(--active, 0) + 1) / 3 * 100%); transition: height 0.4s ease; }
+  .how.is-sticky .steps::after { content: ''; position: absolute; left: 0; top: 0; width: 2px; border-radius: 2px; background: var(--o); height: calc((var(--active, 0) + 1) / 5 * 100%); transition: height 0.4s ease; }
   .how.is-sticky .step { min-height: 64vh; justify-content: center; opacity: 0.35; transition: opacity 0.35s ease; }
   .how.is-sticky .step.is-active { opacity: 1; }
-  .how.is-sticky .step .phone { display: none; }
+  .how.is-sticky .step-phones { display: none; }
   .how.is-sticky .step-copy { margin-bottom: 0; }
   .how.is-sticky .step h3 { font-size: clamp(28px, 3vw, 38px); }
   .how.is-sticky .step p { font-size: 18px; }
   .how.is-sticky .stage { display: grid; place-items: center; position: sticky; align-self: start; top: max(72px, calc(50vh - 330px)); height: min(660px, calc(100vh - 88px)); }
-  .how.is-sticky .stage .phone { --pw: min(296px, calc((100vh - 120px) * 0.44)); }
+  /* scena: para telefonow jak w karcie kroku, ale wieksza i wysokosc liczona z okna, nie z karty */
+  .stage-phones { --ppw: min(250px, calc((100vh - 140px) * 0.40)); position: relative; width: calc(var(--ppw) * 1.55); height: calc(var(--ppw) * 2.3 + 60px); margin-inline: auto; overflow: visible; }
+  .stage-phones .phone { --pw: var(--ppw); }
+  .stage-phone { position: absolute; top: 0; left: 0; }
+  .stage-phone--back { rotate: -4deg; }
+  .stage-phone--front { z-index: 1; rotate: 3deg; top: 40px; left: calc(var(--ppw) * 0.45); }
   .stage[data-active="0"] .screens img:nth-child(1),
   .stage[data-active="1"] .screens img:nth-child(2),
-  .stage[data-active="2"] .screens img:nth-child(3) { opacity: 1; }
+  .stage[data-active="2"] .screens img:nth-child(3),
+  .stage[data-active="3"] .screens img:nth-child(4),
+  .stage[data-active="4"] .screens img:nth-child(5) { opacity: 1; }
 }
 
 /* ---------- 4. pomocnicy: jeden duzy kafel AI Chef i siatka 2x2 pod nim ---------- */
@@ -244,7 +258,9 @@ body.home { overflow-x: clip; }
 /* dwa nachodzace telefony: tylni i przedni, przesuniety w prawo i w dol — kontener przycina, zeby
    skalowanie/paralaksa telefonow nigdy nie odslonily krawedzi ani nie wywolaly przewijania w poziomie */
 .prep-row-visual { display: flex; justify-content: center; width: 100%; }
-.prep-row-phones { --rpw: min(44vw, 180px); position: relative; width: calc(var(--rpw) * 1.55); height: calc(var(--rpw) * 2.3 + 60px); margin-inline: auto; overflow: clip; }
+/* Bez przycinania: obrócony tylny telefon wystaje poza kontener o kilkanaście pikseli i przycięcie ucinało mu rogi.
+   overflow-clip-margin nie działa w Safari, więc kontener jest po prostu widoczny; poziomego przewijania pilnuje body.home (overflow-x: clip). */
+.prep-row-phones { --rpw: min(44vw, 180px); position: relative; width: calc(var(--rpw) * 1.55); height: calc(var(--rpw) * 2.3 + 60px); margin-inline: auto; overflow: visible; }
 .prep-row-phones .phone { --pw: var(--rpw); }
 .prep-row-phone { position: absolute; top: 0; left: 0; }
 .prep-row-phone--back { rotate: -4deg; }
