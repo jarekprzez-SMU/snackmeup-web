@@ -155,7 +155,7 @@ body.home { overflow-x: clip; }
 .modes-head { max-width: 640px; margin-bottom: clamp(32px, 5vw, 56px); }
 .mode-grid { display: grid; gap: 16px; }
 .mode { position: relative; overflow: hidden; border-radius: 28px; padding: 28px; background: var(--ink-mid); color: rgba(253,248,242,0.72); --mc: var(--o); }
-.mode--chef { background: var(--ink); min-height: 460px; display: flex; flex-direction: column; justify-content: flex-end; padding: 32px; }
+.mode--chef { background: var(--ink); min-height: 460px; display: flex; flex-direction: column; padding: 32px; padding-top: 220px; }
 .mode--hero { --mc: var(--m-hero); }
 .mode--sweet { --mc: var(--m-sweet); }
 .mode--prep { --mc: var(--m-prep); }
@@ -168,11 +168,22 @@ body.home { overflow-x: clip; }
 .mode p.more { margin-top: 12px; font-size: 15px; line-height: 1.6; max-width: 46ch; }
 .mode--prep .more a { color: var(--m-prep); text-decoration: underline; text-underline-offset: 3px; }
 .mode--chef .mode-body { position: relative; z-index: 1; max-width: 30rem; }
-.mode-plate { position: absolute; z-index: 0; width: min(230px, 62%); height: auto; aspect-ratio: 1; border-radius: 50%; object-fit: cover; right: -40px; top: -48px; }
+/* zdjecie-tlo karty AI Chef: banner na gorze karty (telefon) albo prawa czesc karty (desktop) wtopiona
+   w --ink gradientem — jedyny wyjatek od zakazu gradientow w tym pliku (bez wtopienia zdjecie konczyloby
+   sie ostra krawedzia w srodku karty). Kafel .mode ma juz overflow:hidden i border-radius, wiec zaokraglenie
+   naroznikow karty przycina zdjecie samo. */
+.mode-photo { position: absolute; z-index: 0; top: 0; left: 0; right: 0; height: 240px; overflow: hidden; }
+.mode-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, var(--ink) 100%); }
+.mode-plate { display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(1.05) contrast(1.04); }
 
-/* kafelki Smaczek/Spontan wewnątrz karty AI Chef */
-.chef-tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; position: relative; z-index: 1; }
-.chef-tile { background: rgba(253,248,242,0.06); border-radius: 20px; padding: 20px; }
+/* kafelki Smaczek/Spontan wewnątrz karty AI Chef: ciemniejsze tlo + blur, bo karta ma teraz zdjecie w tle */
+/* na wąskim ekranie kafelki jeden pod drugim — w dwóch kolumnach opis Spontana łamał się po dwa słowa */
+.chef-tiles { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; margin-top: 20px; position: relative; z-index: 1; }
+@media (min-width: 600px) { .chef-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.chef-tile { background: color-mix(in srgb, var(--ink) 70%, transparent); border-radius: 20px; padding: 20px; }
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .chef-tile { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+}
 .chef-tile-name { font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--parchment); margin-top: 12px; }
 .chef-tile-desc { font-size: 15px; line-height: 1.5; margin-top: 4px; }
 
@@ -188,7 +199,8 @@ body.home { overflow-x: clip; }
 @media (min-width: 900px) {
   .mode-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .mode--chef { grid-column: 1 / -1; padding: 44px; }
-  .mode-plate { width: 380px; right: -70px; top: -60px; }
+  .mode-photo { top: 0; right: 0; bottom: 0; left: auto; height: auto; width: 55%; }
+  .mode-photo::after { background: linear-gradient(90deg, var(--ink) 0%, color-mix(in srgb, var(--ink) 82%, transparent) 28%, color-mix(in srgb, var(--ink) 20%, transparent) 70%, transparent 100%), linear-gradient(180deg, color-mix(in srgb, var(--ink) 25%, transparent) 0%, transparent 18%, transparent 82%, color-mix(in srgb, var(--ink) 25%, transparent) 100%); }
   .mode--hero, .mode--sweet, .mode--prep, .mode--fryer { flex-direction: row; align-items: center; justify-content: space-between; gap: 28px; }
   .mode-preview { margin-top: 0; flex: none; }
   .mode-preview .phone { --pw: 200px; }
@@ -207,42 +219,46 @@ body.home { overflow-x: clip; }
   @keyframes fryer-waft { 0%, 100% { translate: 0 0; opacity: 0.55; } 50% { translate: 0 -2px; opacity: 1; } }
 }
 
-/* ---------- 4b. meal prep: rozdzial rozbudowanego modulu Premium ---------- */
+/* ---------- 4b. meal prep: rozdzial rozbudowanego modulu Premium — 6 etapow, kazdy z wlasnymi ekranami ---------- */
 .prep { background: var(--ink); color: rgba(253,248,242,0.72); z-index: 4; }
 .prep h2 { color: var(--parchment); max-width: 20ch; }
-.prep-grid { display: grid; gap: 40px; grid-template-areas: "head" "visual" "steps"; }
-.prep-head { grid-area: head; max-width: 46ch; }
+.prep-head { max-width: 760px; }
 .prep-eyebrow { display: inline-flex; align-items: center; gap: 10px; }
 .prep-eyebrow .badge { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.04em; text-transform: none; color: var(--parchment); box-shadow: inset 0 0 0 1px rgba(253,248,242,0.35); padding: 3px 10px; border-radius: 100px; }
 .prep-lead { margin-top: 16px; font-size: clamp(17px, 1.8vw, 19px); line-height: 1.6; }
 
-/* dwa nachodzace telefony: tylni (plan) i przedni (lista zakupow), przesuniety w prawo i w dol */
-.prep-visual { grid-area: visual; display: flex; justify-content: center; }
-.prep-phones { position: relative; width: calc(min(46vw, 190px) * 1.2); height: calc(min(46vw, 190px) * 2.35); margin-inline: auto; overflow: clip; }
-.prep-phones .phone { --pw: min(46vw, 190px); }
-.prep-phone { position: absolute; top: 0; left: 0; }
-.prep-phone--back { rotate: -4deg; }
-.prep-phone--front { z-index: 1; rotate: 3deg; top: calc(min(46vw, 190px) * 0.22); left: calc(min(46vw, 190px) * 0.18); }
+/* czipy w wariancie ciemnym: sama pigulka jak .chips, ale na ciemnym tle karty i z kropka zamiast ikony */
+.chips--dark li { background: rgba(253,248,242,0.06); box-shadow: inset 0 0 0 1px rgba(253,248,242,0.14); color: var(--parchment); }
+.chips--dark li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--m-prep); flex: none; }
 
-/* os etapow: kolko z numerem + cienka linia laczaca, tytul i akapit po prawej */
-.prep-steps-wrap { grid-area: steps; }
-.prep-steps { position: relative; margin-top: 8px; }
-.prep-steps::before { content: ''; position: absolute; left: 19px; top: 20px; bottom: 20px; width: 2px; background: rgba(253,248,242,0.14); }
-.prep-step { position: relative; display: grid; grid-template-columns: 40px 1fr; gap: 20px; padding-bottom: 28px; }
-.prep-step:last-child { padding-bottom: 0; }
-.prep-no { position: relative; width: 40px; height: 40px; border-radius: 50%; background: var(--ink); box-shadow: inset 0 0 0 2px var(--m-prep); color: var(--parchment); font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 16px; display: flex; align-items: center; justify-content: center; flex: none; }
-.prep-step h3 { font-size: 20px; color: var(--parchment); margin-bottom: 6px; }
-.prep-step p { font-size: 16px; }
-.prep-link { margin-top: 32px; }
+/* szescioro etapow: naprzemiennie tekst/telefony, potem odwrotnie — na telefonie zawsze tekst nad telefonami */
+.prep-rows { margin-top: clamp(48px, 6vw, 72px); display: flex; flex-direction: column; gap: 72px; }
+.prep-row { display: flex; flex-direction: column; align-items: center; gap: 32px; }
+.prep-row-copy { width: 100%; max-width: 46ch; }
+.prep-row-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.prep-row-no { width: 36px; height: 36px; border-radius: 50%; box-shadow: inset 0 0 0 2px var(--m-prep); color: var(--parchment); font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; display: flex; align-items: center; justify-content: center; flex: none; }
+.prep-row-label { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--m-prep); margin: 0; }
+.prep-row h3 { font-size: clamp(24px, 2.6vw, 32px); line-height: 1.2; color: var(--parchment); margin-bottom: 12px; text-wrap: balance; }
+.prep-row p { font-size: 17px; }
+
+/* dwa nachodzace telefony: tylni i przedni, przesuniety w prawo i w dol — kontener przycina, zeby
+   skalowanie/paralaksa telefonow nigdy nie odslonily krawedzi ani nie wywolaly przewijania w poziomie */
+.prep-row-visual { display: flex; justify-content: center; width: 100%; }
+.prep-row-phones { --rpw: min(44vw, 180px); position: relative; width: calc(var(--rpw) * 1.55); height: calc(var(--rpw) * 2.3 + 60px); margin-inline: auto; overflow: clip; }
+.prep-row-phones .phone { --pw: var(--rpw); }
+.prep-row-phone { position: absolute; top: 0; left: 0; }
+.prep-row-phone--back { rotate: -4deg; }
+.prep-row-phone--front { z-index: 1; rotate: 3deg; top: 40px; left: calc(var(--rpw) * 0.45); }
+
+.prep-link { margin-top: 40px; }
 .prep-link a { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; color: var(--m-prep); text-decoration: underline; text-underline-offset: 3px; }
 
 @media (min-width: 900px) {
-  .prep-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); grid-template-areas: "head visual" "steps visual"; gap: 64px; align-items: start; }
-  /* kolumna z telefonami stoi w miejscu, dopoki trwa lista krokow po lewej (spina oba wiersze siatki) */
-  .prep-visual { position: sticky; top: 96px; align-self: start; }
-  .prep-phones { width: calc(230px * 1.2); height: calc(230px * 2.35); overflow: visible; }
-  .prep-phones .phone { --pw: 230px; }
-  .prep-phone--front { top: calc(230px * 0.22); left: calc(230px * 0.18); }
+  .prep-row { flex-direction: row; align-items: center; gap: 64px; text-align: left; }
+  .prep-row:nth-child(even) { flex-direction: row-reverse; }
+  .prep-row-copy { flex: 1; max-width: 46ch; }
+  .prep-row-visual { flex: none; width: auto; }
+  .prep-row-phones { --rpw: 210px; margin-inline: 0; }
 }
 
 /* ---------- 4c. w środku: pozioma taśma telefonów z pełnymi zrzutami ---------- */
@@ -360,10 +376,17 @@ body.home { overflow-x: clip; }
   .hero-visual .plate { animation: plate-in 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
   @supports (animation-timeline: view()) {
     .rise { animation: rise linear both; animation-timeline: view(); animation-range: entry 0% entry 38%; animation-delay: calc(var(--i, 0) * 80ms); }
-    /* paralaksa na translate (osobnej od transform) w karcie AI Chef, przy tacos i w telefonach Meal Prep —
+    /* paralaksa na translate (osobnej od transform) przy tacos i w telefonach Meal Prep —
        telefony maja tez rotate (osobna wlasciwosc od translate), wiec animacje sie nie gryza */
-    .mode--chef .mode-plate, .knows .dish img, .prep-phone {
+    .knows .dish img, .prep-row-phone {
       animation: parallax-y linear both;
+      animation-timeline: view();
+      animation-range: cover;
+    }
+    /* karta AI Chef: zdjecie-tlo jest wieksze niz jego okno (scale 1.06) i lekko dryfuje w pionie —
+       .mode-photo ma overflow:hidden, wiec ruch nigdy nie odslania krawedzi */
+    .mode-photo img {
+      animation: chef-photo-drift linear both;
       animation-timeline: view();
       animation-range: cover;
     }
@@ -385,6 +408,7 @@ body.home { overflow-x: clip; }
 @keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
 @keyframes tick { 0% { transform: rotate(0); } 35% { transform: rotate(20deg); } 65% { transform: rotate(-8deg); } 100% { transform: rotate(0); } }
 @keyframes parallax-y { from { translate: 0 -24px; } to { translate: 0 24px; } }
+@keyframes chef-photo-drift { from { scale: 1.06; translate: 0 -16px; } to { scale: 1.06; translate: 0 16px; } }
 
 /* zapasowe wejście .rise dla przeglądarek bez animation-timeline: view() (home.js dodaje html.io-rise) */
 html.io-rise .rise { opacity: 0; transform: translateY(26px); transition: opacity 0.6s ease calc(var(--i, 0) * 80ms), transform 0.6s ease calc(var(--i, 0) * 80ms); }
