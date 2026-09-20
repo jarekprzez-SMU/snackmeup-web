@@ -38,6 +38,19 @@ body.home { overflow-x: clip; }
 .nav-links a:hover { color: var(--ink); text-decoration: none; }
 @media (min-width: 820px) { .nav-links { display: flex; } }
 
+/* ---------- pigułka „Pobierz" w nav: obok przełącznika języka, widoczna zawsze ---------- */
+.nav-right { display: flex; align-items: center; gap: 14px; }
+.nav-cta { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: -0.01em; color: var(--parchment); background: var(--ink); padding: 8px 16px; border-radius: 100px; text-decoration: none; white-space: nowrap; flex: none; transition: background-color 0.15s ease; }
+.nav-cta:hover { background: var(--ink-mid); text-decoration: none; }
+/* na wąskim ekranie: brand + przełącznik + pigułka mają zmieścić się w jednej linii — dociskamy odstępy, nie tekst */
+@media (max-width: 380px) {
+  .home nav { padding-inline: 16px; }
+  .nav-right { gap: 8px; }
+  .nav-lang { gap: 4px; }
+  .nav-lang a { padding: 4px 7px; }
+  .nav-cta { padding: 8px 12px; font-size: 13px; }
+}
+
 /* ---------- telefon: ramka w CSS, ekran to prawdziwy zrzut ---------- */
 .phone { --pw: 288px; width: var(--pw); flex: none; padding: calc(var(--pw) * 0.032); border-radius: calc(var(--pw) * 0.16); background: var(--ink); box-shadow: 0 0 0 1px rgba(253,248,242,0.10) inset, 0 40px 70px -30px rgba(17,17,24,0.45), 0 14px 28px -14px rgba(17,17,24,0.30); }
 .phone img, .phone .screens { display: block; width: 100%; height: auto; border-radius: calc(var(--pw) * 0.13); }
@@ -159,6 +172,26 @@ body.home { overflow-x: clip; }
   .mode--hero:hover .mode-preview .phone,
   .mode--sweet:hover .mode-preview .phone,
   .mode--prep:hover .mode-preview .phone { transform: translateY(-8px); }
+}
+
+/* ---------- 4b. w środku: pozioma taśma telefonów z pełnymi zrzutami ---------- */
+.inside { background: var(--parchment); }
+.inside-head { max-width: 640px; margin-bottom: clamp(32px, 5vw, 56px); }
+.inside-strip { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 24px; margin-inline: -24px; padding: 8px 24px 28px; scrollbar-width: none; }
+.inside-strip::-webkit-scrollbar { display: none; }
+.inside-item { flex: 0 0 auto; scroll-snap-align: start; text-align: center; }
+.inside-item .phone { --pw: min(62vw, 230px); margin-inline: auto; }
+/* figcaption jest rodzeństwem .phone, nie potomkiem — --pw z .phone tu nie dotrze,
+   dlatego szerokość podpisu liczymy tym samym wzorem wprost */
+.inside-item figcaption { margin-top: 18px; max-width: min(62vw, 230px); margin-inline: auto; }
+.inside-item h3 { font-size: 18px; color: var(--ink); }
+.inside-item p { font-size: 15px; color: var(--body); margin-top: 6px; }
+.inside-item .tag { display: inline-block; margin-top: 10px; font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 12px; color: var(--o); background: var(--o-lo); padding: 4px 10px; border-radius: 100px; }
+@media (min-width: 900px) {
+  /* struktura taśmy działa też dla 5-6 elementów: przy przepełnieniu wraca poziome przewijanie,
+     "safe center" pilnuje, żeby pierwszy element nie stał się nieosiągalny przy centrowaniu */
+  .inside-strip { justify-content: center; justify-content: safe center; gap: 40px; }
+  .inside-item:nth-child(2) .phone { transform: translateY(-24px); }
 }
 
 /* ---------- 5. zna Cię: ciemne pasmo ---------- */
