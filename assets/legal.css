@@ -4,7 +4,7 @@
 :root { --o: #FF6B35; --ink: #111118; --parchment: #FDF8F2; --parchment-mid: #F4EDE3; --body: #47424F; --muted: #9390A0; --rule: rgba(17,17,24,0.08); }
 /* Tokeny dodatkowe dla strony glownej (MKT-2) — te same zrodlo: paleta marki z smu-design §1.
    Strony legal ich nie uzywaja; zyja tutaj, bo home.css celowo nie definiuje kolorow. */
-:root { --ink-mid: #1E1E2C; --o-hi: #FF8C5A; --o-lo: #FFF3EC; --g: #2F9E5E; --m-hero: #74D9A0; --m-sweet: #C2416F; --m-prep: #82B2D2; }
+:root { --ink-mid: #1E1E2C; --o-hi: #FF8C5A; --o-lo: #FFF3EC; --g: #2F9E5E; --m-hero: #74D9A0; --m-sweet: #C2416F; --m-prep: #82B2D2; --m-fryer: #F2C94C; }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { background: var(--parchment); color: var(--body); font-family: 'DM Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }

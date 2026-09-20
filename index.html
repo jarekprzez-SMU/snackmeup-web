@@ -36,8 +36,9 @@
   <a class="nav-brand" href="/snackmeup-web/">snack me up<span>.</span></a>
   <div class="nav-links">
     <a href="#how">Jak to działa</a>
-    <a href="#modes">Tryby</a>
+    <a href="#modes">Pomocnicy</a>
     <a href="#offer">Za darmo i Premium</a>
+    <a href="#faq">Pytania</a>
   </div>
   <div class="nav-right">
     <div class="nav-lang">
@@ -57,13 +58,11 @@
       <p class="sub">Pamięta o Twoich alergiach i diecie, wie, jaki sprzęt masz w kuchni i których składników nie lubisz. Pilnuje, żeby to samo danie nie wracało dwa razy w tygodniu, i dobiera składniki, które kupisz tam, gdzie robisz zakupy.</p>
 
       <div class="stores">
-        <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.jarekpe.snackmeup">
-          <svg width="18" height="20" viewBox="0 0 20 22" fill="currentColor" aria-hidden="true"><path d="M1.2.4A1.7 1.7 0 0 0 .8 1.6v18.8c0 .45.15.86.4 1.18l10.1-10.59L1.2.4Zm11.3 11.2 2.7 2.83-9.35 5.3 6.65-8.13Zm0-1.2L5.85 2.27l9.35 5.3-2.7 2.83Zm3.9 4.09-3-3.14 3-3.14 3.03 1.72c.85.48.85 1.68 0 2.16l-3.03 1.72Z"/></svg>
-          Google Play
-        </a>
+        <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.jarekpe.snackmeup"><img src="/snackmeup-web/assets/badges/google-play-pl.png" width="646" height="250" alt="Pobierz z Google Play"></a>
         <!-- APP_STORE_URL — po akceptacji iOS, w KAŻDYM miejscu z tym komentarzem (2 na wersję językową):
-             1) data-href="…" zamienić na href="<adres z App Store>"  2) usunąć klasę is-soon i aria-disabled
-             3) usunąć <span class="soon-tag">. Kontrola: grep -rn "APP_STORE_URL" ma zwrócić zero. -->
+             caly element <a class="store-btn is-soon" data-href="{{APP_STORE_URL}}" …> zastąpić przez
+             <a class="store-badge" href="<adres z App Store>"><img src="/snackmeup-web/assets/badges/app-store-pl.svg" alt="Pobierz w App Store" height="52"></a>
+             (odznaka Apple nie mniejsza niż odznaka Google obok). Kontrola: grep -rn "APP_STORE_URL" ma zwrócić zero. -->
         <a class="store-btn is-soon" data-href="{{APP_STORE_URL}}" aria-disabled="true">App Store <span class="soon-tag">wkrótce</span></a>
       </div>
       <p class="stores-note">Za darmo w miesięcznym limicie przepisów. <a href="#offer">Co jest w Premium</a></p>
@@ -120,7 +119,7 @@
               <p class="when">Krok 1 · tylko na początku</p>
             </div>
             <h3>Opowiadasz mi o swojej kuchni.</h3>
-            <p>Na początku zadaję kilka pytań: o alergie i dietę, sprzęt w kuchni, budżet i to, gdzie robisz zakupy. W profilu dodasz też ulubione kuchnie świata i składniki, których nie lubisz. Każdą odpowiedź zmienisz, kiedy zechcesz.</p>
+            <p>Na początku zadaję kilka pytań: o alergie i dietę, sprzęt w kuchni, ulubione kuchnie, składniki, których nie lubisz, i to, gdzie robisz zakupy. Każdą odpowiedź zmienisz później w profilu, tak samo jak budżet i poziom trudności.</p>
             <ul class="chips">
               <li class="rise" style="--i:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l6.5 2.8v5c0 4.6-3 7.7-6.5 8.7-3.5-1-6.5-4.1-6.5-8.7v-5L12 3.5Z"/><path d="M9 12l2 2 4-4.2"/></svg>Alergie i dieta</li>
               <li class="rise" style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10h15v2a6 6 0 0 1-6 6h-3a6 6 0 0 1-6-6v-2Z"/><path d="M2.5 10h2M19.5 10h2"/><path d="M9.5 7c0-1 1-1 1-2s-1-1-1-2"/><path d="M14.5 7c0-1 1-1 1-2s-1-1-1-2"/></svg>Sprzęt kuchenny</li>
@@ -182,8 +181,8 @@
 <section class="modes band" id="modes">
   <div class="wrap">
     <div class="modes-head rise">
-      <p class="eyebrow">Tryby</p>
-      <h2>Na każdą sytuację w kuchni mam osobny tryb.</h2>
+      <p class="eyebrow">Kuchenni pomocnicy</p>
+      <h2>Na każdą sytuację w kuchni mam osobnego pomocnika.</h2>
     </div>
     <div class="mode-grid">
       <article class="mode mode--chef rise" style="--i:0">
@@ -201,33 +200,57 @@
             <div class="chef-tile rise" style="--i:1">
               <span class="ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3.2"/><circle cx="8.6" cy="8.6" r="1.1"/><circle cx="15.4" cy="8.6" r="1.1"/><circle cx="8.6" cy="15.4" r="1.1"/><circle cx="15.4" cy="15.4" r="1.1"/><circle cx="12" cy="12" r="1.1"/></svg></span>
               <p class="chef-tile-name">Spontan</p>
-              <p class="chef-tile-desc">Gdy masz ochotę na niespodziankę i wolisz dać się zaskoczyć.</p>
+              <p class="chef-tile-desc">Gdy masz ochotę na niespodziankę. Losuję kuchnię, budżet i poziom trudności inne niż w Twoim profilu. Alergie i region zakupów zostają bez zmian.</p>
             </div>
           </div>
         </div>
       </article>
       <article class="mode mode--hero rise" style="--i:1">
-        <p class="mode-tag"><span class="dot"></span>Kitchen Hero</p>
-        <h3>Wyciśnij maksa z lodówki.</h3>
-        <p class="more">Kiedy lodówka jest pełna, a pomysłu brak. Wpisz, podyktuj albo sfotografuj to, co masz, a ułożę z tego przepis. Jeśli czegoś zabraknie, dopiszę najwyżej dwa drobiazgi do kupienia.</p>
+        <div class="mode-copy">
+          <p class="mode-tag"><span class="dot"></span>Kitchen Hero</p>
+          <h3>Wyciśnij maksa z lodówki.</h3>
+          <p class="more">Kiedy lodówka jest pełna, a pomysłu brak. Wpisz, podyktuj albo sfotografuj to, co masz, a ułożę z tego przepis. Jeśli czegoś zabraknie, dopiszę najwyżej dwa drobiazgi do kupienia.</p>
+        </div>
         <div class="mode-preview">
-          <div class="phone"><img src="/snackmeup-web/assets/screens/04-kitchenhero-pl-360.webp" srcset="/snackmeup-web/assets/screens/04-kitchenhero-pl-360.webp 360w, /snackmeup-web/assets/screens/04-kitchenhero-pl-720.webp 720w" sizes="220px" width="360" height="484" loading="lazy" alt="Ekran trybu Kitchen Hero: pole na składniki z przyciskiem aparatu i mikrofonu"></div>
+          <div class="phone"><img src="/snackmeup-web/assets/screens/04-kitchenhero-pl-320.webp" srcset="/snackmeup-web/assets/screens/04-kitchenhero-pl-320.webp 320w, /snackmeup-web/assets/screens/04-kitchenhero-pl-480.webp 480w" sizes="(min-width: 900px) 200px, min(60vw, 220px)" width="320" height="694" loading="lazy" alt="Ekran trybu Kitchen Hero: pole na składniki z przyciskiem aparatu i mikrofonu"></div>
         </div>
       </article>
       <article class="mode mode--sweet rise" style="--i:2">
-        <p class="mode-tag"><span class="dot"></span>Łasuch</p>
-        <h3>Coś słodkiego, bez okazji.</h3>
-        <p class="more">Kiedy po obiedzie chodzi za Tobą coś słodkiego. Mus czekoladowy, ciasto w kubku albo coś lżejszego z owocami, także z tego, co masz pod ręką.</p>
+        <div class="mode-copy">
+          <p class="mode-tag"><span class="dot"></span>Łasuch</p>
+          <h3>Coś słodkiego, bez okazji.</h3>
+          <p class="more">Kiedy po obiedzie chodzi za Tobą coś słodkiego. Mus czekoladowy, ciasto w kubku albo coś lżejszego z owocami, także z tego, co masz pod ręką.</p>
+        </div>
         <div class="mode-preview">
-          <div class="phone"><img src="/snackmeup-web/assets/screens/09-sweettooth-pl-360.webp" srcset="/snackmeup-web/assets/screens/09-sweettooth-pl-360.webp 360w, /snackmeup-web/assets/screens/09-sweettooth-pl-720.webp 720w" sizes="220px" width="360" height="484" loading="lazy" alt="Ekran trybu Łasuch: pole na słodką zachciankę i gotowe inspiracje"></div>
+          <div class="phone"><img src="/snackmeup-web/assets/screens/09-sweettooth-pl-320.webp" srcset="/snackmeup-web/assets/screens/09-sweettooth-pl-320.webp 320w, /snackmeup-web/assets/screens/09-sweettooth-pl-480.webp 480w" sizes="(min-width: 900px) 200px, min(60vw, 220px)" width="320" height="694" loading="lazy" alt="Ekran trybu Łasuch: pole na słodką zachciankę i gotowe inspiracje"></div>
         </div>
       </article>
       <article class="mode mode--prep rise" style="--i:3">
-        <p class="mode-tag"><span class="dot"></span>Meal Prep <span class="badge">Premium</span></p>
-        <h3>Cały tydzień z głowy.</h3>
-        <p class="more">Kiedy wolisz ugotować raz, a jeść przez kilka dni. Układam plan posiłków dla wszystkich domowników, z jedną listą zakupów i rozpiską, co i kiedy ugotować.</p>
+        <div class="mode-copy">
+          <p class="mode-tag"><span class="dot"></span>Meal Prep <span class="badge">Premium</span></p>
+          <h3>Cały tydzień z głowy.</h3>
+          <p class="more">Kiedy wolisz ugotować raz, a jeść przez kilka dni. Układam plan posiłków dla wszystkich domowników, z jedną listą zakupów i rozpiską, co i kiedy ugotować.</p>
+        </div>
         <div class="mode-preview">
-          <div class="phone"><img src="/snackmeup-web/assets/screens/05-mealprep-pl-360.webp" srcset="/snackmeup-web/assets/screens/05-mealprep-pl-360.webp 360w, /snackmeup-web/assets/screens/05-mealprep-pl-720.webp 720w" sizes="220px" width="360" height="484" loading="lazy" alt="Ekran Meal Prep: plan posiłków na kilka dni z listą zakupów"></div>
+          <div class="phone"><img src="/snackmeup-web/assets/screens/05-mealprep-pl-320.webp" srcset="/snackmeup-web/assets/screens/05-mealprep-pl-320.webp 320w, /snackmeup-web/assets/screens/05-mealprep-pl-480.webp 480w" sizes="(min-width: 900px) 200px, min(60vw, 220px)" width="320" height="694" loading="lazy" alt="Ekran Meal Prep: plan posiłków na kilka dni z listą zakupów"></div>
+        </div>
+      </article>
+      <!-- AIR_FRYER_SOON — tryb w budowie (źródło: PO, 20.09.2026). Gdy wejdzie do aplikacji: podmienić ilustrację na prawdziwy zrzut, usunąć odznakę „Wkrótce", opis uzgodnić z manifestem. -->
+      <article class="mode mode--fryer rise" style="--i:4">
+        <div class="mode-copy">
+          <p class="mode-tag"><span class="dot"></span>Air Fryer <span class="badge">Wkrótce</span></p>
+          <h3>Przepisy ułożone pod air fryer.</h3>
+          <p class="more">Nowy pomocnik jest już w przygotowaniu. Powiesz, na co masz ochotę, a dostaniesz przepis ułożony pod frytkownicę beztłuszczową.</p>
+        </div>
+        <div class="mode-preview">
+          <span class="fryer-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path class="fryer-wave" d="M7.4 3.4c.9-1 1.6-1 2.5 0s1.6 1 2.5 0 1.6-1 2.5 0"/>
+            <path class="fryer-wave" d="M7.4 5.8c.9-1 1.6-1 2.5 0s1.6 1 2.5 0 1.6-1 2.5 0"/>
+            <rect x="4.5" y="8.2" width="15" height="12.3" rx="4.2"/>
+            <path d="M4.8 14.6h14.4"/>
+            <rect x="9.4" y="16.7" width="5.2" height="1.9" rx="0.95"/>
+            <circle cx="15.2" cy="11" r="1.1"/>
+          </svg></span>
         </div>
       </article>
     </div>
@@ -250,14 +273,42 @@
         </figcaption>
       </figure>
       <figure class="inside-item rise" style="--i:1">
-        <div class="phone"><img src="/snackmeup-web/assets/screens/06-shopping-pl-320.webp" srcset="/snackmeup-web/assets/screens/06-shopping-pl-320.webp 320w, /snackmeup-web/assets/screens/06-shopping-pl-480.webp 480w" sizes="230px" width="320" height="694" loading="lazy" alt="Lista zakupów z produktami pogrupowanymi w działy i odhaczonymi pozycjami"></div>
+        <div class="phone"><img src="/snackmeup-web/assets/screens/13-onb-allergies-pl-320.webp" srcset="/snackmeup-web/assets/screens/13-onb-allergies-pl-320.webp 320w, /snackmeup-web/assets/screens/13-onb-allergies-pl-480.webp 480w" sizes="230px" width="320" height="693" loading="lazy" alt="Ekran startowy z pytaniem o dietę, alergie i nietolerancje"></div>
         <figcaption>
-          <h3>Lista zakupów</h3>
-          <p>Składniki pogrupowane tak jak w sklepie. Odhaczasz je w trakcie zakupów.</p>
-          <span class="tag">Na ekranie: lista z planu Meal Prep (Premium)</span>
+          <h3>Pytania na start</h3>
+          <p>Dieta, alergie i nietolerancje. Zaznaczasz raz, zmienisz w każdej chwili.</p>
         </figcaption>
       </figure>
       <figure class="inside-item rise" style="--i:2">
+        <div class="phone"><img src="/snackmeup-web/assets/screens/14-onb-equipment-pl-320.webp" srcset="/snackmeup-web/assets/screens/14-onb-equipment-pl-320.webp 320w, /snackmeup-web/assets/screens/14-onb-equipment-pl-480.webp 480w" sizes="230px" width="320" height="693" loading="lazy" alt="Ekran startowy z wyborem sprzętu kuchennego"></div>
+        <figcaption>
+          <h3>Twój sprzęt</h3>
+          <p>Proponuję tylko przepisy, które da się zrobić tym, co masz w kuchni.</p>
+        </figcaption>
+      </figure>
+      <figure class="inside-item rise" style="--i:3">
+        <div class="phone"><img src="/snackmeup-web/assets/screens/15-onb-cuisines-pl-320.webp" srcset="/snackmeup-web/assets/screens/15-onb-cuisines-pl-320.webp 320w, /snackmeup-web/assets/screens/15-onb-cuisines-pl-480.webp 480w" sizes="230px" width="320" height="693" loading="lazy" alt="Ekran startowy z wyborem ulubionych kuchni"></div>
+        <figcaption>
+          <h3>Ulubione kuchnie</h3>
+          <p>Wybierasz kuchnie, na które masz ochotę, i wskazujesz, czego nie lubisz.</p>
+        </figcaption>
+      </figure>
+      <figure class="inside-item rise" style="--i:4">
+        <div class="phone"><img src="/snackmeup-web/assets/screens/11-favorites-pl-320.webp" srcset="/snackmeup-web/assets/screens/11-favorites-pl-320.webp 320w, /snackmeup-web/assets/screens/11-favorites-pl-480.webp 480w" sizes="230px" width="320" height="693" loading="lazy" alt="Ekran Ulubione z siatką zapisanych przepisów i filtrami"></div>
+        <figcaption>
+          <h3>Ulubione</h3>
+          <p>Twoje przepisy w jednym miejscu, z filtrami po porze dnia, kuchni i trudności.</p>
+          <span class="tag">Pełny katalog w Premium</span>
+        </figcaption>
+      </figure>
+      <figure class="inside-item rise" style="--i:5">
+        <div class="phone"><img src="/snackmeup-web/assets/screens/12-shoppinglist-pl-320.webp" srcset="/snackmeup-web/assets/screens/12-shoppinglist-pl-320.webp 320w, /snackmeup-web/assets/screens/12-shoppinglist-pl-480.webp 480w" sizes="230px" width="320" height="693" loading="lazy" alt="Lista zakupów jednego przepisu pogrupowana według działów sklepu"></div>
+        <figcaption>
+          <h3>Lista zakupów</h3>
+          <p>Składniki z przepisu pogrupowane tak jak w sklepie. Odhaczasz je w trakcie zakupów.</p>
+        </figcaption>
+      </figure>
+      <figure class="inside-item rise" style="--i:6">
         <div class="phone"><img src="/snackmeup-web/assets/screens/08-history-pl-320.webp" srcset="/snackmeup-web/assets/screens/08-history-pl-320.webp 320w, /snackmeup-web/assets/screens/08-history-pl-480.webp 480w" sizes="230px" width="320" height="694" loading="lazy" alt="Historia gotowania z filtrami i zdjęciami dań"></div>
         <figcaption>
           <h3>Historia gotowania</h3>
@@ -338,13 +389,40 @@
   </div>
 </section>
 
+<section class="faq band" id="faq">
+  <div class="wrap">
+    <div class="faq-head rise">
+      <p class="eyebrow">Pytania</p>
+      <h2>Zanim pobierzesz.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item rise" style="--i:0">
+        <summary>Czy Snack Me Up jest darmowy?<span class="faq-toggle" aria-hidden="true"></span></summary>
+        <p>Tak. W planie darmowym masz miesięczny limit przepisów, a jego aktualną wysokość pokazuje ekran główny aplikacji. Premium znosi miesięczny limit i dodaje Meal Prep, zdjęcia dań, pełny katalog i historię gotowania.</p>
+      </details>
+      <details class="faq-item rise" style="--i:1">
+        <summary>Mam alergię pokarmową. Czy mogę polegać na przepisach?<span class="faq-toggle" aria-hidden="true"></span></summary>
+        <p>Alergie i dieta z Twojego profilu obowiązują w każdym przepisie, który dla Ciebie układam. Nie znam jednak składu konkretnych produktów ze sklepu, dlatego etykiety zawsze czytaj samodzielnie.</p>
+      </details>
+      <details class="faq-item rise" style="--i:2">
+        <summary>Czy kupię składniki w swoim kraju?<span class="faq-toggle" aria-hidden="true"></span></summary>
+        <p>Na początku podajesz region, w którym robisz zakupy. Dania mogą pochodzić z dowolnej kuchni świata, ale składniki dobieram takie, które dostaniesz u siebie.</p>
+      </details>
+      <details class="faq-item rise" style="--i:3">
+        <summary>Jak anulować Premium?<span class="faq-toggle" aria-hidden="true"></span></summary>
+        <p>W dowolnej chwili, w ustawieniach subskrypcji App Store albo Google Play. Dostęp do Premium zachowujesz do końca opłaconego okresu. Szczegóły: <a href="/snackmeup-web/terms/pl/#s4">Regulamin, punkty 4 i 5</a>.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="maker band">
   <div class="wrap">
     <div class="maker-copy rise">
       <p class="maker-label">Od autora</p>
       <h2>Dlaczego zrobiłem Snack Me Up</h2>
       <p class="letter">Po całym dniu podejmowania decyzji w pracy pytanie „co dziś jemy?” było tą jedną decyzją za dużo. Aplikacje z przepisami nie pomagały: dawały mi tysiąc przepisów do wyboru, czyli jeszcze więcej decydowania.</p>
-      <p class="letter">Chciałem czegoś, co działa jak znajomy szef kuchni: zna mój gust i po prostu mówi, co dziś ugotować. Każdy przepis jest spersonalizowany pod mój smak i moje preferencje, bo każdy z nas lubi jeść trochę inaczej i lubi coś zmienić po swojemu. Kiedy mam ochotę na inną kuchnię, nowy smak albo coś bardziej wymagającego, zmieniam jedno ustawienie i kolejne propozycje idą w tę stronę. A ponieważ mój szef kuchni wie, co ostatnio gotowaliśmy, sam dba o to, żeby na talerzu ciągle było coś nowego.</p>
+      <p class="letter">Chciałem czegoś, co działa jak znajomy szef kuchni: zna mój gust i po prostu mówi, co dziś ugotować. Każdy przepis jest spersonalizowany pod mój smak i moje preferencje, bo każdy z nas lubi jeść trochę inaczej i lubi coś zmienić po swojemu. Kiedy mam ochotę na inną kuchnię, nowy smak albo coś bardziej wymagającego, zmieniam preferencje w profilu, a mój osobisty szef kuchni od razu bierze to pod uwagę. A ponieważ wie też, co ostatnio gotowaliśmy, sam dba o to, żeby na talerzu ciągle było coś nowego.</p>
       <p class="letter">Na co dzień pracuję z danymi, a Snack Me Up buduję wieczorami, od ponad pół roku. Mam jeszcze pełno pomysłów na nowe funkcje i usprawnienia, więc aplikacja będzie się stale rozwijać. Jeśli ją wypróbujesz, <a href="mailto:support@snack-me-up.com">podziel się opinią</a>: napisz, co Ci się w niej podoba i co warto jeszcze dodać albo ulepszyć.</p>
       <p class="sign">Jarek Przezdziecki</p>
     </div>
@@ -362,7 +440,7 @@
       <div class="maker-tile rise" style="--i:2">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6.5h9"/><path d="M16.5 6.5H20"/><circle cx="13.2" cy="6.5" r="1.7"/><path d="M4 12h4.5"/><path d="M12 12H20"/><circle cx="10" cy="12" r="1.7"/><path d="M4 17.5h11"/><path d="M18 17.5H20"/><circle cx="16.5" cy="17.5" r="1.7"/></svg></span>
         <h3>Zmieniasz, kiedy chcesz</h3>
-        <p>Inna kuchnia albo trudniejsze danie? Jedno ustawienie.</p>
+        <p>Inna kuchnia albo trudniejsze danie? Zmieniasz preferencje w profilu.</p>
       </div>
       <div class="maker-tile rise" style="--i:3">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4l1.9 5.1L18 11l-5.1 1.9L11 18l-1.9-5.1L4 11l5.1-1.9Z"/><path d="M18.5 3.5v3"/><path d="M17 5h3"/><path d="M19 17.5v2.5"/><path d="M17.75 18.75h2.5"/></svg></span>
@@ -378,10 +456,7 @@
     <div class="get-panel rise">
       <h2>Co dziś na obiad? <span>Już wiesz.</span></h2>
       <div class="stores">
-        <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.jarekpe.snackmeup">
-          <svg width="18" height="20" viewBox="0 0 20 22" fill="currentColor" aria-hidden="true"><path d="M1.2.4A1.7 1.7 0 0 0 .8 1.6v18.8c0 .45.15.86.4 1.18l10.1-10.59L1.2.4Zm11.3 11.2 2.7 2.83-9.35 5.3 6.65-8.13Zm0-1.2L5.85 2.27l9.35 5.3-2.7 2.83Zm3.9 4.09-3-3.14 3-3.14 3.03 1.72c.85.48.85 1.68 0 2.16l-3.03 1.72Z"/></svg>
-          Google Play
-        </a>
+        <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.jarekpe.snackmeup"><img src="/snackmeup-web/assets/badges/google-play-pl.png" width="646" height="250" alt="Pobierz z Google Play"></a>
         <!-- APP_STORE_URL — drugie miejsce w tej wersji językowej; instrukcja przy pierwszym (sekcja hero). -->
         <a class="store-btn is-soon" data-href="{{APP_STORE_URL}}" aria-disabled="true">App Store <span class="soon-tag">wkrótce</span></a>
       </div>
