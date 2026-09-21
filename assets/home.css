@@ -434,3 +434,11 @@ html.io-rise .rise.is-in { opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
   .phone .screens img { transition: none; }
 }
+
+/* Ikona aplikacji jako znak marki (MKT-4): ta sama ikona co w sklepie i na ekranie telefonu */
+.nav-brand { display: inline-flex; align-items: center; gap: 8px; }
+.brand-word { font-weight: inherit; }
+.brand-icon { width: 28px; height: 28px; border-radius: 22%; flex: none; }
+.footer-brand { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.footer-brand small { flex-basis: 100%; }
+.get-icon { display: block; width: 72px; height: 72px; border-radius: 22%; margin-bottom: 20px; box-shadow: 0 0 0 1px rgba(253,248,242,0.12); }
