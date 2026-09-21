@@ -59,7 +59,7 @@
 
       <div class="stores">
         <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.jarekpe.snackmeup"><img src="/snackmeup-web/assets/badges/google-play-en.png" width="646" height="250" alt="Get it on Google Play"></a>
-        <!-- APP_STORE_URL — po akceptacji iOS, w KAŻDYM miejscu z tym komentarzem (2 na wersję językową):
+        <!-- APP_STORE_URL — po akceptacji iOS, w KAŻDYM miejscu z tym komentarzem (3 na wersję językową: hero, środek po trybach, .get):
              caly element <a class="store-btn is-soon" data-href="{{APP_STORE_URL}}" …> zastąpić przez
              <a class="store-badge" href="<adres z App Store>"><img src="/snackmeup-web/assets/badges/app-store-en.svg" alt="Download on the App Store" height="52"></a>
              (odznaka Apple nie mniejsza niż odznaka Google obok). Kontrola: grep -rn "APP_STORE_URL" ma zwrócić zero. -->
@@ -287,7 +287,7 @@
         <div class="mode-copy">
           <p class="mode-tag"><span class="dot"></span>Meal Prep <span class="badge">Premium</span></p>
           <h3>Your whole week sorted.</h3>
-          <p class="more">For when you'd rather cook once and eat for several days. I put together a meal plan for everyone at home, with a shopping list for each cooking session and a schedule of what to cook when. <a href="#prep">See how it works</a></p>
+          <p class="more">For when you'd rather cook once and eat for several days. I put together a meal plan for everyone at home, with a separate shopping list for each cooking day and a schedule of what to cook when. <a href="#prep">See how it works</a></p>
         </div>
         <div class="mode-preview">
           <div class="phone"><img src="/snackmeup-web/assets/screens/05-mealprep-en-320.webp" srcset="/snackmeup-web/assets/screens/05-mealprep-en-320.webp 320w, /snackmeup-web/assets/screens/05-mealprep-en-480.webp 480w" sizes="(min-width: 900px) 200px, min(60vw, 220px)" width="320" height="694" loading="lazy" alt="Meal Prep screen: a meal plan for several days with a shopping list"></div>
@@ -311,6 +311,11 @@
           </svg></span>
         </div>
       </article>
+    </div>
+    <div class="stores">
+      <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.jarekpe.snackmeup"><img src="/snackmeup-web/assets/badges/google-play-en.png" width="646" height="250" loading="lazy" alt="Get it on Google Play"></a>
+      <!-- APP_STORE_URL — trzecie miejsce (środek strony, MKT-4): podmiana jak w hero. -->
+      <a class="store-btn is-soon" data-href="{{APP_STORE_URL}}" aria-disabled="true">App Store <span class="soon-tag">soon</span></a>
     </div>
     <p class="stores-note">AI Chef, Kitchen Hero and Sweet Tooth are free within a monthly recipe limit. Meal Prep is part of Premium. <a href="#offer">Details below</a></p>
   </div>
@@ -551,7 +556,7 @@
       <div class="plan rise">
         <h3><span class="ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.6"/></svg></span>Free</h3>
         <ul>
-          <li>AI Chef with Cravings and Random, Kitchen Hero and Sweet Tooth</li>
+          <li>all of AI Chef (Fast Track, Cravings and Random), Kitchen Hero and Sweet Tooth</li>
           <li>a monthly recipe limit <small>the home screen shows the current limit</small></li>
           <li>recipes without dish photos</li>
           <li>a catalogue of recent recipes only</li>
@@ -597,6 +602,10 @@
       <details class="faq-item rise" style="--i:3">
         <summary>How do I cancel Premium?<span class="faq-toggle" aria-hidden="true"></span></summary>
         <p>Any time, in your App Store or Google Play subscription settings. You keep Premium until the end of the period you've paid for. Details: <a href="/snackmeup-web/terms/en/#s4">Terms, sections 4 and 5</a>.</p>
+      </details>
+      <details class="faq-item rise" style="--i:4">
+        <summary>What languages is the app in?<span class="faq-toggle" aria-hidden="true"></span></summary>
+        <p>The app works in English and Polish.</p>
       </details>
     </div>
   </div>
