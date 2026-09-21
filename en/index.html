@@ -140,7 +140,7 @@
               <p class="when">Step 2 · a few seconds later</p>
             </div>
             <h3>You get a recipe and decide what's next.</h3>
-            <p>You see the dish with its time, cost, difficulty, calories and macros. Like it? Let's cook. Fancy something else? One tap and I suggest another. You can also make the shopping list straight away or plan the cooking for later: pick dinner at work in the morning, and the list is ready for the shop on your way home.</p>
+            <p>You see the dish with its time, cost, difficulty, calories and macros. Like it? Let's cook. Fancy something else? One tap and I suggest another, or tweak the one in front of you. You can also make the shopping list straight away or plan the cooking for later: pick dinner at work in the morning, and the list is ready for the shop on your way home.</p>
             <ul class="chips">
               <li class="rise" style="--i:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/></svg>Let's cook</li>
               <li class="rise" style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l4 4-4 4"/><path d="M3 12V10a4 4 0 0 1 4-4h14"/><path d="M7 21l-4-4 4-4"/><path d="M21 12v2a4 4 0 0 1-4 4H3"/></svg>Another suggestion</li>
@@ -293,7 +293,7 @@
           <div class="phone"><img src="/snackmeup-web/assets/screens/05-mealprep-en-320.webp" srcset="/snackmeup-web/assets/screens/05-mealprep-en-320.webp 320w, /snackmeup-web/assets/screens/05-mealprep-en-480.webp 480w" sizes="(min-width: 900px) 200px, min(60vw, 220px)" width="320" height="694" loading="lazy" alt="Meal Prep screen: a meal plan for several days with a shopping list"></div>
         </div>
       </article>
-      <!-- AIR_FRYER_SOON — tryb jest w manifeście (19:33 UTC 21.09.2026) i w kodzie, ale NIE w sklepie (brief aplikacji S307: trafi do buildu iOS 1.0.4, Android później). Odznakę „Wkrótce" zdjąć dopiero, gdy wersja z Air Fryerem jest w sklepie: curl -s "https://itunes.apple.com/lookup?bundleId=com.jarekpe.snackmeup&country=pl" → version. Wtedy też: ikona → zrzut z buildu 1.0.4 (konto Premium, dane przykładowe), tryb do .stores-note i tabeli #offer, filtr „po trybie" w Ulubionych. Opis trzyma czas przyszły, dopóki odznaka stoi. -->
+      <!-- AIR_FRYER_SOON — tryb jest w manifeście (19:33 UTC 21.09.2026) i w kodzie, ale NIE w sklepie (brief aplikacji S307: trafi do buildu iOS 1.0.4, Android później). Odznakę „Wkrótce" zdjąć dopiero, gdy wersja z Air Fryerem jest w sklepie: curl -s "https://itunes.apple.com/lookup?bundleId=com.jarekpe.snackmeup&country=pl" → version. Zrzut EN od 21.09 (MKT-4): zrzut PL przetłumaczony edycją obrazu (teksty z en.json, style z air-fryer.tsx), imiona Anna/Jon. Wtedy też: zrzut z buildu 1.0.4 (konto Premium, dane przykładowe), tryb do .stores-note i tabeli #offer, filtr „po trybie" w Ulubionych. Opis trzyma czas przyszły, dopóki odznaka stoi. -->
       <article class="mode mode--fryer rise" style="--i:4">
         <div class="mode-copy">
           <p class="mode-tag"><span class="dot"></span>Air Fryer <span class="badge">Coming soon</span></p>
@@ -301,14 +301,7 @@
           <p class="more">For when the air fryer sits on the counter and you want more out of it than fries. Pick what we're making: a main, a side, a snack or dessert. I'll give you the temperature and basket time, and split the food into as many batches as your basket holds. Two baskets? I'll time them so both finish in the same minute. And tell me about a dish you usually bake in the oven, and I'll convert it for the air fryer.</p>
         </div>
         <div class="mode-preview">
-          <span class="fryer-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path class="fryer-wave" d="M7.4 3.4c.9-1 1.6-1 2.5 0s1.6 1 2.5 0 1.6-1 2.5 0"/>
-            <path class="fryer-wave" d="M7.4 5.8c.9-1 1.6-1 2.5 0s1.6 1 2.5 0 1.6-1 2.5 0"/>
-            <rect x="4.5" y="8.2" width="15" height="12.3" rx="4.2"/>
-            <path d="M4.8 14.6h14.4"/>
-            <rect x="9.4" y="16.7" width="5.2" height="1.9" rx="0.95"/>
-            <circle cx="15.2" cy="11" r="1.1"/>
-          </svg></span>
+          <div class="phone"><img src="/snackmeup-web/assets/screens/16-airfryer-en-320.webp" srcset="/snackmeup-web/assets/screens/16-airfryer-en-320.webp 320w, /snackmeup-web/assets/screens/16-airfryer-en-414.webp 414w" sizes="(min-width: 900px) 200px, min(60vw, 220px)" width="320" height="696" loading="lazy" alt="Air Fryer screen: a craving field, portions for the household and a choice of what we're making"></div>
         </div>
       </article>
     </div>
