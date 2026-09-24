@@ -303,7 +303,6 @@ body.home { overflow-x: clip; }
   /* struktura taśmy działa też dla 5-6 elementów: przy przepełnieniu wraca poziome przewijanie,
      "safe center" pilnuje, żeby pierwszy element nie stał się nieosiągalny przy centrowaniu */
   .inside-strip { justify-content: center; justify-content: safe center; gap: 40px; }
-  .inside-item:nth-child(2) .phone { transform: translateY(-24px); }
   /* 7 elementow nie miesci sie w rzedzie: dyskretne wygaszenie prawej krawedzi podpowiada przewijanie */
   .inside-strip { mask-image: linear-gradient(to right, #000 92%, transparent 100%); -webkit-mask-image: linear-gradient(to right, #000 92%, transparent 100%); }
 }
