@@ -59,11 +59,7 @@
 
       <div class="stores">
         <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.jarekpe.snackmeup"><img src="/snackmeup-web/assets/badges/google-play-en.png" width="646" height="250" alt="Get it on Google Play"></a>
-        <!-- APP_STORE_URL — po akceptacji iOS, w KAŻDYM miejscu z tym komentarzem (3 na wersję językową: hero, środek po trybach, .get):
-             caly element <a class="store-btn is-soon" data-href="{{APP_STORE_URL}}" …> zastąpić przez
-             <a class="store-badge" href="<adres z App Store>"><img src="/snackmeup-web/assets/badges/app-store-en.svg" alt="Download on the App Store" height="52"></a>
-             (odznaka Apple nie mniejsza niż odznaka Google obok). Kontrola: grep -rn "APP_STORE_URL" ma zwrócić zero. -->
-        <a class="store-btn is-soon" data-href="{{APP_STORE_URL}}" aria-disabled="true">App Store <span class="soon-tag">soon</span></a>
+        <a class="store-badge" href="https://apps.apple.com/pl/app/snack-me-up/id6760691383"><img src="/snackmeup-web/assets/badges/app-store-en.svg" height="52" alt="Download on the App Store"></a>
       </div>
       <p class="stores-note">Free within a monthly recipe limit. <a href="#offer">What's in Premium</a></p>
     </div>
@@ -293,10 +289,9 @@
           <div class="phone"><img src="/snackmeup-web/assets/screens/05-mealprep-en-320.webp" srcset="/snackmeup-web/assets/screens/05-mealprep-en-320.webp 320w, /snackmeup-web/assets/screens/05-mealprep-en-480.webp 480w" sizes="(min-width: 900px) 200px, min(60vw, 220px)" width="320" height="694" loading="lazy" alt="Meal Prep screen: a meal plan for several days with a shopping list"></div>
         </div>
       </article>
-      <!-- AIR_FRYER_SOON — tryb jest w manifeście (19:33 UTC 21.09.2026) i w kodzie, ale NIE w sklepie (brief aplikacji S307: trafi do buildu iOS 1.0.4, Android później). Odznakę „Wkrótce" zdjąć dopiero, gdy wersja z Air Fryerem jest w sklepie: curl -s "https://itunes.apple.com/lookup?bundleId=com.jarekpe.snackmeup&country=pl" → version. Zrzut EN od 21.09 (MKT-4): zrzut PL przetłumaczony edycją obrazu (teksty z en.json, style z air-fryer.tsx), imiona Anna/Jon. Wtedy też: zrzut z buildu 1.0.4 (konto Premium, dane przykładowe), tryb do .stores-note i tabeli #offer, filtr „po trybie" w Ulubionych. Opis trzyma czas przyszły, dopóki odznaka stoi. -->
       <article class="mode mode--fryer rise" style="--i:4">
         <div class="mode-copy">
-          <p class="mode-tag"><span class="dot"></span>Air Fryer <span class="badge">Coming soon</span></p>
+          <p class="mode-tag"><span class="dot"></span>Air Fryer</p>
           <h3>Crispy, straight from the basket.</h3>
           <p class="more">For when the air fryer sits on the counter and you want more out of it than fries. Pick what we're making: a main, a side, a snack or dessert. I'll give you the temperature and basket time, and split the food into as many batches as your basket holds. Two baskets? I'll time them so both finish in the same minute. And tell me about a dish you usually bake in the oven, and I'll convert it for the air fryer.</p>
         </div>
@@ -307,10 +302,9 @@
     </div>
     <div class="stores">
       <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.jarekpe.snackmeup"><img src="/snackmeup-web/assets/badges/google-play-en.png" width="646" height="250" loading="lazy" alt="Get it on Google Play"></a>
-      <!-- APP_STORE_URL — trzecie miejsce (środek strony, MKT-4): podmiana jak w hero. -->
-      <a class="store-btn is-soon" data-href="{{APP_STORE_URL}}" aria-disabled="true">App Store <span class="soon-tag">soon</span></a>
+      <a class="store-badge" href="https://apps.apple.com/pl/app/snack-me-up/id6760691383"><img src="/snackmeup-web/assets/badges/app-store-en.svg" height="52" loading="lazy" alt="Download on the App Store"></a>
     </div>
-    <p class="stores-note">AI Chef, Kitchen Hero and Sweet Tooth are free within a monthly recipe limit. Meal Prep is part of Premium. <a href="#offer">Details below</a></p>
+    <p class="stores-note">AI Chef, Kitchen Hero, Sweet Tooth and Air Fryer are free within a monthly recipe limit. Meal Prep is part of Premium. <a href="#offer">Details below</a></p>
   </div>
 </section>
 
@@ -481,7 +475,7 @@
         <div class="phone"><img src="/snackmeup-web/assets/screens/11-favorites-en-320.webp" srcset="/snackmeup-web/assets/screens/11-favorites-en-320.webp 320w, /snackmeup-web/assets/screens/11-favorites-en-480.webp 480w" sizes="230px" width="320" height="693" loading="lazy" alt="Favourites screen with a grid of saved recipes and filters"></div>
         <figcaption>
           <h3>Favourites</h3>
-          <p>Your recipes in one place, with filters for meal type, cuisine and difficulty.</p>
+          <p>Your recipes in one place, with filters for meal type, cuisine, difficulty and mode.</p>
           <span class="tag">Full catalogue in Premium</span>
         </figcaption>
       </figure>
@@ -549,7 +543,7 @@
       <div class="plan rise">
         <h3><span class="ico sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.6"/></svg></span>Free</h3>
         <ul>
-          <li>all of AI Chef (Fast Track, Cravings and Random), Kitchen Hero and Sweet Tooth</li>
+          <li>all of AI Chef (Fast Track, Cravings and Random), Kitchen Hero, Sweet Tooth and Air Fryer</li>
           <li>a monthly recipe limit <small>the home screen shows the current limit</small></li>
           <li>recipes without dish photos</li>
           <li>a catalogue of recent recipes only</li>
@@ -600,6 +594,10 @@
         <summary>What languages is the app in?<span class="faq-toggle" aria-hidden="true"></span></summary>
         <p>The app works in English and Polish.</p>
       </details>
+      <details class="faq-item rise" style="--i:5">
+        <summary>Will the app connect to my air fryer?<span class="faq-toggle" aria-hidden="true"></span></summary>
+        <p>It doesn't need to. I give you the temperature, the time and the number of batches, and you set them on your own machine, so the app works with any air fryer. Just pick your basket size.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -646,8 +644,7 @@
       <h2>What's for dinner? <span>Decided.</span></h2>
       <div class="stores">
         <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.jarekpe.snackmeup"><img src="/snackmeup-web/assets/badges/google-play-en.png" width="646" height="250" alt="Get it on Google Play"></a>
-        <!-- APP_STORE_URL — drugie miejsce w tej wersji językowej; instrukcja przy pierwszym (sekcja hero). -->
-        <a class="store-btn is-soon" data-href="{{APP_STORE_URL}}" aria-disabled="true">App Store <span class="soon-tag">soon</span></a>
+        <a class="store-badge" href="https://apps.apple.com/pl/app/snack-me-up/id6760691383"><img src="/snackmeup-web/assets/badges/app-store-en.svg" height="52" loading="lazy" alt="Download on the App Store"></a>
       </div>
       <p class="stores-note">Free within a monthly recipe limit. <a href="#offer">What's in Premium</a></p>
     </div>

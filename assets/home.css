@@ -99,6 +99,15 @@ body.home { overflow-x: clip; }
 .store-badge img { display: block; height: 52px; width: auto; }
 .store-badge img[src*="google-play-pl"] { height: 67.71px; margin-block: -7.85px; }
 .store-badge img[src*="google-play-en"] { height: 77.38px; margin-block: -12.69px; }
+/* Telefon (MKT-3a+, decyzja PO 24.09.2026): przy 52px para odznak nie mieści się w jednej linii
+   (w panelu .get zostaje 271px przy 375px ekranu). Obie odznaki schodzą do 40px — minimum Apple — i nadal są równe;
+   EN kompensuje też boczny margines PNG (41px na 250px). */
+@media (max-width: 419px) {
+  .stores { gap: 12px; }
+  .store-badge img { height: 40px; }
+  .store-badge img[src*="google-play-pl"] { height: 52.08px; margin-block: -6.04px; }
+  .store-badge img[src*="google-play-en"] { height: 59.52px; margin: -9.76px; }
+}
 .stores-note { margin-top: 16px; font-size: 14px; color: var(--muted); }
 .stores-note a { color: var(--body); text-decoration: underline; text-decoration-color: rgba(255,107,53,0.5); text-underline-offset: 3px; }
 
