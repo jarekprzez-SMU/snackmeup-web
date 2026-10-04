@@ -224,3 +224,59 @@
 @media (min-width: 720px) {
   .story--prep .set li:nth-child(5) { display: block; left: calc(var(--off) + 2%); top: 72%; }
 }
+
+/* ---------- kuchenni pomocnicy: Szef jako karta na całą szerokość, pod nim taśma czterech pomocników (paczka 2b) ---------- */
+.crew { position: relative; z-index: 3; background: var(--ink); color: rgba(253,248,242,0.72); border-radius: 36px 36px 0 0; margin-top: -36px; padding: clamp(64px, 9vw, 112px) 0 calc(clamp(56px, 8vw, 96px) + 36px); }
+.crew-head { padding: 0 var(--pad) 22px; }
+.crew h2 { color: var(--parchment); max-width: 20ch; }
+.rail { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px var(--gut) 16px; scrollbar-width: none; }
+.rail::-webkit-scrollbar { display: none; }
+.mate { --pw: 172px; flex: none; width: 80vw; max-width: 330px; scroll-snap-align: center; display: flex; flex-direction: column; background: var(--ink-mid); border-radius: 28px; padding: 22px 20px 0; overflow: hidden; box-shadow: 0 0 0 1px color-mix(in srgb, var(--mc) 38%, transparent) inset; }
+.mate-copy { flex: 1; }
+.who { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mc); margin-bottom: 8px; }
+.who b { font-size: 11px; letter-spacing: 0.06em; padding: 2px 8px; border-radius: 100px; margin-left: 6px; color: var(--ink); background: var(--mc); }
+.mate h3 { font-size: 22px; line-height: 1.15; color: var(--parchment); margin-bottom: 8px; min-height: 2.3em; }
+.mate-copy > p { font-size: 14.5px; line-height: 1.5; }
+.mate-link { margin-top: 8px; font-family: 'Nunito', sans-serif; font-weight: 800; }
+.mate-link a { color: var(--mc); }
+.subs { margin-top: 10px; display: grid; gap: 8px; font-size: 13.5px; line-height: 1.45; }
+.subs b { display: block; font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--parchment); }
+/* okno: każdy telefon stoi na dole karty i jest przycięty w tym samym miejscu */
+.win { position: relative; height: 250px; margin-top: 18px; display: flex; justify-content: center; align-items: flex-start; overflow: hidden; }
+.win .dev { flex: none; }
+.bits li { position: absolute; }
+.bits li:nth-child(1) { left: 0; top: 22px; }
+.bits li:nth-child(2) { right: 0; top: 78px; }
+.bits li:nth-child(3) { left: 0; top: 138px; }
+.mates > .mate { width: auto; max-width: none; margin: 0 var(--gut) 14px; }
+.rail .mate-copy { flex: none; }
+.rail .win { flex: 1 1 250px; min-height: 250px; height: auto; }
+.swipe { padding: 4px var(--gut) 0; font-size: 13px; color: rgba(253,248,242,0.5); }
+.crew-foot { padding: 22px var(--pad) 0; }
+.crew .stores-note { color: rgba(253,248,242,0.6); }
+.crew .stores-note a { color: rgba(253,248,242,0.85); }
+@keyframes lift { from { transform: translateY(46px) scale(0.92); } }
+@media (min-width: 720px) {
+  /* szeroko: karty poziome — tekst obok telefonu, więc długość opisu nie przesuwa ekranów */
+  .mates { display: grid; grid-template-columns: 1fr; gap: 14px; padding-inline: var(--pad); }
+  .mates > .mate { margin: 0; }
+  .rail { display: contents; }
+  .mate { width: auto; max-width: none; flex-direction: row; align-items: flex-end; gap: 24px; padding: 26px 26px 0; }
+  .rail .mate:nth-child(odd) { flex-direction: row-reverse; }
+  .mate-copy, .rail .mate-copy { flex: 1; align-self: center; padding-bottom: 26px; }
+  .mate h3 { min-height: 0; font-size: 26px; }
+  .mate-copy > p { font-size: 15.5px; }
+  .win, .rail .win { flex: 0 0 42%; height: 280px; min-height: 0; margin-top: 0; }
+  .swipe { display: none; }
+}
+@media (min-width: 1080px) {
+  .mates { grid-template-columns: 1fr 1fr; }
+  .mate--chef { grid-column: 1 / -1; }
+  .mate--chef .win { flex-basis: 30%; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .mate .dev { animation: lift linear both; animation-timeline: view(); animation-range: entry 0% cover 30%; }
+    .bits li { animation: pop linear both; animation-timeline: view(); animation-range: entry 30% cover 36%; }
+  }
+}
