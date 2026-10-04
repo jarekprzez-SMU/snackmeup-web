@@ -208,3 +208,19 @@
   .marquee, .opener h1 .w, .opener .moment i, .scroll-hint { animation: none; }
   .dock { transition: none; }
 }
+
+/* ---------- Meal Prep: ta sama opowieść przypięta, sześć etapów, własny kolor (paczka 2a) ---------- */
+.prep-top { position: relative; z-index: 4; background: #e3eef6; border-radius: 36px 36px 0 0; margin-top: -36px; padding: clamp(64px, 9vw, 112px) 0 24px; }
+.prep-top .eyebrow { color: #2b6f9b; }
+.prep-top .prep-eyebrow .badge { color: #fff; background: #2b6f9b; box-shadow: none; padding: 3px 10px; border-radius: 100px; }
+.prep-top h2 { max-width: 20ch; }
+.story--prep { --acc: #2b6f9b; z-index: 4; background: #e3eef6; margin-top: 0; border-radius: 0; }
+.story--prep.is-pinned { padding-bottom: 0; }
+.story--prep.is-pinned .pin { border-radius: 0; }
+.story--prep .set li:nth-child(5) { display: none; }
+.prep-foot { position: relative; z-index: 4; background: #e3eef6; padding: 12px 0 calc(clamp(56px, 8vw, 96px) + 36px); }
+.prep-foot .prep-link { margin-top: 0; }
+.prep-foot .prep-link a { color: #2b6f9b; }
+@media (min-width: 720px) {
+  .story--prep .set li:nth-child(5) { display: block; left: calc(var(--off) + 2%); top: 72%; }
+}

@@ -8,7 +8,8 @@
   var root = document.documentElement, still = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var mid = { rootMargin: '-50% 0px -50% 0px' }; /* obszar obserwacji zwężony do linii na środku okna */
 
-  if (!still) [].forEach.call(document.querySelectorAll('.story'), function (st) {
+  var all = document.querySelectorAll('.story');
+  if (!still) [].forEach.call(all, function (st) {
     var q = function (s) { return [].slice.call(st.querySelectorAll(s)); };
     var beats = q('.beat'), marks = q('.track i'), segs = q('.segs i');
     var pin = st.querySelector('.pin'), act = st.querySelector('.act'), ghost = st.querySelector('.ghost');
@@ -26,7 +27,8 @@
       es.forEach(function (e) { if (e.isIntersecting) show(marks.indexOf(e.target)); });
     }, mid);
     marks.forEach(function (m) { io.observe(m); });
-    new IntersectionObserver(function (es) { root.classList.toggle('is-story', es[0].isIntersecting); }, mid).observe(st);
+    /* dwie opowieści na stronie: pasek pobrania chowa się, gdy którakolwiek jest na środku okna */
+    new IntersectionObserver(function (es) { st.mid = es[0].isIntersecting; root.classList.toggle('is-story', [].some.call(all, function (x) { return x.mid; })); }, mid).observe(st);
   });
 
   var opener = document.querySelector('.opener'), get = document.getElementById('get');
