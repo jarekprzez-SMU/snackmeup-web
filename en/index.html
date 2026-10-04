@@ -31,7 +31,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/legal.css">
   <link rel="stylesheet" href="/assets/home.css">
-  <script src="/assets/home.js" defer></script>
+  <link rel="stylesheet" href="/assets/story.css">
+  <script src="/assets/story.js" defer></script>
 </head>
 <body class="home">
 
@@ -52,187 +53,163 @@
   </div>
 </nav>
 
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="tagline">Dinner, decided.</p>
-      <h1>Don't know what to cook?<br>I do.</h1>
-      <p class="lead">Snack Me Up is a personal chef in your phone. It knows your taste and takes the daily “what's for dinner?” off your mind. You get a recipe made just for you.</p>
-      <p class="sub">It keeps your allergies and diet in mind, knows what equipment you have and which ingredients to leave out. For 28 days, every suggestion is something new, and it picks ingredients you'll easily find at an ordinary supermarket.</p>
-
-      <div class="stores">
+<section class="opener">
+  <div class="opener-copy">
+    <p class="moment"><b>6<i>:</i>00 pm</b> · fridge open, zero ideas</p>
+    <h1><span class="w" style="--d:0">What's</span> <span class="w" style="--d:1">for</span> <em class="w" style="--d:2">dinner?</em></h1>
+    <p class="pitch">You love to cook. Working out what to cook after a long day? That part's on me: your personal chef, right in your phone.</p>
+    <div class="stores">
         <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.jarekpe.snackmeup"><img src="/assets/badges/google-play-en.png" width="646" height="250" alt="Get it on Google Play"></a>
         <a class="store-badge" href="https://apps.apple.com/pl/app/snack-me-up/id6760691383"><img src="/assets/badges/app-store-en.svg" height="52" alt="Download on the App Store"></a>
       </div>
-      <p class="stores-note">Free within a monthly recipe limit. <a href="#offer">What's in Premium</a></p>
-    </div>
-
-    <div class="hero-visual">
-      <img class="plate" src="/assets/food/01-en-384.webp" srcset="/assets/food/01-en-384.webp 384w, /assets/food/01-en.webp 768w" sizes="(min-width: 900px) 430px, 100vw" width="768" height="768" alt="" aria-hidden="true">
-      <div class="phone">
-        <img src="/assets/screens/02-reveal-en-360.webp" srcset="/assets/screens/02-reveal-en-360.webp 360w, /assets/screens/02-reveal-en-720.webp 720w" sizes="304px" width="360" height="780" fetchpriority="high" alt="App screen showing a single recipe with its cooking time and nutrition values">
-      </div>
-    </div>
+    <p class="stores-note">Free within a monthly recipe limit. <a href="#offer">What's in Premium</a></p>
+  </div>
+  <div class="plate-wrap">
+    <img class="plate" src="/assets/food/01-en-384.webp" srcset="/assets/food/01-en-384.webp 384w, /assets/food/01-en.webp 768w" sizes="(min-width: 720px) 44vw, 118vw" width="768" height="768" fetchpriority="high" alt="" aria-hidden="true">
+    <ul class="doubts" aria-hidden="true"><li>pasta again?</li><li>microwave meal?</li><li>takeaway?</li></ul>
+    <p class="scroll-hint" aria-hidden="true">Scroll and I'll show you how it works ↓</p>
   </div>
 </section>
 
-<section class="problem band">
-  <div class="wrap">
-    <div class="problem-head rise">
-      <h2>“What's for dinner?” It comes back every single day.</h2>
-      <p class="lede">You open the fridge, then your phone, and yesterday starts all over again.</p>
+<section class="before">
+  <div class="marquee" aria-hidden="true"><span>pasta · potatoes · pasta · microwave · pasta · potatoes · </span><span>pasta · potatoes · pasta · microwave · pasta · potatoes · </span></div>
+  <div class="before-in">
+    <div class="before-head">
+      <p class="eyebrow rise">Sound familiar?</p>
+      <h2 class="rise">“What's for dinner?” It comes back every single day.</h2>
     </div>
-    <div class="problem-grid">
-      <article class="problem-card rise" style="--i:0">
-        <span class="ico" data-spin="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>
-        <h3>Half an hour of searching</h3>
-        <p>You scroll through recipes online and they all look alike. Time passes and there's still no decision.</p>
-      </article>
-      <article class="problem-card rise" style="--i:1">
-        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16l-1.4 8.4a2 2 0 0 1-2 1.6H7.4a2 2 0 0 1-2-1.6L4 8Z"/><path d="M8.5 8V6.5a3.5 3.5 0 0 1 7 0V8"/><path d="M5 5l14 14"/></svg></span>
-        <h3>An ingredient you can't get</h3>
-        <p>Something finally looks good, but the recipe needs a product your local shop is unlikely to stock.</p>
-      </article>
-      <article class="problem-card rise" style="--i:2">
-        <span class="ico" data-spin="repeat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l4 4-4 4"/><path d="M3 12V10a4 4 0 0 1 4-4h14"/><path d="M7 21l-4-4 4-4"/><path d="M21 12v2a4 4 0 0 1-4 4H3"/></svg></span>
-        <h3>The same thing again</h3>
-        <p>It ends the usual way: pasta with cheese, or a takeaway.</p>
-      </article>
-    </div>
-    <p class="problem-close rise">Coming up with something every day is more tiring than the cooking itself. That's the part I take off your hands.</p>
+    <ul class="days">
+      <li><b>Monday</b><span>Pasta with sauce.</span></li>
+      <li><b>Tuesday</b><span>Pasta. A different sauce.</span></li>
+      <li><b>Wednesday</b><span>A microwave meal. The same one, third time this month.</span></li>
+      <li><b>Thursday, 6 pm</b><span>Fridge open, and someone asks: “what's for dinner?”</span></li>
+    </ul>
+    <p class="turn">Finally, an idea <span>for something different.</span></p>
   </div>
 </section>
 
-<section class="how band" id="how">
-  <div class="wrap">
-    <div class="how-head rise">
-      <p class="eyebrow">How it works</p>
-      <h2>Five steps from no idea to a full plate.</h2>
-      <p class="how-lead">I ask about allergies, equipment and taste once, at the start. After that, every dinner goes like this:</p>
-    </div>
-    <div class="how-grid">
-      <div class="steps">
-        <article class="step">
-          <div class="step-copy">
-            <div class="step-row">
-              <span class="step-no">1</span>
-              <p class="when">Step 1 · you say what you want</p>
-            </div>
-            <h3>One tap or one sentence.</h3>
-            <p>In AI Chef you choose how to start. Fast Track creates a recipe in one tap. When you're craving something, you type it or say it and, if you like, adjust your preferences on the spot. Then I need a moment at the stove.</p>
-            <ul class="chips">
-              <li class="rise" style="--i:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 9-12h-6l1-6Z"/></svg>Fast Track</li>
-              <li class="rise" style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v9H10.5L6.5 18.5V15H4V6Z"/></svg>Cravings</li>
-              <li class="rise" style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3.2"/><circle cx="8.6" cy="8.6" r="1.1"/><circle cx="15.4" cy="8.6" r="1.1"/><circle cx="8.6" cy="15.4" r="1.1"/><circle cx="15.4" cy="15.4" r="1.1"/><circle cx="12" cy="12" r="1.1"/></svg>Random</li>
-              <li class="rise" style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9.3" y="3.5" width="5.4" height="10" rx="2.7"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0"/><path d="M12 17.5V21"/></svg>Text or voice</li>
-            </ul>
-          </div>
-          <div class="step-phones">
-            <div class="phone step-phone step-phone--back"><img src="/assets/screens/hw-1a-en-300.webp" srcset="/assets/screens/hw-1a-en-300.webp 300w, /assets/screens/hw-1a-en-500.webp 500w" sizes="170px" width="300" height="650" loading="lazy" decoding="async" alt="The AI Chef screen with Fast Track, Cravings and Random tiles"></div>
-            <div class="phone step-phone step-phone--front"><img src="/assets/screens/hw-1b-en-300.webp" srcset="/assets/screens/hw-1b-en-300.webp 300w, /assets/screens/hw-1b-en-500.webp 500w" sizes="170px" width="300" height="650" loading="lazy" decoding="async" alt="A field for a craving you can type or say"></div>
-          </div>
-        </article>
-        <article class="step">
-          <div class="step-copy">
-            <div class="step-row">
-              <span class="step-no">2</span>
-              <p class="when">Step 2 · a few seconds later</p>
-            </div>
-            <h3>I serve up a recipe, you get cooking.</h3>
-            <p>You see the dish with its time, cost, difficulty, calories and macros. Like it? Let's cook. Fancy something else? One tap and I suggest another, or tweak the one in front of you. You can also make the shopping list straight away or plan the cooking for later: pick dinner at work in the morning, and the list is ready for the shop on your way home.</p>
-            <ul class="chips">
-              <li class="rise" style="--i:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/></svg>Let's cook</li>
-              <li class="rise" style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l4 4-4 4"/><path d="M3 12V10a4 4 0 0 1 4-4h14"/><path d="M7 21l-4-4 4-4"/><path d="M21 12v2a4 4 0 0 1-4 4H3"/></svg>Another suggestion</li>
-              <li class="rise" style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2.2l2.3 12a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 1.9-1.5L21 8.2H6.2"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg>Shopping list</li>
-              <li class="rise" style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="15.5" rx="2.2"/><path d="M3 9.5h18"/><path d="M8 3v4M16 3v4"/></svg>Add to plan</li>
-              <li class="rise" style="--i:4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h10a1 1 0 0 1 1 1V21l-6-4-6 4V4.5a1 1 0 0 1 1-1Z"/></svg>Save</li>
-            </ul>
-          </div>
-          <div class="step-phones">
-            <div class="phone step-phone step-phone--back"><img src="/assets/screens/hw-2a-en-300.webp" srcset="/assets/screens/hw-2a-en-300.webp 300w, /assets/screens/hw-2a-en-500.webp 500w" sizes="170px" width="300" height="650" loading="lazy" decoding="async" alt="The “Cooking” screen: the app is finding supper"></div>
-            <div class="phone step-phone step-phone--front"><img src="/assets/screens/hw-2b-en-300.webp" srcset="/assets/screens/hw-2b-en-300.webp 300w, /assets/screens/hw-2b-en-500.webp 500w" sizes="170px" width="300" height="650" loading="lazy" decoding="async" alt="A finished recipe with time, cost, calories and the Let's cook, Shopping and Add to plan buttons"></div>
-          </div>
-        </article>
-        <article class="step">
-          <div class="step-copy">
-            <div class="step-row">
-              <span class="step-no">3</span>
-              <p class="when">Step 3 · at the shop</p>
-            </div>
-            <h3>Shopping without a trip to Asia.</h3>
-            <p>The shopping list writes itself, grouped the way a shop is laid out. Tick off what you already have at home and buy the rest. I choose ingredients for the country you live in. Craving pad thai in a small town in the middle of Europe? The ticket to Bangkok can stay in the drawer, because I build the recipe from what an ordinary supermarket stocks.</p>
-            <ul class="chips">
-              <li class="rise" style="--i:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg>Grouped by aisle</li>
-              <li class="rise" style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8 12.5l2.5 2.5 5-6"/></svg>Tick off</li>
-              <li class="rise" style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg>Your own items</li>
-              <li class="rise" style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="2.2"/><circle cx="6" cy="12" r="2.2"/><circle cx="18" cy="19" r="2.2"/><path d="M8 10.8l8-4.4M8 13.2l8 4.4"/></svg>Share the list</li>
-            </ul>
-          </div>
-          <div class="step-phones">
-            <div class="phone step-phone step-phone--back"><img src="/assets/screens/hw-3a-en-300.webp" srcset="/assets/screens/hw-3a-en-300.webp 300w, /assets/screens/hw-3a-en-500.webp 500w" sizes="170px" width="300" height="650" loading="lazy" decoding="async" alt="Active shopping lists with progress"></div>
-            <div class="phone step-phone step-phone--front"><img src="/assets/screens/hw-3b-en-300.webp" srcset="/assets/screens/hw-3b-en-300.webp 300w, /assets/screens/hw-3b-en-500.webp 500w" sizes="170px" width="300" height="650" loading="lazy" decoding="async" alt="One recipe's shopping list grouped by aisle"></div>
-          </div>
-        </article>
-        <article class="step">
-          <div class="step-copy">
-            <div class="step-row">
-              <span class="step-no">4</span>
-              <p class="when">Step 4 · in the kitchen</p>
-            </div>
-            <h3>Cook step by step, the way you like.</h3>
-            <p>Have each step on the full screen in large type you can read from the other end of the counter, or all the steps in one list to tick off. Every step shows the ingredients you need right then, with quantities. Where timing matters, a timer is waiting.</p>
-            <ul class="chips">
-              <li class="rise" style="--i:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V5a1 1 0 0 1 1-1h4"/><path d="M20 9V5a1 1 0 0 0-1-1h-4"/><path d="M4 15v4a1 1 0 0 0 1 1h4"/><path d="M20 15v4a1 1 0 0 1-1 1h-4"/></svg>Step view</li>
-              <li class="rise" style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 6.5h11"/><path d="M9.5 12h11"/><path d="M9.5 17.5h11"/><path d="M4 6.5h.01"/><path d="M4 12h.01"/><path d="M4 17.5h.01"/></svg>List view</li>
-              <li class="rise" style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10h15v2a6 6 0 0 1-6 6h-3a6 6 0 0 1-6-6v-2Z"/><path d="M2.5 10h2M19.5 10h2"/></svg>Step ingredients</li>
-              <li class="rise" style="--i:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.8 1.8"/><path d="M9.5 2.5h5"/><path d="M18.5 5.5l1.3-1.3"/></svg>Timer</li>
-            </ul>
-          </div>
-          <div class="step-phones">
-            <div class="phone step-phone step-phone--back"><img src="/assets/screens/hw-4a-en-300.webp" srcset="/assets/screens/hw-4a-en-300.webp 300w, /assets/screens/hw-4a-en-500.webp 500w" sizes="170px" width="300" height="650" loading="lazy" decoding="async" alt="A cooking step on the full screen with its ingredients"></div>
-            <div class="phone step-phone step-phone--front"><img src="/assets/screens/hw-4b-en-300.webp" srcset="/assets/screens/hw-4b-en-300.webp 300w, /assets/screens/hw-4b-en-500.webp 500w" sizes="170px" width="300" height="650" loading="lazy" decoding="async" alt="All the steps in one list to tick off"></div>
-          </div>
-        </article>
-        <article class="step">
-          <div class="step-copy">
-            <div class="step-row">
-              <span class="step-no">5</span>
-              <p class="when">Step 5 · after the meal</p>
-            </div>
-            <h3>And finally, the verdict.</h3>
-            <p>After cooking you give the dish one to five stars. One switch sends the best ones to your favourites. I take your rating into account in future suggestions, so with every dinner I know your taste a little better.</p>
-            <ul class="chips">
-              <li class="rise" style="--i:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.3l2.5 5.6 6.1.6-4.6 4.1 1.3 6-5.3-3-5.3 3 1.3-6-4.6-4.1 6.1-.6L12 3.3Z"/></svg>Stars</li>
-              <li class="rise" style="--i:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19.5s-6.7-4.1-9-8.2C1.2 7.9 3 4.5 6.3 4.5c1.9 0 3.3 1.1 3.9 2.3.6-1.2 2-2.3 3.9-2.3 3.3 0 5.1 3.4 3.3 6.8-2.3 4.1-9 8.2-9 8.2Z"/></svg>Add to your menu</li>
-              <li class="rise" style="--i:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17l5-5 4 4 7-8"/><path d="M15 8h5v5"/></svg>I learn your taste</li>
-            </ul>
-          </div>
-          <div class="step-phones">
-            <div class="phone step-phone step-phone--back"><img src="/assets/screens/hw-5a-en-300.webp" srcset="/assets/screens/hw-5a-en-300.webp 300w, /assets/screens/hw-5a-en-500.webp 500w" sizes="170px" width="300" height="650" loading="lazy" decoding="async" alt="The “Verdict” screen with five stars"></div>
-            <div class="phone step-phone step-phone--front"><img src="/assets/screens/hw-5b-en-300.webp" srcset="/assets/screens/hw-5b-en-300.webp 300w, /assets/screens/hw-5b-en-500.webp 500w" sizes="170px" width="300" height="650" loading="lazy" decoding="async" alt="A five-star rating and the “Add to your menu” switch"></div>
-          </div>
-        </article>
-      </div>
-      <div class="stage" data-active="0" aria-hidden="true">
-        <div class="stage-phones">
-          <div class="phone stage-phone stage-phone--back"><div class="screens">
-            <img src="/assets/screens/hw-1a-en-300.webp" srcset="/assets/screens/hw-1a-en-300.webp 300w, /assets/screens/hw-1a-en-500.webp 500w" sizes="250px" width="300" height="650" loading="lazy" alt="">
-            <img src="/assets/screens/hw-2a-en-300.webp" srcset="/assets/screens/hw-2a-en-300.webp 300w, /assets/screens/hw-2a-en-500.webp 500w" sizes="250px" width="300" height="650" loading="lazy" alt="">
-            <img src="/assets/screens/hw-3a-en-300.webp" srcset="/assets/screens/hw-3a-en-300.webp 300w, /assets/screens/hw-3a-en-500.webp 500w" sizes="250px" width="300" height="650" loading="lazy" alt="">
-            <img src="/assets/screens/hw-4a-en-300.webp" srcset="/assets/screens/hw-4a-en-300.webp 300w, /assets/screens/hw-4a-en-500.webp 500w" sizes="250px" width="300" height="650" loading="lazy" alt="">
-            <img src="/assets/screens/hw-5a-en-300.webp" srcset="/assets/screens/hw-5a-en-300.webp 300w, /assets/screens/hw-5a-en-500.webp 500w" sizes="250px" width="300" height="650" loading="lazy" alt="">
-          </div></div>
-          <div class="phone stage-phone stage-phone--front"><div class="screens">
-            <img src="/assets/screens/hw-1b-en-300.webp" srcset="/assets/screens/hw-1b-en-300.webp 300w, /assets/screens/hw-1b-en-500.webp 500w" sizes="250px" width="300" height="650" loading="lazy" alt="">
-            <img src="/assets/screens/hw-2b-en-300.webp" srcset="/assets/screens/hw-2b-en-300.webp 300w, /assets/screens/hw-2b-en-500.webp 500w" sizes="250px" width="300" height="650" loading="lazy" alt="">
-            <img src="/assets/screens/hw-3b-en-300.webp" srcset="/assets/screens/hw-3b-en-300.webp 300w, /assets/screens/hw-3b-en-500.webp 500w" sizes="250px" width="300" height="650" loading="lazy" alt="">
-            <img src="/assets/screens/hw-4b-en-300.webp" srcset="/assets/screens/hw-4b-en-300.webp 300w, /assets/screens/hw-4b-en-500.webp 500w" sizes="250px" width="300" height="650" loading="lazy" alt="">
-            <img src="/assets/screens/hw-5b-en-300.webp" srcset="/assets/screens/hw-5b-en-300.webp 300w, /assets/screens/hw-5b-en-500.webp 500w" sizes="250px" width="300" height="650" loading="lazy" alt="">
-          </div></div>
+<section class="story" id="how" style="--n:10">
+  <div class="pin">
+    <h2 class="story-title">How it works</h2>
+    <div class="segs" aria-hidden="true"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i><i style="--k:8"></i><i style="--k:9"></i></div>
+    <p class="ghost" aria-hidden="true">6:01</p>
+    <p class="act" aria-hidden="true">6:01 · First, I get to know you</p>
+    <div class="frame" aria-hidden="true"></div>
+    <div class="beats">
+      <article class="beat" data-time="6:01" data-act="First, I get to know you">
+        <div class="rig">
+          <div class="dev"><div class="scr"><img src="/assets/screens/17-onb-region-en-320.webp" srcset="/assets/screens/17-onb-region-en-320.webp 320w, /assets/screens/17-onb-region-en-480.webp 480w" sizes="(min-width: 1080px) 300px, (min-width: 720px) 236px, 56vw" width="360" height="780" loading="lazy" decoding="async" alt="Start screen asking which region you shop in"></div></div>
+          <ul class="set" aria-hidden="true"><li class="chip sel" style="--i:0">United Kingdom</li><li class="chip" style="--i:1">Poland</li><li class="chip" style="--i:2">Germany</li><li class="chip" style="--i:3">Other…</li></ul>
         </div>
-      </div>
+        <div class="cap">
+          <p class="eyebrow">Question 1 of 4 · first time only</p>
+          <h3>Where are you cooking from?</h3>
+          <p>At the start you tell me the region where you shop. Your country is enough. Dishes can come from any cuisine in the world, but I pick ingredients you can get where you live.</p>
+        </div>
+      </article>
+      <article class="beat" data-time="6:01" data-act="First, I get to know you">
+        <div class="rig">
+          <div class="dev"><div class="scr"><img src="/assets/screens/13-onb-allergies-en-320.webp" srcset="/assets/screens/13-onb-allergies-en-320.webp 320w, /assets/screens/13-onb-allergies-en-480.webp 480w" sizes="(min-width: 1080px) 300px, (min-width: 720px) 236px, 56vw" width="360" height="780" loading="lazy" decoding="async" alt="Onboarding screen asking about diet, allergies and intolerances"></div></div>
+          <ul class="set" aria-hidden="true"><li class="chip sel" style="--i:0">Vegetarian</li><li class="chip sel" style="--i:1">Gluten</li><li class="chip sel" style="--i:2">Nuts</li><li class="chip sel" style="--i:3">Dairy</li></ul>
+        </div>
+        <div class="cap">
+          <p class="eyebrow">Question 2 of 4 · diet and allergies</p>
+          <h3>Can you eat it?</h3>
+          <p>The allergies and diet in your profile apply to every recipe I put together for you. I can't see what's inside a specific product from the shop, so read labels as you always do. Set once, change any time.</p>
+        </div>
+      </article>
+      <article class="beat" data-time="6:02" data-act="First, I get to know you">
+        <div class="rig">
+          <div class="dev"><div class="scr"><img src="/assets/screens/14-onb-equipment-en-320.webp" srcset="/assets/screens/14-onb-equipment-en-320.webp 320w, /assets/screens/14-onb-equipment-en-480.webp 480w" sizes="(min-width: 1080px) 300px, (min-width: 720px) 236px, 56vw" width="360" height="780" loading="lazy" decoding="async" alt="Onboarding screen for selecting kitchen equipment"></div></div>
+          <ul class="set" aria-hidden="true"><li class="chip sel" style="--i:0">Oven</li><li class="chip sel" style="--i:1">Air Fryer</li><li class="chip sel" style="--i:2">Blender</li><li class="chip sel" style="--i:3">Wok</li></ul>
+        </div>
+        <div class="cap">
+          <p class="eyebrow">Question 3 of 4 · equipment</p>
+          <h3>What's in your kitchen?</h3>
+          <p>I only suggest recipes your kitchen can handle.</p>
+        </div>
+      </article>
+      <article class="beat" data-time="6:02" data-act="First, I get to know you">
+        <div class="rig">
+          <div class="dev"><div class="scr"><img src="/assets/screens/15-onb-cuisines-en-320.webp" srcset="/assets/screens/15-onb-cuisines-en-320.webp 320w, /assets/screens/15-onb-cuisines-en-480.webp 480w" sizes="(min-width: 1080px) 300px, (min-width: 720px) 236px, 56vw" width="360" height="780" loading="lazy" decoding="async" alt="Onboarding screen for picking favourite cuisines"></div></div>
+          <ul class="set" aria-hidden="true"><li class="chip love" style="--i:0">Italian</li><li class="chip love" style="--i:1">Mexican</li><li class="chip love" style="--i:2">Thai</li><li class="chip no" style="--i:3">mushrooms</li></ul>
+        </div>
+        <div class="cap">
+          <p class="eyebrow">Question 4 of 4 · taste</p>
+          <h3>What do you fancy? And what would you rather skip?</h3>
+          <p>Pick the cuisines you feel like and the ones you'd rather skip. I'll cook around those.</p>
+        </div>
+      </article>
+      <article class="beat" data-time="6:03" data-act="Tonight's dinner">
+        <div class="rig">
+          <div class="dev"><div class="scr"><img src="/assets/screens/hw-1a-en-300.webp" srcset="/assets/screens/hw-1a-en-300.webp 300w, /assets/screens/hw-1a-en-500.webp 500w" sizes="(min-width: 1080px) 300px, (min-width: 720px) 236px, 56vw" width="360" height="780" loading="lazy" decoding="async" alt="The AI Chef screen with Fast Track, Cravings and Random tiles"><img src="/assets/screens/hw-1b-en-300.webp" srcset="/assets/screens/hw-1b-en-300.webp 300w, /assets/screens/hw-1b-en-500.webp 500w" sizes="(min-width: 1080px) 300px, (min-width: 720px) 236px, 56vw" width="360" height="780" loading="lazy" decoding="async" alt="A field for a craving you can type or say"></div></div>
+          <ul class="set" aria-hidden="true"><li class="chip" style="--i:0">Fast Track</li><li class="chip" style="--i:1">Cravings</li><li class="chip" style="--i:2">Random</li><li class="chip" style="--i:3">Text or voice</li></ul>
+        </div>
+        <div class="cap">
+          <p class="eyebrow">You say what you want</p>
+          <h3>One tap or one sentence.</h3>
+          <p>In AI Chef you choose how to start. Fast Track creates a recipe in one tap. When you're craving something, you type it or say it and, if you like, adjust your preferences on the spot. Then I need a moment at the stove.</p>
+        </div>
+      </article>
+      <article class="beat" data-time="6:04" data-act="Tonight's dinner">
+        <div class="rig">
+          <div class="dev"><div class="scr"><img src="/assets/screens/hw-2a-en-300.webp" srcset="/assets/screens/hw-2a-en-300.webp 300w, /assets/screens/hw-2a-en-500.webp 500w" sizes="(min-width: 1080px) 300px, (min-width: 720px) 236px, 56vw" width="360" height="780" loading="lazy" decoding="async" alt="The “Cooking” screen: the app is finding supper"><img src="/assets/screens/hw-2b-en-300.webp" srcset="/assets/screens/hw-2b-en-300.webp 300w, /assets/screens/hw-2b-en-500.webp 500w" sizes="(min-width: 1080px) 300px, (min-width: 720px) 236px, 56vw" width="360" height="780" loading="lazy" decoding="async" alt="A finished recipe with time, cost, calories and the Let&#x27;s cook, Shopping and Add to plan buttons"></div></div>
+          <ul class="set" aria-hidden="true"><li class="chip ok" style="--i:0">your diet in mind</li><li class="chip ok" style="--i:1">fits your equipment</li><li class="chip ok" style="--i:2">supermarket ingredients</li><li class="chip ok" style="--i:3">always something new</li></ul>
+        </div>
+        <div class="cap">
+          <p class="eyebrow">A few seconds later</p>
+          <h3>I serve up a recipe, you get cooking.</h3>
+          <p>You see the dish with its time, cost, difficulty, calories and macros. Like it? Let's cook. Fancy something else? One tap and I suggest another, or tweak the one in front of you. You can also make the shopping list straight away or plan the cooking for later: pick dinner at work in the morning, and the list is ready for the shop on your way home.</p>
+        </div>
+      </article>
+      <article class="beat" data-time="6:10" data-act="Tonight's dinner">
+        <div class="rig">
+          <div class="dev"><div class="scr"><img src="/assets/screens/hw-3a-en-300.webp" srcset="/assets/screens/hw-3a-en-300.webp 300w, /assets/screens/hw-3a-en-500.webp 500w" sizes="(min-width: 1080px) 300px, (min-width: 720px) 236px, 56vw" width="360" height="780" loading="lazy" decoding="async" alt="Active shopping lists with progress"><img src="/assets/screens/hw-3b-en-300.webp" srcset="/assets/screens/hw-3b-en-300.webp 300w, /assets/screens/hw-3b-en-500.webp 500w" sizes="(min-width: 1080px) 300px, (min-width: 720px) 236px, 56vw" width="360" height="780" loading="lazy" decoding="async" alt="One recipe&#x27;s shopping list grouped by aisle"></div></div>
+          <ul class="set" aria-hidden="true"><li class="chip" style="--i:0">Grouped by aisle</li><li class="chip" style="--i:1">Tick off</li><li class="chip" style="--i:2">Your own items</li><li class="chip" style="--i:3">Share the list</li></ul>
+        </div>
+        <div class="cap">
+          <p class="eyebrow">At the shop</p>
+          <h3>Shopping without a trip to Asia.</h3>
+          <p>The shopping list writes itself, grouped the way a shop is laid out. Tick off what you already have at home and buy the rest. I choose ingredients for the country you live in. Craving pad thai in a small town in the middle of Europe? The ticket to Bangkok can stay in the drawer, because I build the recipe from what an ordinary supermarket stocks.</p>
+        </div>
+      </article>
+      <article class="beat" data-time="6:25" data-act="Tonight's dinner">
+        <div class="rig">
+          <div class="dev"><div class="scr"><img src="/assets/screens/hw-4a-en-300.webp" srcset="/assets/screens/hw-4a-en-300.webp 300w, /assets/screens/hw-4a-en-500.webp 500w" sizes="(min-width: 1080px) 300px, (min-width: 720px) 236px, 56vw" width="360" height="780" loading="lazy" decoding="async" alt="A cooking step on the full screen with its ingredients"><img src="/assets/screens/hw-4b-en-300.webp" srcset="/assets/screens/hw-4b-en-300.webp 300w, /assets/screens/hw-4b-en-500.webp 500w" sizes="(min-width: 1080px) 300px, (min-width: 720px) 236px, 56vw" width="360" height="780" loading="lazy" decoding="async" alt="All the steps in one list to tick off"></div></div>
+          <ul class="set" aria-hidden="true"><li style="--i:0" class="ring"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="18"/><circle class="fg" cx="22" cy="22" r="18"/></svg><b>timer</b></li><li class="chip" style="--i:1">Step view</li><li class="chip" style="--i:2">List view</li></ul>
+        </div>
+        <div class="cap">
+          <p class="eyebrow">In the kitchen</p>
+          <h3>Cook step by step, the way you like.</h3>
+          <p>Have each step on the full screen in large type you can read from the other end of the counter, or all the steps in one list to tick off. Every step shows the ingredients you need right then, with quantities. Where timing matters, a timer is waiting.</p>
+        </div>
+      </article>
+      <article class="beat" data-time="6:50" data-act="Tonight's dinner">
+        <div class="rig">
+          <div class="dev"><div class="scr"><img src="/assets/screens/hw-5a-en-300.webp" srcset="/assets/screens/hw-5a-en-300.webp 300w, /assets/screens/hw-5a-en-500.webp 500w" sizes="(min-width: 1080px) 300px, (min-width: 720px) 236px, 56vw" width="360" height="780" loading="lazy" decoding="async" alt="The “Verdict” screen with five stars"><img src="/assets/screens/hw-5b-en-300.webp" srcset="/assets/screens/hw-5b-en-300.webp 300w, /assets/screens/hw-5b-en-500.webp 500w" sizes="(min-width: 1080px) 300px, (min-width: 720px) 236px, 56vw" width="360" height="780" loading="lazy" decoding="async" alt="A five-star rating and the “Add to your menu” switch"></div></div>
+          <ul class="set" aria-hidden="true"><li style="--i:0" class="stars"><i style="--s:0">★</i><i style="--s:1">★</i><i style="--s:2">★</i><i style="--s:3">★</i><i style="--s:4">★</i></li><li class="chip love" style="--i:1">Add to your menu</li></ul>
+        </div>
+        <div class="cap">
+          <p class="eyebrow">After the meal</p>
+          <h3>And finally, the verdict.</h3>
+          <p>After cooking you give the dish one to five stars. One switch sends the best ones to your favourites. I take your rating into account in future suggestions, so with every dinner I know your taste a little better.</p>
+        </div>
+      </article>
+      <article class="beat" data-time="tomorrow" data-act="6 pm again">
+        <div class="rig">
+          <div class="dev"><div class="scr"><img src="/assets/screens/11-favorites-en-320.webp" srcset="/assets/screens/11-favorites-en-320.webp 320w, /assets/screens/11-favorites-en-480.webp 480w" sizes="(min-width: 1080px) 300px, (min-width: 720px) 236px, 56vw" width="360" height="780" loading="lazy" decoding="async" alt="Favourites screen with a grid of saved recipes and filters"><img src="/assets/screens/08-history-en-320.webp" srcset="/assets/screens/08-history-en-320.webp 320w, /assets/screens/08-history-en-480.webp 480w" sizes="(min-width: 1080px) 300px, (min-width: 720px) 236px, 56vw" width="360" height="780" loading="lazy" decoding="async" alt="Cooking history with filters and dish photos"></div></div>
+          <ul class="set" aria-hidden="true"><li class="chip ok" style="--i:0">something new for 28 days</li><li class="chip love" style="--i:1">favourites</li></ul>
+        </div>
+        <div class="cap">
+          <p class="eyebrow">Tomorrow, 6 pm</p>
+          <h3>Will it be something new?</h3>
+          <p>I know what's been cooked lately, so for 28 days every suggestion is something new. The full cooking history is there to browse in Premium.</p>
+        </div>
+      </article>
     </div>
+    <p class="cue" aria-hidden="true">scroll</p>
   </div>
+  <div class="track" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 </section>
 
 <section class="modes band" id="modes">
@@ -439,103 +416,6 @@
   </div>
 </section>
 
-<section class="inside band" id="inside">
-  <div class="wrap">
-    <div class="inside-head rise">
-      <p class="eyebrow">Inside</p>
-      <h2>Take a look inside before you download.</h2>
-    </div>
-    <div class="inside-strip">
-      <figure class="inside-item rise" style="--i:0">
-        <div class="phone"><img src="/assets/screens/01-home-en-320.webp" srcset="/assets/screens/01-home-en-320.webp 320w, /assets/screens/01-home-en-480.webp 480w" sizes="230px" width="320" height="694" loading="lazy" alt="The app's home screen with mode tiles"></div>
-        <figcaption>
-          <h3>Home</h3>
-          <p>Your chef and every mode in one place.</p>
-        </figcaption>
-      </figure>
-      <figure class="inside-item rise" style="--i:1">
-        <div class="phone"><img src="/assets/screens/13-onb-allergies-en-320.webp" srcset="/assets/screens/13-onb-allergies-en-320.webp 320w, /assets/screens/13-onb-allergies-en-480.webp 480w" sizes="230px" width="320" height="693" loading="lazy" alt="Onboarding screen asking about diet, allergies and intolerances"></div>
-        <figcaption>
-          <h3>Questions at the start</h3>
-          <p>Diet, allergies and intolerances. Set once, change any time.</p>
-        </figcaption>
-      </figure>
-      <figure class="inside-item rise" style="--i:2">
-        <div class="phone"><img src="/assets/screens/14-onb-equipment-en-320.webp" srcset="/assets/screens/14-onb-equipment-en-320.webp 320w, /assets/screens/14-onb-equipment-en-480.webp 480w" sizes="230px" width="320" height="693" loading="lazy" alt="Onboarding screen for selecting kitchen equipment"></div>
-        <figcaption>
-          <h3>Your equipment</h3>
-          <p>I only suggest recipes your kitchen can handle.</p>
-        </figcaption>
-      </figure>
-      <figure class="inside-item rise" style="--i:3">
-        <div class="phone"><img src="/assets/screens/15-onb-cuisines-en-320.webp" srcset="/assets/screens/15-onb-cuisines-en-320.webp 320w, /assets/screens/15-onb-cuisines-en-480.webp 480w" sizes="230px" width="320" height="693" loading="lazy" alt="Onboarding screen for picking favourite cuisines"></div>
-        <figcaption>
-          <h3>Favourite cuisines</h3>
-          <p>Pick the cuisines you feel like and the ones you'd rather skip.</p>
-        </figcaption>
-      </figure>
-      <figure class="inside-item rise" style="--i:4">
-        <div class="phone"><img src="/assets/screens/11-favorites-en-320.webp" srcset="/assets/screens/11-favorites-en-320.webp 320w, /assets/screens/11-favorites-en-480.webp 480w" sizes="230px" width="320" height="693" loading="lazy" alt="Favourites screen with a grid of saved recipes and filters"></div>
-        <figcaption>
-          <h3>Favourites</h3>
-          <p>Your recipes in one place, with filters for meal type, cuisine, difficulty and mode.</p>
-          <span class="tag">Full catalogue in Premium</span>
-        </figcaption>
-      </figure>
-      <figure class="inside-item rise" style="--i:5">
-        <div class="phone"><img src="/assets/screens/12-shoppinglist-en-320.webp" srcset="/assets/screens/12-shoppinglist-en-320.webp 320w, /assets/screens/12-shoppinglist-en-480.webp 480w" sizes="230px" width="320" height="693" loading="lazy" alt="Shopping list for a single recipe grouped by shop aisle"></div>
-        <figcaption>
-          <h3>Shopping list</h3>
-          <p>Recipe ingredients grouped the way a shop is laid out. Tick them off as you go.</p>
-        </figcaption>
-      </figure>
-      <figure class="inside-item rise" style="--i:6">
-        <div class="phone"><img src="/assets/screens/08-history-en-320.webp" srcset="/assets/screens/08-history-en-320.webp 320w, /assets/screens/08-history-en-480.webp 480w" sizes="230px" width="320" height="694" loading="lazy" alt="Cooking history with filters and dish photos"></div>
-        <figcaption>
-          <h3>Cooking history</h3>
-          <p>Everything that's come out of your kitchen, always at hand.</p>
-          <span class="tag">Premium</span>
-        </figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section class="knows band">
-  <div class="wrap knows-grid">
-    <div class="rise">
-      <h2>Before I suggest anything, I check three things.</h2>
-      <div class="checks">
-        <div class="check">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l6.5 2.8v5c0 4.6-3 7.7-6.5 8.7-3.5-1-6.5-4.1-6.5-8.7v-5L12 3.5Z"/><path d="M9 12l2 2 4-4.2"/></svg></span>
-          <div>
-            <h3>Can you eat it?</h3>
-            <p>The allergies and diet in your profile apply to every recipe I put together for you. I can't see what's inside a specific product from the shop, so read labels as you always do.</p>
-          </div>
-        </div>
-        <div class="check">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8.5h12l-1.1 11a2 2 0 0 1-2 1.8H9.1a2 2 0 0 1-2-1.8L6 8.5Z"/><path d="M9 8.5v-2a3 3 0 0 1 6 0v2"/></svg></span>
-          <div>
-            <h3>Can you buy the ingredients where you live?</h3>
-            <p>I know which region you shop in. The dish can come from any cuisine in the world, and I pick ingredients you can easily buy locally.</p>
-          </div>
-        </div>
-        <div class="check">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="15.5" rx="2.2"/><path d="M3 9.5h18"/><path d="M8 3v4M16 3v4"/><path d="M9 15a3 3 0 0 1 5.3-1.9"/><path d="M15 12.7l1 2-2.2.4"/></svg></span>
-          <div>
-            <h3>Will it be something new?</h3>
-            <p>I know what's been cooked lately, so for 28 days every suggestion is something new. The full cooking history is there to browse in Premium.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <figure class="dish rise">
-      <img src="/assets/food/08-384.webp" srcset="/assets/food/08-384.webp 384w, /assets/food/08.webp 768w" sizes="(min-width: 900px) 420px, 100vw" width="768" height="768" loading="lazy" alt="Three chicken tacos on a wooden board">
-      <figcaption><span class="dish-name">Quick chicken tacos</span>You had these yesterday, so today I'll suggest something else.</figcaption>
-    </figure>
-  </div>
-</section>
-
 <section class="offer band" id="offer">
   <div class="wrap">
     <div class="offer-head rise">
@@ -671,6 +551,8 @@
     <a href="mailto:support@snack-me-up.com">Contact</a>
   </div>
 </footer>
+
+<div class="dock" aria-hidden="true"><span>I plan, you cook</span><a href="#get" tabindex="-1">Get the app</a></div>
 
 </body>
 </html>
