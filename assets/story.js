@@ -1,9 +1,11 @@
 /* snack me up — jedyny skrypt strony głównej. Własny, bez zależności, bez sieci.
-   1. Opowieść (.story): przypina telefon i włącza etap, który jest na środku okna.
-      Bez skryptu albo przy prefers-reduced-motion zostaje zwykła lista etapów ze story.css.
+   0. Etykieta kanału: ?c=grupy zastępuje „strona” w linkach sklepów.
+   1. Opowieść (.story): przypina telefon i włącza etap ze środka okna; bez skryptu zostaje lista etapów.
    2. Pasek pobrania: po pierwszym ekranie, chowany przy sekcji pobrania.
    3. Zapasowe wejście .rise dla przeglądarek bez animation-timeline: view(). */
 (function () {
+  var c = /[?&]c=([a-z0-9-]{1,30})(&|$)/.exec(location.search);
+  if (c) [].forEach.call(document.querySelectorAll('a[href*=strona]'), function (a) { a.href = a.href.replace(/strona/g, c[1]); });
   if (!('IntersectionObserver' in window) || !window.matchMedia) return;
   var root = document.documentElement, still = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var mid = { rootMargin: '-50% 0px -50% 0px' }; /* obszar obserwacji zwężony do linii na środku okna */
