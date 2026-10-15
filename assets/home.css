@@ -107,7 +107,13 @@ body.home { overflow-x: clip; }
   .store-badge img { height: 40px; }
   .store-badge img[src*="google-play-pl"] { height: 52.08px; margin-block: -6.04px; }
   .store-badge img[src*="google-play-en"] { height: 59.52px; margin: -9.76px; }
+  .os-apple .store-badge img { height: 52px; }
+  .os-google .store-badge img[src*="google-play-pl"] { height: 67.71px; margin-block: -7.85px; }
+  .os-google .store-badge img[src*="google-play-en"] { height: 77.38px; margin: -12.69px 0; }
 }
+/* Rozpoznany telefon (story.js dodaje .os-apple / .os-google, PO 14.10.2026): zostaje tylko odznaka jego sklepu,
+   więc na wąskim ekranie wraca do pełnych 52px. Komputer i nierozpoznane urządzenia widzą obie. */
+.os-apple .store-badge[href*="google"], .os-google .store-badge[href*="apple"] { display: none; }
 .stores-note { margin-top: 16px; font-size: 14px; color: var(--muted); }
 .stores-note a { color: var(--body); text-decoration: underline; text-decoration-color: rgba(255,107,53,0.5); text-underline-offset: 3px; }
 

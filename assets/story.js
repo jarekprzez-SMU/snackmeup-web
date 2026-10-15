@@ -1,14 +1,16 @@
-/* snack me up — jedyny skrypt strony głównej. Własny, bez zależności, bez sieci.
-   0. Etykieta kanału: ?c=grupy zastępuje „strona” w linkach sklepów.
-   1. Opowieść (.story): przypina telefon i włącza etap ze środka okna; bez skryptu zostaje lista etapów.
-   2. Pasek pobrania: po pierwszym ekranie, chowany przy sekcji pobrania.
-   3. Zapasowe wejście .rise dla przeglądarek bez animation-timeline: view(). */
+/* snack me up, jedyny skrypt (limit 3 kB): 0. ?c= w linkach sklepow; telefon widzi swoj sklep, Pobierz prosto do niego.
+   1. opowiesc .story  2. pasek pobrania (chowany, gdy opowiesc na srodku)  3. zapasowe .rise */
 (function () {
-  var c = /[?&]c=([a-z0-9-]{1,30})(&|$)/.exec(location.search);
+  var c = /[?&]c=([a-z0-9-]{1,30})(&|$)/.exec(location.search), u = navigator.userAgent;
   if (c) [].forEach.call(document.querySelectorAll('a[href*=strona]'), function (a) { a.href = a.href.replace(/strona/g, c[1]); });
+  var os = /iP(hone|od|ad)/.test(u) ? 'apple' : /Android/.test(u) ? 'google' : '', s = os && document.querySelector('.store-badge[href*=' + os + ']');
+  if (s) {
+    document.documentElement.classList.add('os-' + os);
+    [].forEach.call(document.querySelectorAll('a[href="#get"]'), function (a) { a.href = s.href; });
+  }
   if (!('IntersectionObserver' in window) || !window.matchMedia) return;
   var root = document.documentElement, still = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var mid = { rootMargin: '-50% 0px -50% 0px' }; /* obszar obserwacji zwężony do linii na środku okna */
+  var mid = { rootMargin: '-50% 0px -50% 0px' }; /* linia na srodku okna */
 
   var all = document.querySelectorAll('.story');
   if (!still) [].forEach.call(all, function (st) {
@@ -29,7 +31,6 @@
       es.forEach(function (e) { if (e.isIntersecting) show(marks.indexOf(e.target)); });
     }, mid);
     marks.forEach(function (m) { io.observe(m); });
-    /* dwie opowieści na stronie: pasek pobrania chowa się, gdy którakolwiek jest na środku okna */
     new IntersectionObserver(function (es) { st.mid = es[0].isIntersecting; root.classList.toggle('is-story', [].some.call(all, function (x) { return x.mid; })); }, mid).observe(st);
   });
 
