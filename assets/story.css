@@ -40,6 +40,16 @@
 .turn { margin-top: 20px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: clamp(36px, 10.6vw, 68px); line-height: 1.04; letter-spacing: -0.04em; color: var(--o); transform-origin: 0 100%; text-wrap: balance; }
 .turn span { display: inline-block; padding-bottom: 0.08em; background: linear-gradient(var(--o), var(--o)) 0 100% / 100% 0.07em no-repeat; }
 
+/* ---------- film „Poznaj Snack Me Up”: arkusz między „Znasz to?” a opowieścią; wideo ładuje się dopiero po kliknięciu (preload none) ---------- */
+.film-link { position: relative; z-index: 3; display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; color: var(--o); text-decoration: none; }
+.film-link span { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--o-lo); font-size: 11px; padding-left: 2px; }
+.film { position: relative; z-index: 2; display: grid; justify-items: center; gap: 28px; background: var(--parchment); border-radius: 32px 32px 0 0; margin-top: -32px; padding: 52px var(--pad) 104px; }
+.film-copy { max-width: 46ch; }
+.film-copy p:last-child { font-size: clamp(16px, 1.6vw, 18px); line-height: 1.6; }
+.film h2 { font-size: clamp(28px, 6.4vw, 40px); margin-bottom: 12px; }
+.film-phone { --pw: min(72vw, 300px); }
+.film-phone video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; border-radius: calc(var(--pw) * 0.13); background: var(--ink); }
+
 /* ---------- opowieść: układ podstawowy (bez skryptu, bez ruchu) — lista etapów ---------- */
 .story { --acc: var(--o); --pw: 120px; position: relative; z-index: 2; background: var(--parchment-mid); border-radius: 32px 32px 0 0; margin-top: -32px; }
 .story .pin { padding: 56px var(--pad) 72px; }
@@ -125,6 +135,8 @@
   .opener { display: grid; grid-template-columns: 1.05fr 0.95fr; align-items: center; column-gap: 40px; padding: 40px var(--pad) 72px; }
   .opener .pitch { font-size: 20px; max-width: 34ch; }
   .opener .stores { gap: 12px; flex-wrap: nowrap; }
+  .film { grid-template-columns: 1fr auto; align-items: center; justify-items: start; column-gap: 56px; padding-block: 72px 120px; }
+  .film-phone { --pw: 300px; }
   .opener .store-badge img { height: 44px; }
   .opener .store-badge img[src*="google-play-pl"] { height: 57.3px; margin-block: -6.65px; }
   .opener .store-badge img[src*="google-play-en"] { height: 65.5px; margin: -10.7px; }
